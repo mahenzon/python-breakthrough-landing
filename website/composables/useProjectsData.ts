@@ -1,25 +1,30 @@
 import type { StudentProject } from '~/types/content'
 
-let cachedProjects: StudentProject[] | null = null
-
 export const useProjectsData = () => {
+  // Use useState to share data between server and client
+  const projects = useState<StudentProject[]>('projects', () => [])
+  
   const getProjects = async (): Promise<StudentProject[]> => {
-    if (import.meta.server) {
-      if (!cachedProjects) {
-        const { join } = await import('path')
-        const { readFileSync } = await import('fs')
-        const yaml = await import('js-yaml')
-        
-        const projectsPath = join(process.cwd(), 'content', 'projects.yaml')
-        const content = readFileSync(projectsPath, 'utf8')
-        cachedProjects = yaml.load(content) as StudentProject[]
-        cachedProjects.sort((a, b) => a.order - b.order)
-      }
-      return cachedProjects!
+    // If data is already loaded, return it
+    if (projects.value.length > 0) {
+      return projects.value
     }
     
-    // Client-side placeholder
-    return []
+    // Load data on server side
+    if (import.meta.server) {
+      const { join } = await import('path')
+      const { readFileSync } = await import('fs')
+      const yaml = await import('js-yaml')
+      
+      const projectsPath = join(process.cwd(), 'content', 'projects.yaml')
+      const content = readFileSync(projectsPath, 'utf8')
+      projects.value = yaml.load(content) as StudentProject[]
+      projects.value.sort((a, b) => a.order - b.order)
+      return projects.value
+    }
+    
+    // On client side, return the value from useState
+    return projects.value
   }
   
   return {

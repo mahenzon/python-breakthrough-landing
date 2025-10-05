@@ -1,25 +1,30 @@
 import type { FaqItem } from '~/types/content'
 
-let cachedFaq: FaqItem[] | null = null
-
 export const useFaqData = () => {
+  // Use useState to share data between server and client
+  const faqItems = useState<FaqItem[]>('faqItems', () => [])
+  
   const getFaqItems = async (): Promise<FaqItem[]> => {
-    if (import.meta.server) {
-      if (!cachedFaq) {
-        const { join } = await import('path')
-        const { readFileSync } = await import('fs')
-        const yaml = await import('js-yaml')
-        
-        const faqPath = join(process.cwd(), 'content', 'faq.yaml')
-        const content = readFileSync(faqPath, 'utf8')
-        cachedFaq = yaml.load(content) as FaqItem[]
-        cachedFaq.sort((a, b) => a.order - b.order)
-      }
-      return cachedFaq!
+    // If data is already loaded, return it
+    if (faqItems.value.length > 0) {
+      return faqItems.value
     }
     
-    // Client-side placeholder
-    return []
+    // Load data on server side
+    if (import.meta.server) {
+      const { join } = await import('path')
+      const { readFileSync } = await import('fs')
+      const yaml = await import('js-yaml')
+      
+      const faqPath = join(process.cwd(), 'content', 'faq.yaml')
+      const content = readFileSync(faqPath, 'utf8')
+      faqItems.value = yaml.load(content) as FaqItem[]
+      faqItems.value.sort((a, b) => a.order - b.order)
+      return faqItems.value
+    }
+    
+    // On client side, return the value from useState
+    return faqItems.value
   }
   
   return {

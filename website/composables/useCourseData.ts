@@ -1,22 +1,26 @@
 import type { Course, CourseStatistics, Module, Topic } from '~/types/course'
 
-let cachedCourse: Course | null = null
-
 export const useCourseData = () => {
+  // Use useState to share data between server and client
+  const courseData = useState<Course>('courseData', () => ({ modules: [] }))
+  
   const getCourseData = async (): Promise<Course> => {
-    // During static generation, this will be provided by the server
-    // For now, return a placeholder that will be replaced during build
-    if (import.meta.server) {
-      if (!cachedCourse) {
-        const { join } = await import('path')
-        const { parseCourseData } = await import('~/utils/course-parser')
-        const courseDataPath = join(process.cwd(), '..', 'course-data')
-        cachedCourse = parseCourseData(courseDataPath)
-      }
-      return cachedCourse
+    // If data is already loaded, return it
+    if (courseData.value.modules.length > 0) {
+      return courseData.value
     }
-    // On client side (after hydration), data will be in the rendered HTML
-    return { modules: [] }
+    
+    // Load data on server side
+    if (import.meta.server) {
+      const { join } = await import('path')
+      const { parseCourseData } = await import('~/utils/course-parser')
+      const courseDataPath = join(process.cwd(), '..', 'course-data')
+      courseData.value = parseCourseData(courseDataPath)
+      return courseData.value
+    }
+    
+    // On client side, the data should already be in useState from server
+    return courseData.value
   }
   
   const getStatistics = async (numberOfStudents: number): Promise<CourseStatistics> => {
