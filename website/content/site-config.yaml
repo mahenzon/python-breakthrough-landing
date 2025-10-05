@@ -1,0 +1,30 @@
+author:
+  name: "Ваше Имя"
+  bio: |
+    Краткая биография о вас.
+    Можно использовать несколько строк.
+    Расскажите о своём опыте в преподавании и разработке.
+  links:
+    - name: "GitHub"
+      url: "https://github.com/yourusername"
+      icon: "github"
+    - name: "Telegram"
+      url: "https://t.me/yourusername"
+      icon: "telegram"
+
+course:
+  title: "Python Breakthrough"
+  subtitle: "Разработка веб-приложений на Python"
+  description: |
+    Комплексный курс по веб-разработке на Python.
+    
+    Изучите создание современных веб-приложений с нуля до продакшена.
+    Практические проекты и поддержка наставника на всём пути обучения.
+  features:
+    - "Асинхронное обучение"
+    - "Практические проекты"
+    - "Поддержка наставника"
+    - "Реальные кейсы из индустрии"
+
+statistics:
+  numberOfStudents: 100
