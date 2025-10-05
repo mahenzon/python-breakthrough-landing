@@ -45,10 +45,8 @@
 
 <script setup lang="ts">
 const { getStatistics } = useCourseData()
-const { getConfig } = useConfig()
 
-const config = await getConfig()
-const stats = await getStatistics(config.statistics.numberOfStudents)
+const stats = await getStatistics()
 const { t } = useI18n()
 
 useHead({

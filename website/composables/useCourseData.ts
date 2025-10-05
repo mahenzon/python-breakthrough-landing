@@ -3,6 +3,7 @@ import type { Course, CourseStatistics, Module, Topic } from '~/types/course'
 export const useCourseData = () => {
   // Use useState to share data between server and client
   const courseData = useState<Course>('courseData', () => ({ modules: [] }))
+  const statsData = useState<CourseStatistics | null>('statsData', () => null)
   
   const getCourseData = async (): Promise<Course> => {
     // If data is already loaded, return it
@@ -10,36 +11,44 @@ export const useCourseData = () => {
       return courseData.value
     }
     
-    // Load data on server side
+    // Load data differently based on environment
     if (import.meta.server) {
+      // During SSR, read from filesystem
+      const { readFileSync } = await import('fs')
       const { join } = await import('path')
-      const { parseCourseData } = await import('~/server/utils/course-parser')
-      const courseDataPath = join(process.cwd(), '..', 'course-data')
-      courseData.value = parseCourseData(courseDataPath)
-      return courseData.value
+      const filePath = join(process.cwd(), 'public', 'data', 'course.json')
+      const content = readFileSync(filePath, 'utf-8')
+      courseData.value = JSON.parse(content)
+    } else {
+      // On client, fetch from public directory
+      const response = await fetch('/data/course.json')
+      courseData.value = await response.json()
     }
     
-    // On client side, the data should already be in useState from server
     return courseData.value
   }
   
-  const getStatistics = async (numberOfStudents: number): Promise<CourseStatistics> => {
+  const getStatistics = async (): Promise<CourseStatistics> => {
+    // If stats are already loaded, return them
+    if (statsData.value) {
+      return statsData.value
+    }
+    
+    // Load data differently based on environment
     if (import.meta.server) {
-      const { calculateStatistics } = await import('~/server/utils/stats-calculator')
-      const course = await getCourseData()
-      return calculateStatistics(course, numberOfStudents)
+      // During SSR, read from filesystem
+      const { readFileSync } = await import('fs')
+      const { join } = await import('path')
+      const filePath = join(process.cwd(), 'public', 'data', 'stats.json')
+      const content = readFileSync(filePath, 'utf-8')
+      statsData.value = JSON.parse(content)
+    } else {
+      // On client, fetch from public directory
+      const response = await fetch('/data/stats.json')
+      statsData.value = await response.json()
     }
-    // Placeholder for client-side
-    return {
-      totalLessons: 0,
-      totalVideos: 0,
-      totalDurationMinutes: 0,
-      totalDurationFormatted: '0 ч 0 мин',
-      numberOfStudents: 0,
-      totalTasks: 0,
-      modulesCount: 0,
-      topicsCount: 0,
-    }
+    
+    return statsData.value!
   }
   
   const getModuleById = async (moduleId: string): Promise<Module | undefined> => {

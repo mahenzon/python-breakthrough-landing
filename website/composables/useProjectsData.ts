@@ -10,20 +10,21 @@ export const useProjectsData = () => {
       return projects.value
     }
     
-    // Load data on server side
+    // Load data differently based on environment
     if (import.meta.server) {
-      const { join } = await import('path')
+      // During SSR, read from filesystem
       const { readFileSync } = await import('fs')
-      const yaml = await import('js-yaml')
-      
-      const projectsPath = join(process.cwd(), 'content', 'projects.yaml')
-      const content = readFileSync(projectsPath, 'utf8')
-      projects.value = yaml.load(content) as StudentProject[]
-      projects.value.sort((a, b) => a.order - b.order)
-      return projects.value
+      const { join } = await import('path')
+      const filePath = join(process.cwd(), 'public', 'data', 'projects.json')
+      const content = readFileSync(filePath, 'utf-8')
+      projects.value = JSON.parse(content)
+    } else {
+      // On client, fetch from public directory
+      const response = await fetch('/data/projects.json')
+      projects.value = await response.json()
     }
     
-    // On client side, return the value from useState
+    projects.value.sort((a, b) => a.order - b.order)
     return projects.value
   }
   

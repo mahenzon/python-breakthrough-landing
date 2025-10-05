@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "stats": "tsx scripts/generate-stats.ts"
+    "stats": "tsx scripts/generate-data.ts"
   },
   "dependencies": {
     "@nuxtjs/i18n": "^10.1.0",

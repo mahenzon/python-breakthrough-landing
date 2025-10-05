@@ -10,36 +10,21 @@ export const useConfig = () => {
       return siteConfig.value
     }
     
-    // Load data on server side
+    // Load data differently based on environment
     if (import.meta.server) {
-      const { join } = await import('path')
+      // During SSR, read from filesystem
       const { readFileSync } = await import('fs')
-      const yaml = await import('js-yaml')
-      
-      const configPath = join(process.cwd(), 'content', 'site-config.yaml')
-      const content = readFileSync(configPath, 'utf8')
-      siteConfig.value = yaml.load(content) as SiteConfig
-      return siteConfig.value
+      const { join } = await import('path')
+      const filePath = join(process.cwd(), 'public', 'data', 'site-config.json')
+      const content = readFileSync(filePath, 'utf-8')
+      siteConfig.value = JSON.parse(content)
+    } else {
+      // On client, fetch from public directory
+      const response = await fetch('/data/site-config.json')
+      siteConfig.value = await response.json()
     }
     
-    // On client side, return the value from useState (populated by server)
-    // Fallback to minimal config if somehow not available
-    return siteConfig.value || {
-      author: {
-        name: '',
-        bio: '',
-        links: [],
-      },
-      course: {
-        title: '',
-        subtitle: '',
-        description: '',
-        features: [],
-      },
-      statistics: {
-        numberOfStudents: 0,
-      },
-    }
+    return siteConfig.value!
   }
   
   return {

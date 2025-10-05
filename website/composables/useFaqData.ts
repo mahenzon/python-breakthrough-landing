@@ -10,20 +10,21 @@ export const useFaqData = () => {
       return faqItems.value
     }
     
-    // Load data on server side
+    // Load data differently based on environment
     if (import.meta.server) {
-      const { join } = await import('path')
+      // During SSR, read from filesystem
       const { readFileSync } = await import('fs')
-      const yaml = await import('js-yaml')
-      
-      const faqPath = join(process.cwd(), 'content', 'faq.yaml')
-      const content = readFileSync(faqPath, 'utf8')
-      faqItems.value = yaml.load(content) as FaqItem[]
-      faqItems.value.sort((a, b) => a.order - b.order)
-      return faqItems.value
+      const { join } = await import('path')
+      const filePath = join(process.cwd(), 'public', 'data', 'faq.json')
+      const content = readFileSync(filePath, 'utf-8')
+      faqItems.value = JSON.parse(content)
+    } else {
+      // On client, fetch from public directory
+      const response = await fetch('/data/faq.json')
+      faqItems.value = await response.json()
     }
     
-    // On client side, return the value from useState
+    faqItems.value.sort((a, b) => a.order - b.order)
     return faqItems.value
   }
   

@@ -325,7 +325,7 @@ const { getConfig } = useConfig()
 const { t } = useI18n()
 
 const config = await getConfig()
-const stats = await getStatistics(config.statistics.numberOfStudents)
+const stats = await getStatistics()
 const course = await getCourseData()
 
 // Use content arrays from separate file (no i18n processing)
