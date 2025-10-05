@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     locales: [
       { code: 'ru', file: 'ru.ts', name: 'Русский' }
     ],
-    langDir: 'locales/',
+    langDir: 'locales',
     strategy: 'no_prefix',
     detectBrowserLanguage: false
   },

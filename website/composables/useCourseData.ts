@@ -1,26 +1,36 @@
-import { join } from 'path';
 import type { Course, CourseStatistics, Module, Topic } from '~/types/course';
-import { parseCourseData } from '~/utils/course-parser';
-import { calculateStatistics } from '~/utils/stats-calculator';
-
-let cachedCourse: Course | null = null;
-let cachedStats: CourseStatistics | null = null;
 
 export function useCourseData() {
   function getCourseData(): Course {
-    if (!cachedCourse) {
+    // During static generation, this will be provided by the server
+    // For now, return a placeholder that will be replaced during build
+    if (import.meta.server) {
+      const { join } = require('path');
+      const { parseCourseData } = require('~/utils/course-parser');
       const courseDataPath = join(process.cwd(), '..', 'course-data');
-      cachedCourse = parseCourseData(courseDataPath);
+      return parseCourseData(courseDataPath);
     }
-    return cachedCourse;
+    // On client side (after hydration), data will be in the rendered HTML
+    return { modules: [] };
   }
   
   function getStatistics(numberOfStudents: number): CourseStatistics {
-    if (!cachedStats) {
+    if (import.meta.server) {
+      const { calculateStatistics } = require('~/utils/stats-calculator');
       const course = getCourseData();
-      cachedStats = calculateStatistics(course, numberOfStudents);
+      return calculateStatistics(course, numberOfStudents);
     }
-    return cachedStats;
+    // Placeholder for client-side
+    return {
+      totalLessons: 0,
+      totalVideos: 0,
+      totalDurationMinutes: 0,
+      totalDurationFormatted: '0 ч 0 мин',
+      numberOfStudents: 0,
+      totalTasks: 0,
+      modulesCount: 0,
+      topicsCount: 0
+    };
   }
   
   function getModuleById(moduleId: string): Module | undefined {
