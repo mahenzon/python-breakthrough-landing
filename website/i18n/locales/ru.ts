@@ -47,8 +47,11 @@ export default {
   },
   projects: {
     title: 'Проекты студентов',
+    courseProjectsTitle: 'Проекты курса',
+    courseProjectsDescription: 'Проекты, которые вы разработаете в процессе обучения',
     viewProject: 'Посмотреть проект',
     noProjects: 'Проекты скоро появятся!',
+    comingSoon: 'Скоро',
   },
   latest: {
     title: 'Последние обновления',
