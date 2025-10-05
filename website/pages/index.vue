@@ -322,11 +322,12 @@ const stats = await getStatistics(config.statistics.numberOfStudents)
 const course = await getCourseData()
 
 // Extract translation arrays as strings
-const whatYouLearnItems = (tm('home.whatYouLearnList') as string[])
-const forWhomItems = (tm('home.forWhomText') as string[])
-const requirementsItems = (tm('home.requirementsList') as string[])
-const howItWorksItems = (tm('home.howItWorksText') as string[])
-const whatYouGetItems = (tm('home.whatYouGetList') as string[])
+// tm() returns message format objects, so we need to convert them to strings
+const whatYouLearnItems = (tm('home.whatYouLearnList') as unknown[]).map(item => String(item))
+const forWhomItems = (tm('home.forWhomText') as unknown[]).map(item => String(item))
+const requirementsItems = (tm('home.requirementsList') as unknown[]).map(item => String(item))
+const howItWorksItems = (tm('home.howItWorksText') as unknown[]).map(item => String(item))
+const whatYouGetItems = (tm('home.whatYouGetList') as unknown[]).map(item => String(item))
 
 // Module accordion state
 const openModules = ref<boolean[]>(new Array(course.modules.length).fill(false))
