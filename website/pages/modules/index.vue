@@ -12,10 +12,11 @@
         <div class="text-gray-600 mb-4 line-clamp-3">
           {{ getPlainText(module.description) }}
         </div>
-        <div class="flex gap-4 text-sm text-gray-500 mb-4">
-          <span>{{ module.topics.length }} {{ $t('course.topics') }}</span>
-          <span>{{ countModuleLessons(module) }} {{ $t('course.lessons') }}</span>
-          <span>{{ calculateModuleDuration(module) }} {{ $t('course.minutes') }}</span>
+        <div class="flex flex-wrap gap-3 text-sm text-gray-600 mb-4">
+          <span>{{ $t('course.topicsCount') }}: {{ module.topics.length }}</span>
+          <span>{{ $t('course.lessonsCount') }}: {{ countModuleLessons(module) }}</span>
+          <span>{{ $t('course.totalVideo') }} {{ formatDuration(module) }}</span>
+          <span>{{ $t('course.tasksCount') }}: {{ countModuleTasks(module) }}</span>
         </div>
         <NuxtLink 
           :to="`/modules/${module.id}`"
@@ -32,6 +33,7 @@
 import type { Module } from '~/types/course'
 
 const { getCourseData } = useCourseData()
+const { t } = useI18n()
 const course = await getCourseData()
 
 function getPlainText(markdown: string): string {
@@ -42,17 +44,35 @@ function countModuleLessons(module: Module): number {
   return module.topics.reduce((sum, topic) => sum + topic.lessons.length, 0)
 }
 
-function calculateModuleDuration(module: Module): number {
+function countModuleTasks(module: Module): number {
   let total = 0
-  module.topics.forEach(topic => {
-    topic.lessons.forEach(lesson => {
-      total += lesson.duration_minutes
+  module.topics.forEach((topic) => {
+    topic.lessons.forEach((lesson) => {
+      total += lesson.tasks || 0
     })
   })
   return total
 }
 
-const { t } = useI18n()
+function formatDuration(module: Module): string {
+  let totalMinutes = 0
+  module.topics.forEach((topic) => {
+    topic.lessons.forEach((lesson) => {
+      totalMinutes += lesson.duration || 0
+    })
+  })
+
+  if (totalMinutes === 0)
+    return '—'
+
+  const hours = Math.floor(totalMinutes / 60)
+  const mins = totalMinutes % 60
+
+  if (hours > 0) {
+    return mins > 0 ? `${hours}ч ${mins}м` : `${hours}ч`
+  }
+  return `${mins}м`
+}
 
 useHead({
   title: `Модули курса - ${t('brand.name')}`,

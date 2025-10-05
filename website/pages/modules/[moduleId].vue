@@ -22,6 +22,16 @@
 
       <!-- Topics Accordion -->
       <div class="space-y-4">
+        <!-- Expand/Collapse All Button -->
+        <div class="flex justify-end">
+          <button 
+            class="px-4 py-2 text-sm text-primary-600 hover:text-primary-700 font-medium"
+            @click="toggleAllTopics()"
+          >
+            {{ allTopicsExpanded ? $t('accordion.collapseAll') : $t('accordion.expandAll') }}
+          </button>
+        </div>
+
         <div
           v-for="(topic, topicIndex) in module.topics"
           :key="topic.id"
@@ -72,13 +82,13 @@
                   <span class="font-medium">{{ lesson.name }}</span>
                 </div>
                 <div class="col-span-3 text-center text-sm text-gray-600">
-                  <span v-if="lesson.duration_minutes > 0">
-                    {{ lesson.duration_minutes }} {{ $t('course.minutes') }}
+                  <span v-if="lesson.duration && lesson.duration > 0">
+                    {{ lesson.duration }} {{ $t('course.minutes') }}
                   </span>
                   <span v-else class="text-gray-400">—</span>
                 </div>
                 <div class="col-span-2 text-center text-sm text-gray-600">
-                  <span v-if="lesson.tasks > 0">{{ lesson.tasks }}</span>
+                  <span v-if="lesson.tasks && lesson.tasks > 0">{{ lesson.tasks }}</span>
                   <span v-else class="text-gray-400">—</span>
                 </div>
               </div>
@@ -109,9 +119,21 @@ const moduleId = route.params.moduleId as string
 const module = await getModuleById(moduleId)
 
 const openTopics = ref<Record<number, boolean>>({})
+const allTopicsExpanded = computed(() => {
+  if (!module) return false
+  return module.topics.every((_, index) => openTopics.value[index] === true)
+})
 
 function toggleTopic(index: number) {
   openTopics.value[index] = !openTopics.value[index]
+}
+
+function toggleAllTopics() {
+  if (!module) return
+  const shouldExpand = !allTopicsExpanded.value
+  module.topics.forEach((_, index) => {
+    openTopics.value[index] = shouldExpand
+  })
 }
 
 const moduleDescriptionHtml = computed(() => {
@@ -127,14 +149,14 @@ const totalLessons = computed(() => {
 const totalDuration = computed(() => {
   if (!module) return 0
   return module.topics.reduce((sum, topic) =>
-    sum + topic.lessons.reduce((lessonSum, lesson) => lessonSum + lesson.duration_minutes, 0),
+    sum + topic.lessons.reduce((lessonSum, lesson) => lessonSum + (lesson.duration || 0), 0),
   0)
 })
 
 const totalTasks = computed(() => {
   if (!module) return 0
   return module.topics.reduce((sum, topic) =>
-    sum + topic.lessons.reduce((lessonSum, lesson) => lessonSum + lesson.tasks, 0),
+    sum + topic.lessons.reduce((lessonSum, lesson) => lessonSum + (lesson.tasks || 0), 0),
   0)
 })
 
@@ -151,12 +173,12 @@ function formatDuration(minutes: number): string {
 }
 
 function getTopicDuration(topic: Topic): string {
-  const duration = topic.lessons.reduce((sum, lesson) => sum + lesson.duration_minutes, 0)
+  const duration = topic.lessons.reduce((sum, lesson) => sum + (lesson.duration || 0), 0)
   return formatDuration(duration)
 }
 
 function getTopicTasks(topic: Topic): number {
-  return topic.lessons.reduce((sum, lesson) => sum + lesson.tasks, 0)
+  return topic.lessons.reduce((sum, lesson) => sum + (lesson.tasks || 0), 0)
 }
 
 useHead({
