@@ -13,7 +13,7 @@ export const useCourseData = () => {
     // Load data on server side
     if (import.meta.server) {
       const { join } = await import('path')
-      const { parseCourseData } = await import('~/utils/course-parser')
+      const { parseCourseData } = await import('~/server/utils/course-parser')
       const courseDataPath = join(process.cwd(), '..', 'course-data')
       courseData.value = parseCourseData(courseDataPath)
       return courseData.value
@@ -25,7 +25,7 @@ export const useCourseData = () => {
   
   const getStatistics = async (numberOfStudents: number): Promise<CourseStatistics> => {
     if (import.meta.server) {
-      const { calculateStatistics } = await import('~/utils/stats-calculator')
+      const { calculateStatistics } = await import('~/server/utils/stats-calculator')
       const course = await getCourseData()
       return calculateStatistics(course, numberOfStudents)
     }
