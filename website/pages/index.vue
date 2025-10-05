@@ -403,5 +403,29 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:image', content: 'https://placehold.co/1200x630/2563eb/ffffff?text=Python+%D0%9F%D0%A0%D0%9E%D1%80%D1%8B%D0%B2' },
   ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Course',
+        name: config.course.title,
+        description: `${config.course.subtitle}. ${t('home.shortDescription')}`,
+        provider: {
+          '@type': 'Person',
+          name: config.author.name,
+        },
+        educationalLevel: 'Beginner to Intermediate',
+        inLanguage: 'ru',
+        numberOfLessons: stats.totalLessons,
+        timeRequired: `PT${stats.totalDurationMinutes}M`,
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5',
+          ratingCount: stats.numberOfStudents,
+        },
+      }),
+    },
+  ],
 })
 </script>

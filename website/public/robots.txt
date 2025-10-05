@@ -1,2 +1,6 @@
-User-Agent: *
-Disallow:
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_nuxt/
+
+Sitemap: https://yourdomain.com/sitemap.xml

@@ -26,6 +26,18 @@ export default defineNuxtConfig({
     url: 'https://yourdomain.com', // Update with actual domain
   },
 
+  sitemap: {
+    strictNuxtContentPaths: true,
+    urls: async () => {
+      // Dynamic routes will be added by nuxt/sitemap automatically
+      return []
+    },
+    defaults: {
+      changefreq: 'weekly',
+      priority: 0.5,
+    },
+  },
+
   nitro: {
     preset: 'github_pages',
   },
