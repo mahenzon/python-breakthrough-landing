@@ -150,7 +150,7 @@
                     <div class="flex flex-wrap gap-3 text-sm text-gray-600 mb-3">
                       <span>{{ $t('course.topicsCount') }}: {{ module.topics.length }}</span>
                       <span>{{ $t('course.lessonsCount') }}: {{ countModuleLessons(module) }}</span>
-                      <span>{{ $t('course.totalVideo') }} {{ formatModuleDuration(module) }}</span>
+                      <span v-if="getModuleDurationMinutes(module) > 0">{{ $t('course.totalVideo') }} {{ formatModuleDuration(module) }}</span>
                     </div>
                   </div>
                   <div class="flex gap-2">
@@ -182,18 +182,16 @@
                   >
                     <div class="font-semibold mb-1">{{ topicIndex + 1 }}. {{ topic.name }}</div>
                     <div class="text-sm text-gray-600 mb-2">
-                      {{ topic.lessons.length }} {{ $t('course.lessons') }} • {{ getTopicDuration(topic) }}
+                      <span>{{ topic.lessons.length }} {{ $t('course.lessons') }}</span>
+                      <span v-if="getTopicDurationMinutes(topic) > 0"> • {{ getTopicDuration(topic) }}</span>
                     </div>
                     <div class="pl-4 space-y-1">
                       <div 
-                        v-for="(lesson, lessonIndex) in topic.lessons.slice(0, 3)" 
+                        v-for="(lesson, lessonIndex) in topic.lessons" 
                         :key="lesson.order"
                         class="text-sm text-gray-500"
                       >
                         {{ lessonIndex + 1 }}. {{ lesson.name }}
-                      </div>
-                      <div v-if="topic.lessons.length > 3" class="text-sm text-gray-400 italic">
-                        ...и ещё {{ topic.lessons.length - 3 }} {{ pluralizeLessons(topic.lessons.length - 3) }}
                       </div>
                     </div>
                   </div>
@@ -359,15 +357,23 @@ function formatDuration(minutes: number | undefined): string {
   return `${mins}м`
 }
 
-function formatModuleDuration(module: Module): string {
-  const totalMinutes = module.topics.reduce((sum, topic) => {
+function getModuleDurationMinutes(module: Module): number {
+  return module.topics.reduce((sum, topic) => {
     return sum + topic.lessons.reduce((topicSum, lesson) => topicSum + (lesson.duration_minutes || 0), 0)
   }, 0)
+}
+
+function formatModuleDuration(module: Module): string {
+  const totalMinutes = getModuleDurationMinutes(module)
   return formatDuration(totalMinutes)
 }
 
+function getTopicDurationMinutes(topic: Topic): number {
+  return topic.lessons.reduce((sum, lesson) => sum + (lesson.duration_minutes || 0), 0)
+}
+
 function getTopicDuration(topic: Topic): string {
-  const totalMinutes = topic.lessons.reduce((sum, lesson) => sum + (lesson.duration_minutes || 0), 0)
+  const totalMinutes = getTopicDurationMinutes(topic)
   return formatDuration(totalMinutes)
 }
 
