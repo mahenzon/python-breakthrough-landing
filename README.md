@@ -51,6 +51,50 @@ npm run generate
 
 Static files will be in `.output/public/`
 
+### Test Static Build Locally
+
+After generating the static site, test it locally to ensure everything works correctly:
+
+**Option 1: Using Nuxt Preview (Recommended)**
+```bash
+cd website
+npm run preview
+```
+Visit `http://localhost:3000` - This uses Nuxt's built-in preview server.
+
+**Option 2: Using npx serve**
+```bash
+cd website
+npx serve .output/public
+```
+Visit `http://localhost:3000` - Serves static files exactly as they'll appear on GitHub Pages.
+
+**Option 3: Using Python's HTTP Server**
+```bash
+cd website/.output/public
+python3 -m http.server 8000
+```
+Visit `http://localhost:8000`
+
+#### What to Verify
+
+After starting the local server, check:
+
+- ✅ **All pages load**: Home, Modules, Statistics, Projects, FAQ, Latest Changes, Collaboration
+- ✅ **Navigation works**: Click all menu links and module/topic links
+- ✅ **Sitemap accessible**: Visit `/sitemap.xml` - should show all pages
+- ✅ **Robots.txt accessible**: Visit `/robots.txt` - should reference sitemap
+- ✅ **Images load**: Check course image, author photo
+- ✅ **No console errors**: Open browser DevTools (F12) and check console
+- ✅ **Responsive design**: Test on different screen sizes (DevTools device toolbar)
+- ✅ **Meta tags present**: View page source, check `<head>` section for meta tags
+- ✅ **Structured data**: Search for `application/ld+json` in homepage source
+
+**Common Issues:**
+- If styles are broken, regenerate with `npm run generate`
+- If links use absolute URLs incorrectly, check `site.url` in `nuxt.config.ts`
+- If pages 404, ensure all routes are properly pre-rendered
+
 ## Features
 
 - ✅ **Static Site Generation** - Pre-rendered HTML for optimal performance
