@@ -90,7 +90,7 @@
           
           <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
             <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.totalDurationFormatted }}</div>
-            <div class="text-gray-600 text-sm">{{ $t('stats.totalDuration') }}</div>
+            <div class="text-gray-600 text-sm">{{ $t('stats.totalVideosDuration') }}</div>
           </div>
           
           <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">

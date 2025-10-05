@@ -36,7 +36,7 @@ export default {
     title: 'Статистика курса',
     totalLessons: 'Всего уроков',
     totalVideos: 'Всего видео',
-    totalDuration: 'Общая длительность',
+    totalVideosDuration: 'Общая длительность видео',
     students: 'Студентов',
     modules: 'Модулей',
     topics: 'Тем',

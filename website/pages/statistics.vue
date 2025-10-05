@@ -15,7 +15,7 @@
       
       <div class="bg-white rounded-lg shadow-lg p-8 text-center">
         <div class="text-5xl font-bold text-primary-600 mb-2">{{ stats.totalDurationFormatted }}</div>
-        <div class="text-gray-600">{{ $t('stats.totalDuration') }}</div>
+        <div class="text-gray-600">{{ $t('stats.totalVideosDuration') }}</div>
       </div>
       
       <div class="bg-white rounded-lg shadow-lg p-8 text-center">
