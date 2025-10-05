@@ -312,7 +312,13 @@
 
 <script setup lang="ts">
 import type { Module, Topic } from '~/types/course'
-import ruLocale from '~/i18n/locales/ru'
+import {
+  whatYouLearnList,
+  forWhomText,
+  requirementsList,
+  howItWorksText,
+  whatYouGetList,
+} from '~/i18n/locales/ru'
 
 const { getStatistics, getCourseData } = useCourseData()
 const { getConfig } = useConfig()
@@ -322,12 +328,12 @@ const config = await getConfig()
 const stats = await getStatistics(config.statistics.numberOfStudents)
 const course = await getCourseData()
 
-// Extract translation arrays directly from locale file to avoid message format object issues
-const whatYouLearnItems = ruLocale.home.whatYouLearnList
-const forWhomItems = ruLocale.home.forWhomText
-const requirementsItems = ruLocale.home.requirementsList
-const howItWorksItems = ruLocale.home.howItWorksText
-const whatYouGetItems = ruLocale.home.whatYouGetList
+// Use content arrays directly imported from locale file (no i18n processing)
+const whatYouLearnItems = whatYouLearnList
+const forWhomItems = forWhomText
+const requirementsItems = requirementsList
+const howItWorksItems = howItWorksText
+const whatYouGetItems = whatYouGetList
 
 // Module accordion state
 const openModules = ref<boolean[]>(new Array(course.modules.length).fill(false))
