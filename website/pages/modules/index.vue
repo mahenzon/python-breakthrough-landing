@@ -52,12 +52,14 @@ function calculateModuleDuration(module: Module): number {
   return total
 }
 
+const { t } = useI18n()
+
 useHead({
-  title: 'Модули курса - Python Breakthrough',
+  title: `Модули курса - ${t('brand.name')}`,
   meta: [
-    { name: 'description', content: 'Все модули курса Python Breakthrough' },
+    { name: 'description', content: `Все модули курса ${t('brand.name')}` },
     { property: 'og:title', content: 'Модули курса' },
-    { property: 'og:description', content: 'Все модули курса Python Breakthrough' },
+    { property: 'og:description', content: `Все модули курса ${t('brand.name')}` },
     { property: 'og:type', content: 'website' },
   ],
 })
