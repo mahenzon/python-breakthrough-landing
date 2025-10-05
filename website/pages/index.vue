@@ -182,7 +182,7 @@
                   >
                     <div class="font-semibold mb-1">{{ topicIndex + 1 }}. {{ topic.name }}</div>
                     <div class="text-sm text-gray-600 mb-2">
-                      <span>{{ topic.lessons.length }} {{ $t('course.lessons') }}</span>
+                      <span>{{ $t('course.lessonsCount') }}: {{ topic.lessons.length }}</span>
                       <span v-if="getTopicDurationMinutes(topic) > 0"> • {{ getTopicDuration(topic) }}</span>
                     </div>
                     <div class="pl-4 space-y-1">
