@@ -1,6 +1,5 @@
 {
   "totalLessons": 263,
-  "totalVideos": 263,
   "totalDurationMinutes": 2530,
   "totalDurationFormatted": "42 ч 10 мин",
   "numberOfStudents": 100,
@@ -433,5 +432,5 @@
       ]
     }
   ],
-  "generatedAt": "2025-10-05T21:15:54.921Z"
+  "generatedAt": "2025-10-05T21:22:44.242Z"
 }

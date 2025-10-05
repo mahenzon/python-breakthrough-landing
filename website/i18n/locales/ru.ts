@@ -35,7 +35,6 @@ export default {
   stats: {
     title: 'Статистика курса',
     totalLessons: 'Всего уроков',
-    totalVideos: 'Всего видео',
     totalVideosDuration: 'Общая длительность видео',
     students: 'Студентов',
     modules: 'Модулей',

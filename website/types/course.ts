@@ -27,7 +27,6 @@ export interface Course {
 
 export interface CourseStatistics {
   totalLessons: number;
-  totalVideos: number;
   totalDurationMinutes: number;
   totalDurationFormatted: string;
   numberOfStudents: number;

@@ -2,15 +2,10 @@
   <div class="container mx-auto px-4 py-12">
     <h1 class="text-4xl font-bold mb-8">{{ $t('stats.title') }}</h1>
     
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
       <div class="bg-white rounded-lg shadow-lg p-8 text-center">
         <div class="text-5xl font-bold text-primary-600 mb-2">{{ stats.totalLessons }}</div>
         <div class="text-gray-600">{{ $t('stats.totalLessons') }}</div>
-      </div>
-      
-      <div class="bg-white rounded-lg shadow-lg p-8 text-center">
-        <div class="text-5xl font-bold text-primary-600 mb-2">{{ stats.totalVideos }}</div>
-        <div class="text-gray-600">{{ $t('stats.totalVideos') }}</div>
       </div>
       
       <div class="bg-white rounded-lg shadow-lg p-8 text-center">

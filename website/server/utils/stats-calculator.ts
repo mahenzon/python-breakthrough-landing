@@ -25,7 +25,6 @@ export function calculateStatistics(course: Course, numberOfStudents: number): C
   
   return {
     totalLessons,
-    totalVideos: totalLessons, // Each lesson has a video
     totalDurationMinutes,
     totalDurationFormatted,
     numberOfStudents,
