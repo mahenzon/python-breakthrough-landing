@@ -9,7 +9,7 @@ export function useConfig() {
         // eslint-disable-next-line @typescript-eslint/no-require-imports
         const { join } = require('path')
         // eslint-disable-next-line @typescript-eslint/no-require-imports
-        const { loadYamlFile } = require('~/utils/yaml-loader')
+        const { loadYamlFile } = require('../utils/yaml-loader')
         const configPath = join(process.cwd(), 'content', 'site-config.yaml')
         cachedConfig = loadYamlFile<SiteConfig>(configPath)
       }

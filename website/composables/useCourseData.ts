@@ -8,7 +8,7 @@ export function useCourseData() {
       // eslint-disable-next-line @typescript-eslint/no-require-imports
       const { join } = require('path')
       // eslint-disable-next-line @typescript-eslint/no-require-imports
-      const { parseCourseData } = require('~/utils/course-parser')
+      const { parseCourseData } = require('../utils/course-parser')
       const courseDataPath = join(process.cwd(), '..', 'course-data')
       return parseCourseData(courseDataPath)
     }
@@ -19,7 +19,7 @@ export function useCourseData() {
   function getStatistics(numberOfStudents: number): CourseStatistics {
     if (import.meta.server) {
       // eslint-disable-next-line @typescript-eslint/no-require-imports
-      const { calculateStatistics } = require('~/utils/stats-calculator')
+      const { calculateStatistics } = require('../utils/stats-calculator')
       const course = getCourseData()
       return calculateStatistics(course, numberOfStudents)
     }
