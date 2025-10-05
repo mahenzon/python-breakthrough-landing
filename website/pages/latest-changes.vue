@@ -17,8 +17,9 @@ const { getLatestChanges } = useLatestChanges()
 const content = await getLatestChanges()
 const renderedContent = marked(content)
 
+const { t } = useI18n()
 useHead({
-  title: 'Последние обновления - Python Breakthrough',
+  title: 'Последние обновления - ${t('brand.name')}',
   meta: [
     { name: 'description', content: 'Последние изменения и обновления курса' },
     { property: 'og:title', content: 'Последние обновления' },

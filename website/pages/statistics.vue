@@ -49,9 +49,10 @@ const { getConfig } = useConfig()
 
 const config = await getConfig()
 const stats = await getStatistics(config.statistics.numberOfStudents)
+const { t } = useI18n()
 
 useHead({
-  title: 'Статистика курса - Python Breakthrough',
+  title: `Статистика курса - ${t('brand.name')}`,
   meta: [
     { name: 'description', content: `Курс содержит ${stats.totalLessons} уроков общей длительностью ${stats.totalDurationFormatted}` },
     { property: 'og:title', content: 'Статистика курса' },

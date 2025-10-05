@@ -36,10 +36,11 @@ function toggleFaq(index: number) {
   openFaq.value = openFaq.value === index ? null : index
 }
 
+const { t } = useI18n()
 useHead({
-  title: 'FAQ - Python Breakthrough',
+  title: 'FAQ - ${t('brand.name')}',
   meta: [
-    { name: 'description', content: 'Часто задаваемые вопросы о курсе Python Breakthrough' },
+    { name: 'description', content: 'Часто задаваемые вопросы о курсе ${t('brand.name')}' },
     { property: 'og:title', content: 'Часто задаваемые вопросы' },
     { property: 'og:description', content: 'Ответы на частые вопросы о курсе' },
     { property: 'og:type', content: 'website' },
