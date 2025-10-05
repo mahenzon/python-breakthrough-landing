@@ -32,7 +32,7 @@
 
 <script setup lang="ts">
 const { getProjects } = useProjectsData()
-const projects = getProjects()
+const projects = await getProjects()
 
 useHead({
   title: 'Проекты студентов - Python Breakthrough',

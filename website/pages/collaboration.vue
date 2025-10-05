@@ -43,7 +43,7 @@
 
 <script setup lang="ts">
 const { getConfig } = useConfig()
-const config = getConfig()
+const config = await getConfig()
 
 useHead({
   title: 'Сотрудничество - Python Breakthrough',

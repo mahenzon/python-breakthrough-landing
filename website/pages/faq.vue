@@ -28,7 +28,7 @@
 
 <script setup lang="ts">
 const { getFaqItems } = useFaqData()
-const faqs = getFaqItems()
+const faqs = await getFaqItems()
 
 const openFaq = ref<number | null>(null)
 

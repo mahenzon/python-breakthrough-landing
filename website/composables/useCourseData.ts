@@ -1,26 +1,28 @@
 import type { Course, CourseStatistics, Module, Topic } from '~/types/course'
 
-export function useCourseData() {
-  function getCourseData(): Course {
+let cachedCourse: Course | null = null
+
+export const useCourseData = () => {
+  const getCourseData = async (): Promise<Course> => {
     // During static generation, this will be provided by the server
     // For now, return a placeholder that will be replaced during build
     if (import.meta.server) {
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
-      const { join } = require('path')
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
-      const { parseCourseData } = require('../utils/course-parser')
-      const courseDataPath = join(process.cwd(), '..', 'course-data')
-      return parseCourseData(courseDataPath)
+      if (!cachedCourse) {
+        const { join } = await import('path')
+        const { parseCourseData } = await import('~/utils/course-parser')
+        const courseDataPath = join(process.cwd(), '..', 'course-data')
+        cachedCourse = parseCourseData(courseDataPath)
+      }
+      return cachedCourse
     }
     // On client side (after hydration), data will be in the rendered HTML
     return { modules: [] }
   }
   
-  function getStatistics(numberOfStudents: number): CourseStatistics {
+  const getStatistics = async (numberOfStudents: number): Promise<CourseStatistics> => {
     if (import.meta.server) {
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
-      const { calculateStatistics } = require('../utils/stats-calculator')
-      const course = getCourseData()
+      const { calculateStatistics } = await import('~/utils/stats-calculator')
+      const course = await getCourseData()
       return calculateStatistics(course, numberOfStudents)
     }
     // Placeholder for client-side
@@ -36,13 +38,13 @@ export function useCourseData() {
     }
   }
   
-  function getModuleById(moduleId: string): Module | undefined {
-    const course = getCourseData()
+  const getModuleById = async (moduleId: string): Promise<Module | undefined> => {
+    const course = await getCourseData()
     return course.modules.find(m => m.id === moduleId)
   }
   
-  function getTopicById(moduleId: string, topicId: string): Topic | undefined {
-    const module = getModuleById(moduleId)
+  const getTopicById = async (moduleId: string, topicId: string): Promise<Topic | undefined> => {
+    const module = await getModuleById(moduleId)
     return module?.topics.find(t => t.id === topicId)
   }
   

@@ -32,7 +32,7 @@
 import type { Module } from '~/types/course'
 
 const { getCourseData } = useCourseData()
-const course = getCourseData()
+const course = await getCourseData()
 
 function getPlainText(markdown: string): string {
   return markdown.replace(/[#*`]/g, '').substring(0, 150) + '...'

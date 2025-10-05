@@ -1,13 +1,12 @@
 let cachedContent: string | null = null
 
-export function useLatestChanges() {
-  function getLatestChanges(): string {
+export const useLatestChanges = () => {
+  const getLatestChanges = async (): Promise<string> => {
     if (import.meta.server) {
       if (!cachedContent) {
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        const { readFileSync } = require('fs')
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        const { join } = require('path')
+        const { join } = await import('path')
+        const { readFileSync } = await import('fs')
+        
         const changesPath = join(process.cwd(), 'content', 'latest-changes.md')
         cachedContent = readFileSync(changesPath, 'utf8')
       }

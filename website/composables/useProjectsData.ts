@@ -2,16 +2,17 @@ import type { StudentProject } from '~/types/content'
 
 let cachedProjects: StudentProject[] | null = null
 
-export function useProjectsData() {
-  function getProjects(): StudentProject[] {
+export const useProjectsData = () => {
+  const getProjects = async (): Promise<StudentProject[]> => {
     if (import.meta.server) {
       if (!cachedProjects) {
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        const { join } = require('path')
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        const { loadYamlFile } = require('../utils/yaml-loader')
+        const { join } = await import('path')
+        const { readFileSync } = await import('fs')
+        const yaml = await import('js-yaml')
+        
         const projectsPath = join(process.cwd(), 'content', 'projects.yaml')
-        cachedProjects = loadYamlFile<StudentProject[]>(projectsPath)
+        const content = readFileSync(projectsPath, 'utf8')
+        cachedProjects = yaml.load(content) as StudentProject[]
         cachedProjects.sort((a, b) => a.order - b.order)
       }
       return cachedProjects!

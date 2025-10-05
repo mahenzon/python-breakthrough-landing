@@ -93,8 +93,8 @@
 const { getStatistics } = useCourseData()
 const { getConfig } = useConfig()
 
-const config = getConfig()
-const stats = getStatistics(config.statistics.numberOfStudents)
+const config = await getConfig()
+const stats = await getStatistics(config.statistics.numberOfStudents)
 
 useHead({
   title: config.course.title,

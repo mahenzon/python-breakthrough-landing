@@ -14,7 +14,7 @@
 import { marked } from 'marked'
 
 const { getLatestChanges } = useLatestChanges()
-const content = getLatestChanges()
+const content = await getLatestChanges()
 const renderedContent = marked(content)
 
 useHead({

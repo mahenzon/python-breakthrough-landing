@@ -2,16 +2,17 @@ import type { FaqItem } from '~/types/content'
 
 let cachedFaq: FaqItem[] | null = null
 
-export function useFaqData() {
-  function getFaqItems(): FaqItem[] {
+export const useFaqData = () => {
+  const getFaqItems = async (): Promise<FaqItem[]> => {
     if (import.meta.server) {
       if (!cachedFaq) {
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        const { join } = require('path')
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        const { loadYamlFile } = require('../utils/yaml-loader')
+        const { join } = await import('path')
+        const { readFileSync } = await import('fs')
+        const yaml = await import('js-yaml')
+        
         const faqPath = join(process.cwd(), 'content', 'faq.yaml')
-        cachedFaq = loadYamlFile<FaqItem[]>(faqPath)
+        const content = readFileSync(faqPath, 'utf8')
+        cachedFaq = yaml.load(content) as FaqItem[]
         cachedFaq.sort((a, b) => a.order - b.order)
       }
       return cachedFaq!
