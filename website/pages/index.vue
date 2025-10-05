@@ -312,22 +312,22 @@
 
 <script setup lang="ts">
 import type { Module, Topic } from '~/types/course'
+import ruLocale from '~/i18n/locales/ru'
 
 const { getStatistics, getCourseData } = useCourseData()
 const { getConfig } = useConfig()
-const { t, tm } = useI18n()
+const { t } = useI18n()
 
 const config = await getConfig()
 const stats = await getStatistics(config.statistics.numberOfStudents)
 const course = await getCourseData()
 
-// Extract translation arrays as strings
-// tm() returns message format objects, so we need to convert them to strings
-const whatYouLearnItems = (tm('home.whatYouLearnList') as unknown[]).map(item => String(item))
-const forWhomItems = (tm('home.forWhomText') as unknown[]).map(item => String(item))
-const requirementsItems = (tm('home.requirementsList') as unknown[]).map(item => String(item))
-const howItWorksItems = (tm('home.howItWorksText') as unknown[]).map(item => String(item))
-const whatYouGetItems = (tm('home.whatYouGetList') as unknown[]).map(item => String(item))
+// Extract translation arrays directly from locale file to avoid message format object issues
+const whatYouLearnItems = ruLocale.home.whatYouLearnList
+const forWhomItems = ruLocale.home.forWhomText
+const requirementsItems = ruLocale.home.requirementsList
+const howItWorksItems = ruLocale.home.howItWorksText
+const whatYouGetItems = ruLocale.home.whatYouGetList
 
 // Module accordion state
 const openModules = ref<boolean[]>(new Array(course.modules.length).fill(false))
