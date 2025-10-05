@@ -47,9 +47,9 @@
                 {{ topicIndex + 1 }}. {{ topic.name }}
               </h2>
               <div class="flex flex-wrap gap-3 text-sm text-gray-500">
-                <span>{{ topic.lessons.length }} {{ $t('course.lessons') }}</span>
-                <span>{{ getTopicDuration(topic) }}</span>
-                <span v-if="getTopicTasks(topic) > 0">{{ getTopicTasks(topic) }} {{ $t('course.tasks') }}</span>
+                <span>{{ $t('course.lessonsCount') }}: {{ topic.lessons.length }}</span>
+                <span>{{ $t('course.totalVideo') }} {{ getTopicDuration(topic) }}</span>
+                <span v-if="getTopicTasks(topic) > 0">{{ $t('course.tasksCount') }}: {{ getTopicTasks(topic) }}</span>
               </div>
             </div>
             <span class="transform transition-transform ml-4" :class="{ 'rotate-180': openTopics[topicIndex] }">
@@ -82,8 +82,8 @@
                   <span class="font-medium">{{ lesson.name }}</span>
                 </div>
                 <div class="col-span-3 text-center text-sm text-gray-600">
-                  <span v-if="lesson.duration && lesson.duration > 0">
-                    {{ lesson.duration }} {{ $t('course.minutes') }}
+                  <span v-if="lesson.duration_minutes && lesson.duration_minutes > 0">
+                    {{ lesson.duration_minutes }} {{ $t('course.minutes') }}
                   </span>
                   <span v-else class="text-gray-400">—</span>
                 </div>
@@ -149,7 +149,7 @@ const totalLessons = computed(() => {
 const totalDuration = computed(() => {
   if (!module) return 0
   return module.topics.reduce((sum, topic) =>
-    sum + topic.lessons.reduce((lessonSum, lesson) => lessonSum + (lesson.duration || 0), 0),
+    sum + topic.lessons.reduce((lessonSum, lesson) => lessonSum + (lesson.duration_minutes || 0), 0),
   0)
 })
 
@@ -173,7 +173,7 @@ function formatDuration(minutes: number): string {
 }
 
 function getTopicDuration(topic: Topic): string {
-  const duration = topic.lessons.reduce((sum, lesson) => sum + (lesson.duration || 0), 0)
+  const duration = topic.lessons.reduce((sum, lesson) => sum + (lesson.duration_minutes || 0), 0)
   return formatDuration(duration)
 }
 

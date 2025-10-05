@@ -58,7 +58,7 @@ function formatDuration(module: Module): string {
   let totalMinutes = 0
   module.topics.forEach((topic) => {
     topic.lessons.forEach((lesson) => {
-      totalMinutes += lesson.duration || 0
+      totalMinutes += lesson.duration_minutes || 0
     })
   })
 

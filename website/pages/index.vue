@@ -361,13 +361,13 @@ function formatDuration(minutes: number | undefined): string {
 
 function formatModuleDuration(module: Module): string {
   const totalMinutes = module.topics.reduce((sum, topic) => {
-    return sum + topic.lessons.reduce((topicSum, lesson) => topicSum + (lesson.duration || 0), 0)
+    return sum + topic.lessons.reduce((topicSum, lesson) => topicSum + (lesson.duration_minutes || 0), 0)
   }, 0)
   return formatDuration(totalMinutes)
 }
 
 function getTopicDuration(topic: Topic): string {
-  const totalMinutes = topic.lessons.reduce((sum, lesson) => sum + (lesson.duration || 0), 0)
+  const totalMinutes = topic.lessons.reduce((sum, lesson) => sum + (lesson.duration_minutes || 0), 0)
   return formatDuration(totalMinutes)
 }
 
