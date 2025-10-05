@@ -318,7 +318,7 @@ import {
   requirementsList,
   howItWorksText,
   whatYouGetList,
-} from '~/i18n/locales/ru'
+} from '~/content/home-content'
 
 const { getStatistics, getCourseData } = useCourseData()
 const { getConfig } = useConfig()
@@ -328,7 +328,7 @@ const config = await getConfig()
 const stats = await getStatistics(config.statistics.numberOfStudents)
 const course = await getCourseData()
 
-// Use content arrays directly imported from locale file (no i18n processing)
+// Use content arrays from separate file (no i18n processing)
 const whatYouLearnItems = whatYouLearnList
 const forWhomItems = forWhomText
 const requirementsItems = requirementsList
