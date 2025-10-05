@@ -68,8 +68,6 @@
 </template>
 
 <script setup lang="ts">
-import type { Module } from '~/types/course'
-
 const route = useRoute()
 const { getModuleById } = useCourseData()
 

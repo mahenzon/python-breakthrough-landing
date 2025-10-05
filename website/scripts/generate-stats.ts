@@ -56,7 +56,7 @@ console.log(`✅ Total Tasks: ${stats.totalTasks}`)
 console.log(`✅ Total Duration: ${stats.totalDurationFormatted} (${stats.totalDurationMinutes} minutes)`)
 console.log(`✅ Number of Students: ${stats.numberOfStudents}`)
 console.log(`\n💾 Stats saved to: ${outputPath}`)
-console.log(`\n📋 Module Breakdown:`)
+console.log('\n📋 Module Breakdown:')
 
 course.modules.forEach((module) => {
   const moduleLessons = module.topics.reduce((sum, topic) => sum + topic.lessons.length, 0)
