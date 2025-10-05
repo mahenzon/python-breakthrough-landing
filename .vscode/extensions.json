@@ -1,0 +1,37 @@
+{
+  "recommendations": [
+    // Vue/Nuxt
+    "vue.volar",
+    "nuxt.mdc",
+    
+    // TypeScript
+    "yoavbls.pretty-ts-errors",
+    
+    // ESLint
+    "dbaeumer.vscode-eslint",
+    
+    // Tailwind CSS
+    "bradlc.vscode-tailwindcss",
+    
+    // Auto imports and path intellisense
+    "christian-kohler.path-intellisense",
+    
+    // Markdown
+    "yzhang.markdown-all-in-one",
+    
+    // YAML
+    "redhat.vscode-yaml",
+    
+    // Git
+    "eamodio.gitlens",
+    
+    // General productivity
+    "usernamehw.errorlens",
+    "streetsidesoftware.code-spell-checker",
+    "editorconfig.editorconfig"
+  ],
+  "unwantedRecommendations": [
+    // Old Vue extension (replaced by Volar)
+    "octref.vetur"
+  ]
+}

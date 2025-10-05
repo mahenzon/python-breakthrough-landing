@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Nuxt: Dev Server",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/website",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "Nuxt: Generate Static",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/website",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "generate"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "ESLint: Fix All",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/website",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "lint:fix"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
+}

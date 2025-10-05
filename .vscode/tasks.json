@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev",
+      "type": "npm",
+      "script": "dev",
+      "path": "website/",
+      "problemMatcher": [],
+      "detail": "Start Nuxt development server"
+    },
+    {
+      "label": "build",
+      "type": "npm",
+      "script": "build",
+      "path": "website/",
+      "problemMatcher": [],
+      "detail": "Build Nuxt for production"
+    },
+    {
+      "label": "generate",
+      "type": "npm",
+      "script": "generate",
+      "path": "website/",
+      "problemMatcher": [],
+      "detail": "Generate static site"
+    },
+    {
+      "label": "lint",
+      "type": "npm",
+      "script": "lint",
+      "path": "website/",
+      "problemMatcher": ["$eslint-stylish"],
+      "detail": "Run ESLint"
+    },
+    {
+      "label": "lint:fix",
+      "type": "npm",
+      "script": "lint:fix",
+      "path": "website/",
+      "problemMatcher": ["$eslint-stylish"],
+      "detail": "Run ESLint and auto-fix issues"
+    }
+  ]
+}
