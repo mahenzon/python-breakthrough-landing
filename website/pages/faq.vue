@@ -37,10 +37,11 @@ function toggleFaq(index: number) {
 }
 
 const { t } = useI18n()
+
 useHead({
-  title: 'FAQ - ${t('brand.name')}',
+  title: `FAQ - ${t('brand.name')}`,
   meta: [
-    { name: 'description', content: 'Часто задаваемые вопросы о курсе ${t('brand.name')}' },
+    { name: 'description', content: `Часто задаваемые вопросы о курсе ${t('brand.name')}` },
     { property: 'og:title', content: 'Часто задаваемые вопросы' },
     { property: 'og:description', content: 'Ответы на частые вопросы о курсе' },
     { property: 'og:type', content: 'website' },

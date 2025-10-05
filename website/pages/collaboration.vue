@@ -46,8 +46,9 @@ const { getConfig } = useConfig()
 const config = await getConfig()
 
 const { t } = useI18n()
+
 useHead({
-  title: 'Сотрудничество - ${t('brand.name')}',
+  title: `Сотрудничество - ${t('brand.name')}`,
   meta: [
     { name: 'description', content: 'Корпоративное обучение и консультации по веб-разработке на Python' },
     { property: 'og:title', content: 'Сотрудничество' },

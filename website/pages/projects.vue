@@ -35,10 +35,11 @@ const { getProjects } = useProjectsData()
 const projects = await getProjects()
 
 const { t } = useI18n()
+
 useHead({
-  title: 'Проекты студентов - ${t('brand.name')}',
+  title: `Проекты студентов - ${t('brand.name')}`,
   meta: [
-    { name: 'description', content: 'Проекты, созданные студентами курса ${t('brand.name')}' },
+    { name: 'description', content: `Проекты, созданные студентами курса ${t('brand.name')}` },
     { property: 'og:title', content: 'Проекты студентов' },
     { property: 'og:description', content: 'Проекты, созданные студентами курса' },
     { property: 'og:type', content: 'website' },
