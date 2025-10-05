@@ -1,0 +1,24 @@
+name: Соблюдение код-стиля
+order: 8
+description: ''
+lessons:
+- name: Зачем соблюдать код-стиль
+  duration_minutes: 0
+  tasks: 0
+  order: 1
+- name: Знакомство с ruff
+  duration_minutes: 19
+  tasks: 0
+  order: 2
+- name: Автоматическое причесывание импортов
+  duration_minutes: 5
+  tasks: 0
+  order: 3
+- name: Подключение новых правил
+  duration_minutes: 14
+  tasks: 1
+  order: 4
+- name: Принуждение к соблюдению код-стиля
+  duration_minutes: 15
+  tasks: 0
+  order: 5

@@ -1,0 +1,28 @@
+name: Установка Python
+order: 2
+description: ''
+lessons:
+- name: Зачем запускать Python локально
+  duration_minutes: 2
+  tasks: 1
+  order: 1
+- name: Установка Scoop на Windows
+  duration_minutes: 5
+  tasks: 1
+  order: 2
+- name: Установка Python на Windows
+  duration_minutes: 9
+  tasks: 0
+  order: 3
+- name: Установка Python на Ubuntu или Debian Linux
+  duration_minutes: 9
+  tasks: 0
+  order: 4
+- name: Установка brew на macOS
+  duration_minutes: 6
+  tasks: 0
+  order: 5
+- name: Установка Python на macOS
+  duration_minutes: 10
+  tasks: 0
+  order: 6

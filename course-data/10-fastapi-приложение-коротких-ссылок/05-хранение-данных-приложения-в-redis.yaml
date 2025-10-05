@@ -1,0 +1,52 @@
+name: Хранение данных приложения в Redis
+order: 5
+description: ''
+lessons:
+- name: Подключение Python приложения к Redis
+  duration_minutes: 9
+  tasks: 1
+  order: 1
+- name: Хранение токенов в Redis
+  duration_minutes: 12
+  tasks: 1
+  order: 2
+- name: Обертка над Redis для работы с токенами
+  duration_minutes: 13
+  tasks: 1
+  order: 3
+- name: Хранение пользователей в Redis
+  duration_minutes: 17
+  tasks: 1
+  order: 4
+- name: Сохранение коротких ссылок в Redis
+  duration_minutes: 18
+  tasks: 2
+  order: 5
+- name: Получение короткой ссылки из Redis
+  duration_minutes: 2
+  tasks: 1
+  order: 6
+- name: Получение коротких ссылок из Redis
+  duration_minutes: 3
+  tasks: 1
+  order: 7
+- name: Обновление короткой ссылки в Redis
+  duration_minutes: 4
+  tasks: 1
+  order: 8
+- name: Удаление короткой ссылки из Redis
+  duration_minutes: 2
+  tasks: 1
+  order: 9
+- name: Уборка. Избавляемся от лишнего кода
+  duration_minutes: 1
+  tasks: 1
+  order: 10
+- name: Проверка наличия короткой ссылки перед записью
+  duration_minutes: 9
+  tasks: 1
+  order: 11
+- name: Реализация в CRUD проверки наличия короткой ссылки
+  duration_minutes: 12
+  tasks: 1
+  order: 12

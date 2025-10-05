@@ -1,0 +1,28 @@
+name: Проверка покрытия
+order: 10
+description: ''
+lessons:
+- name: Зачем проверять покрытие
+  duration_minutes: 1
+  tasks: 0
+  order: 1
+- name: Проверка покрытия в PyCharm
+  duration_minutes: 11
+  tasks: 0
+  order: 2
+- name: Знакомство с coverage
+  duration_minutes: 7
+  tasks: 2
+  order: 3
+- name: Отчёты о покрытии
+  duration_minutes: 5
+  tasks: 4
+  order: 4
+- name: Генерация отчётов
+  duration_minutes: 6
+  tasks: 1
+  order: 5
+- name: Настройки coverage
+  duration_minutes: 19
+  tasks: 1
+  order: 6

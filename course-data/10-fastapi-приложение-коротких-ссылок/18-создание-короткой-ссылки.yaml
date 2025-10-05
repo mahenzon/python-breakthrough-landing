@@ -1,0 +1,40 @@
+name: Создание короткой ссылки
+order: 18
+description: ''
+lessons:
+- name: Представления для создания новой короткой ссылки и Pydantic форма
+  duration_minutes: 11
+  tasks: 3
+  order: 1
+- name: HTML форма создания новой короткой ссылки
+  duration_minutes: 21
+  tasks: 1
+  order: 2
+- name: Макросы в Jinja
+  duration_minutes: 10
+  tasks: 1
+  order: 3
+- name: Кнопки навигации
+  duration_minutes: 5
+  tasks: 1
+  order: 4
+- name: Создание короткой ссылки через форму
+  duration_minutes: 5
+  tasks: 1
+  order: 5
+- name: Обработка ошибки при создании
+  duration_minutes: 15
+  tasks: 1
+  order: 6
+- name: Обработка ошибок валидации формы
+  duration_minutes: 14
+  tasks: 1
+  order: 7
+- name: Аутентификация при создании
+  duration_minutes: 9
+  tasks: 3
+  order: 8
+- name: Проверка кода и исправление ошибок
+  duration_minutes: 3
+  tasks: 3
+  order: 9

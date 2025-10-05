@@ -1,0 +1,16 @@
+name: Poetry
+order: 2
+description: ''
+lessons:
+- name: Установка Poetry
+  duration_minutes: 4
+  tasks: 0
+  order: 1
+- name: Инициализация проекта и установка зависимостей
+  duration_minutes: 10
+  tasks: 0
+  order: 2
+- name: Запуск скриптов в виртуальном окружении через Poetry
+  duration_minutes: 8
+  tasks: 1
+  order: 3

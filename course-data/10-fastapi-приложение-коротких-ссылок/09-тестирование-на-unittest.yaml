@@ -1,0 +1,52 @@
+name: Тестирование на unittest
+order: 9
+description: ''
+lessons:
+- name: Введение в тестирование
+  duration_minutes: 2
+  tasks: 1
+  order: 1
+- name: Организация файлов тестирования
+  duration_minutes: 8
+  tasks: 1
+  order: 2
+- name: Первый тест на unittest
+  duration_minutes: 9
+  tasks: 0
+  order: 3
+- name: Проверка совместимости схем
+  duration_minutes: 8
+  tasks: 3
+  order: 4
+- name: Группировка идентичных проверок
+  duration_minutes: 10
+  tasks: 1
+  order: 5
+- name: Ожидание исключений
+  duration_minutes: 13
+  tasks: 1
+  order: 6
+- name: Переменные окружения на Windows в разных оболочках
+  duration_minutes: 6
+  tasks: 0
+  order: 7
+- name: Тестовое окружение
+  duration_minutes: 15
+  tasks: 1
+  order: 8
+- name: Проверка работы с хранилищем
+  duration_minutes: 6
+  tasks: 1
+  order: 9
+- name: Другие способы валидации
+  duration_minutes: 1
+  tasks: 1
+  order: 10
+- name: Предварительная настройка до теста и уборка за собой
+  duration_minutes: 16
+  tasks: 1
+  order: 11
+- name: Предварительная настройка до всех тестов и уборка за собой
+  duration_minutes: 9
+  tasks: 1
+  order: 12

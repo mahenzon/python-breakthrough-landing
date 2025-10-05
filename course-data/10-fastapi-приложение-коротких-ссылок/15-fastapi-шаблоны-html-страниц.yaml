@@ -1,0 +1,36 @@
+name: FastAPI шаблоны HTML страниц
+order: 15
+description: ''
+lessons:
+- name: Главная страница HTML
+  duration_minutes: 8
+  tasks: 1
+  order: 1
+- name: Отображение представления в документации
+  duration_minutes: 2
+  tasks: 3
+  order: 2
+- name: Шаблон главной страницы
+  duration_minutes: 21
+  tasks: 1
+  order: 3
+- name: Базовый шаблон страницы
+  duration_minutes: 9
+  tasks: 4
+  order: 4
+- name: Навигационная панель
+  duration_minutes: 6
+  tasks: 2
+  order: 5
+- name: Стандартный контекст шаблона
+  duration_minutes: 5
+  tasks: 3
+  order: 6
+- name: Страница о проекте
+  duration_minutes: 5
+  tasks: 1
+  order: 7
+- name: Активная ссылка
+  duration_minutes: 11
+  tasks: 3
+  order: 8

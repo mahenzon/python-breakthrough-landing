@@ -1,0 +1,36 @@
+name: Проектирование таблицы
+order: 2
+description: ''
+lessons:
+- name: Описание таблицы товаров
+  duration_minutes: 10
+  tasks: 0
+  order: 1
+- name: Схема таблицы товаров
+  duration_minutes: 8
+  tasks: 0
+  order: 2
+- name: Тип первичного ключа
+  duration_minutes: 18
+  tasks: 0
+  order: 3
+- name: Создание и удаление таблиц
+  duration_minutes: 5
+  tasks: 0
+  order: 4
+- name: Создание таблицы товаров
+  duration_minutes: 6
+  tasks: 0
+  order: 5
+- name: Описание таблицы клиентов
+  duration_minutes: 5
+  tasks: 1
+  order: 6
+- name: Схема таблицы клиентов
+  duration_minutes: 3
+  tasks: 1
+  order: 7
+- name: Создание таблицы клиентов
+  duration_minutes: 2
+  tasks: 1
+  order: 8

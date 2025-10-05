@@ -1,0 +1,32 @@
+name: FastAPI Auth
+order: 2
+description: ''
+lessons:
+- name: Auth vs Auth
+  duration_minutes: 4
+  tasks: 1
+  order: 1
+- name: Когда использовать Token Auth
+  duration_minutes: 4
+  tasks: 1
+  order: 2
+- name: Токен в строке запроса
+  duration_minutes: 17
+  tasks: 1
+  order: 3
+- name: Токен в заголовках запроса
+  duration_minutes: 9
+  tasks: 1
+  order: 4
+- name: Единый вход в документации Swagger
+  duration_minutes: 12
+  tasks: 1
+  order: 5
+- name: Basic Auth
+  duration_minutes: 24
+  tasks: 1
+  order: 6
+- name: Выбор метода входа
+  duration_minutes: 12
+  tasks: 1
+  order: 7

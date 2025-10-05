@@ -1,0 +1,437 @@
+{
+  "totalLessons": 263,
+  "totalVideos": 263,
+  "totalDurationMinutes": 2530,
+  "totalDurationFormatted": "42 ч 10 мин",
+  "numberOfStudents": 100,
+  "totalTasks": 335,
+  "modulesCount": 8,
+  "topicsCount": 42,
+  "modules": [
+    {
+      "id": "01-введение",
+      "name": "Введение",
+      "order": 1,
+      "topicsCount": 1,
+      "lessonsCount": 2,
+      "totalDuration": 0,
+      "totalTasks": 0,
+      "topics": [
+        {
+          "id": "01-интро",
+          "name": "Интро",
+          "order": 1,
+          "lessonsCount": 2,
+          "totalDuration": 0,
+          "totalTasks": 0
+        }
+      ]
+    },
+    {
+      "id": "03-работа-на-локальном-компьютере",
+      "name": "Работа на локальном компьютере",
+      "order": 3,
+      "topicsCount": 4,
+      "lessonsCount": 18,
+      "totalDuration": 80,
+      "totalTasks": 8,
+      "topics": [
+        {
+          "id": "01-терминал",
+          "name": "Терминал",
+          "order": 1,
+          "lessonsCount": 6,
+          "totalDuration": 19,
+          "totalTasks": 3
+        },
+        {
+          "id": "02-установка-python",
+          "name": "Установка Python",
+          "order": 2,
+          "lessonsCount": 6,
+          "totalDuration": 41,
+          "totalTasks": 2
+        },
+        {
+          "id": "03-repl",
+          "name": "REPL",
+          "order": 3,
+          "lessonsCount": 2,
+          "totalDuration": 0,
+          "totalTasks": 1
+        },
+        {
+          "id": "04-установка-pipx",
+          "name": "Установка pipx",
+          "order": 4,
+          "lessonsCount": 4,
+          "totalDuration": 20,
+          "totalTasks": 2
+        }
+      ]
+    },
+    {
+      "id": "04-pycharm",
+      "name": "PyCharm",
+      "order": 4,
+      "topicsCount": 2,
+      "lessonsCount": 6,
+      "totalDuration": 65,
+      "totalTasks": 3,
+      "topics": [
+        {
+          "id": "01-начало-работы-с-pycharm",
+          "name": "Начало работы с PyCharm",
+          "order": 1,
+          "lessonsCount": 5,
+          "totalDuration": 58,
+          "totalTasks": 3
+        },
+        {
+          "id": "02-плагины",
+          "name": "Плагины",
+          "order": 2,
+          "lessonsCount": 1,
+          "totalDuration": 7,
+          "totalTasks": 0
+        }
+      ]
+    },
+    {
+      "id": "06-рабочее-окружение",
+      "name": "Рабочее окружение",
+      "order": 6,
+      "topicsCount": 4,
+      "lessonsCount": 13,
+      "totalDuration": 59,
+      "totalTasks": 6,
+      "topics": [
+        {
+          "id": "01-виртуальное-окружение-virtualenv",
+          "name": "Виртуальное окружение virtualenv",
+          "order": 1,
+          "lessonsCount": 1,
+          "totalDuration": 0,
+          "totalTasks": 0
+        },
+        {
+          "id": "02-poetry",
+          "name": "Poetry",
+          "order": 2,
+          "lessonsCount": 3,
+          "totalDuration": 22,
+          "totalTasks": 1
+        },
+        {
+          "id": "03-uv",
+          "name": "uv",
+          "order": 3,
+          "lessonsCount": 6,
+          "totalDuration": 29,
+          "totalTasks": 3
+        },
+        {
+          "id": "04-установка-и-использование-инструментов",
+          "name": "Установка и использование инструментов",
+          "order": 4,
+          "lessonsCount": 3,
+          "totalDuration": 8,
+          "totalTasks": 2
+        }
+      ]
+    },
+    {
+      "id": "07-git",
+      "name": "git",
+      "order": 7,
+      "topicsCount": 2,
+      "lessonsCount": 6,
+      "totalDuration": 39,
+      "totalTasks": 7,
+      "topics": [
+        {
+          "id": "01-контроль-версий",
+          "name": "Контроль версий",
+          "order": 1,
+          "lessonsCount": 3,
+          "totalDuration": 30,
+          "totalTasks": 5
+        },
+        {
+          "id": "02-удобное-управление-git",
+          "name": "Удобное управление git",
+          "order": 2,
+          "lessonsCount": 3,
+          "totalDuration": 9,
+          "totalTasks": 2
+        }
+      ]
+    },
+    {
+      "id": "10-fastapi-приложение-коротких-ссылок",
+      "name": "FastAPI приложение коротких ссылок",
+      "order": 10,
+      "topicsCount": 21,
+      "lessonsCount": 172,
+      "totalDuration": 1847,
+      "totalTasks": 227,
+      "topics": [
+        {
+          "id": "01-fastapi-короткие-ссылки-rest-api",
+          "name": "FastAPI короткие ссылки REST API",
+          "order": 1,
+          "lessonsCount": 18,
+          "totalDuration": 246,
+          "totalTasks": 19
+        },
+        {
+          "id": "02-fastapi-auth",
+          "name": "FastAPI Auth",
+          "order": 2,
+          "lessonsCount": 7,
+          "totalDuration": 82,
+          "totalTasks": 7
+        },
+        {
+          "id": "03-знакомство-с-docker-desktop",
+          "name": "Знакомство с Docker Desktop",
+          "order": 3,
+          "lessonsCount": 5,
+          "totalDuration": 43,
+          "totalTasks": 2
+        },
+        {
+          "id": "04-знакомство-с-redis",
+          "name": "Знакомство с Redis",
+          "order": 4,
+          "lessonsCount": 3,
+          "totalDuration": 20,
+          "totalTasks": 6
+        },
+        {
+          "id": "05-хранение-данных-приложения-в-redis",
+          "name": "Хранение данных приложения в Redis",
+          "order": 5,
+          "lessonsCount": 12,
+          "totalDuration": 102,
+          "totalTasks": 13
+        },
+        {
+          "id": "06-команды-в-терминале",
+          "name": "Команды в терминале",
+          "order": 6,
+          "lessonsCount": 5,
+          "totalDuration": 41,
+          "totalTasks": 4
+        },
+        {
+          "id": "07-принуждение-к-типизации",
+          "name": "Принуждение к типизации",
+          "order": 7,
+          "lessonsCount": 5,
+          "totalDuration": 47,
+          "totalTasks": 5
+        },
+        {
+          "id": "08-соблюдение-код-стиля",
+          "name": "Соблюдение код-стиля",
+          "order": 8,
+          "lessonsCount": 5,
+          "totalDuration": 53,
+          "totalTasks": 1
+        },
+        {
+          "id": "09-тестирование-на-unittest",
+          "name": "Тестирование на unittest",
+          "order": 9,
+          "lessonsCount": 12,
+          "totalDuration": 103,
+          "totalTasks": 12
+        },
+        {
+          "id": "10-проверка-покрытия",
+          "name": "Проверка покрытия",
+          "order": 10,
+          "lessonsCount": 6,
+          "totalDuration": 49,
+          "totalTasks": 8
+        },
+        {
+          "id": "11-тестирование-на-pytest",
+          "name": "Тестирование на pytest",
+          "order": 11,
+          "lessonsCount": 24,
+          "totalDuration": 240,
+          "totalTasks": 42
+        },
+        {
+          "id": "12-знакомство-с-github-actions",
+          "name": "Знакомство с GitHub Actions",
+          "order": 12,
+          "lessonsCount": 12,
+          "totalDuration": 170,
+          "totalTasks": 9
+        },
+        {
+          "id": "13-автотесты-и-проверка-покрытия-в-github-actions",
+          "name": "Автотесты и проверка покрытия в GitHub Actions",
+          "order": 13,
+          "lessonsCount": 10,
+          "totalDuration": 217,
+          "totalTasks": 5
+        },
+        {
+          "id": "14-конфигурация-приложения",
+          "name": "Конфигурация приложения",
+          "order": 14,
+          "lessonsCount": 7,
+          "totalDuration": 88,
+          "totalTasks": 27
+        },
+        {
+          "id": "15-fastapi-шаблоны-html-страниц",
+          "name": "FastAPI шаблоны HTML страниц",
+          "order": 15,
+          "lessonsCount": 8,
+          "totalDuration": 67,
+          "totalTasks": 18
+        },
+        {
+          "id": "16-наводим-порядок-перед-большой-работой",
+          "name": "Наводим порядок перед большой работой",
+          "order": 16,
+          "lessonsCount": 5,
+          "totalDuration": 40,
+          "totalTasks": 6
+        },
+        {
+          "id": "17-отображение-коротких-ссылок",
+          "name": "Отображение коротких ссылок",
+          "order": 17,
+          "lessonsCount": 4,
+          "totalDuration": 22,
+          "totalTasks": 10
+        },
+        {
+          "id": "18-создание-короткой-ссылки",
+          "name": "Создание короткой ссылки",
+          "order": 18,
+          "lessonsCount": 9,
+          "totalDuration": 93,
+          "totalTasks": 15
+        },
+        {
+          "id": "19-обновление-короткой-ссылки",
+          "name": "Обновление короткой ссылки",
+          "order": 19,
+          "lessonsCount": 7,
+          "totalDuration": 49,
+          "totalTasks": 7
+        },
+        {
+          "id": "20-удаление-короткой-ссылки",
+          "name": "Удаление короткой ссылки",
+          "order": 20,
+          "lessonsCount": 5,
+          "totalDuration": 38,
+          "totalTasks": 7
+        },
+        {
+          "id": "21-сессия-пользователя",
+          "name": "Сессия пользователя",
+          "order": 21,
+          "lessonsCount": 3,
+          "totalDuration": 37,
+          "totalTasks": 4
+        }
+      ]
+    },
+    {
+      "id": "11-основы-frontend",
+      "name": "Основы Frontend",
+      "order": 11,
+      "topicsCount": 6,
+      "lessonsCount": 30,
+      "totalDuration": 316,
+      "totalTasks": 81,
+      "topics": [
+        {
+          "id": "01-html",
+          "name": "HTML",
+          "order": 1,
+          "lessonsCount": 6,
+          "totalDuration": 87,
+          "totalTasks": 21
+        },
+        {
+          "id": "02-css",
+          "name": "CSS",
+          "order": 2,
+          "lessonsCount": 4,
+          "totalDuration": 36,
+          "totalTasks": 10
+        },
+        {
+          "id": "03-javascript",
+          "name": "JavaScript",
+          "order": 3,
+          "lessonsCount": 6,
+          "totalDuration": 42,
+          "totalTasks": 16
+        },
+        {
+          "id": "04-готовые-наборы-css-bootstrap",
+          "name": "Готовые наборы CSS - Bootstrap",
+          "order": 4,
+          "lessonsCount": 6,
+          "totalDuration": 96,
+          "totalTasks": 16
+        },
+        {
+          "id": "05-сторонний-js",
+          "name": "Сторонний JS",
+          "order": 5,
+          "lessonsCount": 5,
+          "totalDuration": 43,
+          "totalTasks": 13
+        },
+        {
+          "id": "06-публикация-статичного-сайта",
+          "name": "Публикация статичного сайта",
+          "order": 6,
+          "lessonsCount": 3,
+          "totalDuration": 12,
+          "totalTasks": 5
+        }
+      ]
+    },
+    {
+      "id": "12-sql",
+      "name": "SQL",
+      "order": 12,
+      "topicsCount": 2,
+      "lessonsCount": 16,
+      "totalDuration": 124,
+      "totalTasks": 3,
+      "topics": [
+        {
+          "id": "01-знакомство-с-sql",
+          "name": "Знакомство с SQL",
+          "order": 1,
+          "lessonsCount": 8,
+          "totalDuration": 67,
+          "totalTasks": 0
+        },
+        {
+          "id": "02-проектирование-таблицы",
+          "name": "Проектирование таблицы",
+          "order": 2,
+          "lessonsCount": 8,
+          "totalDuration": 57,
+          "totalTasks": 3
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2025-10-05T19:09:37.299Z"
+}

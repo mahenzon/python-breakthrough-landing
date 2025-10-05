@@ -1,0 +1,24 @@
+name: Принуждение к типизации
+order: 7
+description: ''
+lessons:
+- name: Почему нам важно строго соблюдать типы
+  duration_minutes: 0
+  tasks: 2
+  order: 1
+- name: Знакомство с mypy
+  duration_minutes: 10
+  tasks: 0
+  order: 2
+- name: Согласование кода с mypy
+  duration_minutes: 17
+  tasks: 1
+  order: 3
+- name: Строгий mypy
+  duration_minutes: 16
+  tasks: 1
+  order: 4
+- name: mypy и Pydantic
+  duration_minutes: 4
+  tasks: 1
+  order: 5

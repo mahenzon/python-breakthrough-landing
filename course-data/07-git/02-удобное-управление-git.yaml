@@ -1,0 +1,16 @@
+name: Удобное управление git
+order: 2
+description: ''
+lessons:
+- name: Знакомство с GitHub Desktop
+  duration_minutes: 9
+  tasks: 2
+  order: 1
+- name: git в VS Code
+  duration_minutes: 0
+  tasks: 0
+  order: 2
+- name: git в PyCharm
+  duration_minutes: 0
+  tasks: 0
+  order: 3

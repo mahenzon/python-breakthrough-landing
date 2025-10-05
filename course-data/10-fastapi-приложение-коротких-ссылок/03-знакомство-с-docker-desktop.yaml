@@ -1,0 +1,24 @@
+name: Знакомство с Docker Desktop
+order: 3
+description: ''
+lessons:
+- name: Контейнеризация и Docker
+  duration_minutes: 7
+  tasks: 1
+  order: 1
+- name: Установка Docker Desktop на Windows + WSL
+  duration_minutes: 8
+  tasks: 0
+  order: 2
+- name: Установка Docker Desktop на Ubuntu
+  duration_minutes: 13
+  tasks: 0
+  order: 3
+- name: Установка Docker Desktop на macOS
+  duration_minutes: 5
+  tasks: 0
+  order: 4
+- name: Запуск контейнеров в терминале
+  duration_minutes: 10
+  tasks: 1
+  order: 5

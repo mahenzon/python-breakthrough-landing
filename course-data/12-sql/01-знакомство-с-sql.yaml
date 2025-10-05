@@ -1,0 +1,36 @@
+name: Знакомство с SQL
+order: 1
+description: ''
+lessons:
+- name: Что такое базы данных
+  duration_minutes: 7
+  tasks: 0
+  order: 1
+- name: Что такое SQL
+  duration_minutes: 8
+  tasks: 0
+  order: 2
+- name: SQLite
+  duration_minutes: 5
+  tasks: 0
+  order: 3
+- name: Запросы и сортировка
+  duration_minutes: 16
+  tasks: 0
+  order: 4
+- name: Фильтрация
+  duration_minutes: 10
+  tasks: 0
+  order: 5
+- name: Вставка
+  duration_minutes: 9
+  tasks: 0
+  order: 6
+- name: Обновление
+  duration_minutes: 9
+  tasks: 0
+  order: 7
+- name: Удаление
+  duration_minutes: 3
+  tasks: 0
+  order: 8

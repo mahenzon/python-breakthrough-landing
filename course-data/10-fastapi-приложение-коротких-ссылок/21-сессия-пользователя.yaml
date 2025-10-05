@@ -1,0 +1,16 @@
+name: Сессия пользователя
+order: 21
+description: ''
+lessons:
+- name: Что такое сессия
+  duration_minutes: 4
+  tasks: 2
+  order: 1
+- name: Starlette SessionMiddleware
+  duration_minutes: 20
+  tasks: 1
+  order: 2
+- name: flash сообщения о создании
+  duration_minutes: 13
+  tasks: 1
+  order: 3

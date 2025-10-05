@@ -1,0 +1,24 @@
+name: Наводим порядок перед большой работой
+order: 16
+description: ''
+lessons:
+- name: Обновление тестов
+  duration_minutes: 19
+  tasks: 2
+  order: 1
+- name: Расположение кода хранилища
+  duration_minutes: 6
+  tasks: 1
+  order: 2
+- name: Организация HTML представлений
+  duration_minutes: 4
+  tasks: 1
+  order: 3
+- name: Хранилище через зависимость
+  duration_minutes: 5
+  tasks: 1
+  order: 4
+- name: Глобальный экземпляр хранилища
+  duration_minutes: 6
+  tasks: 1
+  order: 5

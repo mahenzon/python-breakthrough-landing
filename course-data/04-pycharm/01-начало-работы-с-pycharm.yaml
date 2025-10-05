@@ -1,0 +1,24 @@
+name: Начало работы с PyCharm
+order: 1
+description: ''
+lessons:
+- name: Где писать код
+  duration_minutes: 1
+  tasks: 0
+  order: 1
+- name: Установка PyCharm на Windows
+  duration_minutes: 10
+  tasks: 1
+  order: 2
+- name: Установка PyCharm на Ubuntu
+  duration_minutes: 20
+  tasks: 1
+  order: 3
+- name: Установка PyCharm на macOS
+  duration_minutes: 14
+  tasks: 0
+  order: 4
+- name: Знакомство с PyCharm и первичная настройка
+  duration_minutes: 13
+  tasks: 1
+  order: 5

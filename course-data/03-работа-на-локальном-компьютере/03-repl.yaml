@@ -1,0 +1,12 @@
+name: REPL
+order: 3
+description: ''
+lessons:
+- name: REPL
+  duration_minutes: 0
+  tasks: 1
+  order: 1
+- name: Нижнее подчеркивание
+  duration_minutes: 0
+  tasks: 0
+  order: 2

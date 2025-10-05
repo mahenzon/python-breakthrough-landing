@@ -1,0 +1,100 @@
+name: Тестирование на pytest
+order: 11
+description: ''
+lessons:
+- name: Почему нам недостаточно unittest
+  duration_minutes: 5
+  tasks: 1
+  order: 1
+- name: Знакомство с pytest
+  duration_minutes: 9
+  tasks: 1
+  order: 2
+- name: Первый тест на pytest
+  duration_minutes: 4
+  tasks: 1
+  order: 3
+- name: Группа тестов на pytest
+  duration_minutes: 5
+  tasks: 2
+  order: 4
+- name: Принудительное завершение pytest
+  duration_minutes: 4
+  tasks: 1
+  order: 5
+- name: Знакомство с conftest
+  duration_minutes: 4
+  tasks: 2
+  order: 6
+- name: Перенос представления в отдельный модуль
+  duration_minutes: 2
+  tasks: 1
+  order: 7
+- name: Первый API тест FastAPI приложения
+  duration_minutes: 17
+  tasks: 2
+  order: 8
+- name: Параметризация в pytest
+  duration_minutes: 6
+  tasks: 2
+  order: 9
+- name: Ожидание исключений на pytest
+  duration_minutes: 11
+  tasks: 1
+  order: 10
+- name: Фикстуры в pytest
+  duration_minutes: 6
+  tasks: 2
+  order: 11
+- name: Фикстура убирает за собой
+  duration_minutes: 6
+  tasks: 1
+  order: 12
+- name: Общие фикстуры в conftest
+  duration_minutes: 9
+  tasks: 1
+  order: 13
+- name: Вложенные фикстуры, частота создания фикстур, api тесты
+  duration_minutes: 28
+  tasks: 2
+  order: 14
+- name: Параметризация фикстур в pytest
+  duration_minutes: 21
+  tasks: 1
+  order: 15
+- name: Косвенная и частичная параметризация фикстур
+  duration_minutes: 28
+  tasks: 2
+  order: 16
+- name: Автоматическое применение фикстур в pytest
+  duration_minutes: 7
+  tasks: 1
+  order: 17
+- name: Плагин pytest-cov
+  duration_minutes: 11
+  tasks: 2
+  order: 18
+- name: Настройки pytest
+  duration_minutes: 12
+  tasks: 1
+  order: 19
+- name: Метки pytest
+  duration_minutes: 10
+  tasks: 4
+  order: 20
+- name: Ожидаемая ошибка - метка xfail
+  duration_minutes: 14
+  tasks: 2
+  order: 21
+- name: Пропуск теста - skip и skipif
+  duration_minutes: 11
+  tasks: 3
+  order: 22
+- name: Отчёт pytest по результатам - флаги r
+  duration_minutes: 4
+  tasks: 4
+  order: 23
+- name: Фикстура caplog
+  duration_minutes: 6
+  tasks: 2
+  order: 24

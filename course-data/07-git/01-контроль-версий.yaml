@@ -1,0 +1,16 @@
+name: Контроль версий
+order: 1
+description: ''
+lessons:
+- name: Знакомство с git в PyCharm
+  duration_minutes: 6
+  tasks: 2
+  order: 1
+- name: .gitignore
+  duration_minutes: 6
+  tasks: 1
+  order: 2
+- name: git - Быстрый старт на Windows
+  duration_minutes: 18
+  tasks: 2
+  order: 3

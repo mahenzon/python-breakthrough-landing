@@ -1,0 +1,8 @@
+name: Виртуальное окружение virtualenv
+order: 1
+description: ''
+lessons:
+- name: Знакомство с virtualenv
+  duration_minutes: 0
+  tasks: 0
+  order: 1

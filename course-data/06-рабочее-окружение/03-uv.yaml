@@ -1,0 +1,28 @@
+name: uv
+order: 3
+description: ''
+lessons:
+- name: Установка uv на *nix
+  duration_minutes: 4
+  tasks: 0
+  order: 1
+- name: Установка uv на Windows
+  duration_minutes: 2
+  tasks: 0
+  order: 2
+- name: uv vs pip и Poetry
+  duration_minutes: 10
+  tasks: 1
+  order: 3
+- name: uv vs virtualenv
+  duration_minutes: 1
+  tasks: 0
+  order: 4
+- name: uv vs pipx
+  duration_minutes: 3
+  tasks: 1
+  order: 5
+- name: uv vs pyenv
+  duration_minutes: 9
+  tasks: 1
+  order: 6

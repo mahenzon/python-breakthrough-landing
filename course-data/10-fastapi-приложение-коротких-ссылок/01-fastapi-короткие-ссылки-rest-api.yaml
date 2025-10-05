@@ -1,0 +1,76 @@
+name: FastAPI короткие ссылки REST API
+order: 1
+description: ''
+lessons:
+- name: Старт FastAPI проекта коротких ссылок
+  duration_minutes: 18
+  tasks: 1
+  order: 1
+- name: API представление
+  duration_minutes: 17
+  tasks: 1
+  order: 2
+- name: Параметры пути, схемы, перенаправление, зависимости view
+  duration_minutes: 22
+  tasks: 1
+  order: 3
+- name: Разделение и API Router
+  duration_minutes: 15
+  tasks: 1
+  order: 4
+- name: Получение данных в форме
+  duration_minutes: 12
+  tasks: 1
+  order: 5
+- name: Получение данных в JSON теле
+  duration_minutes: 8
+  tasks: 2
+  order: 6
+- name: Хранение данных в памяти
+  duration_minutes: 13
+  tasks: 1
+  order: 7
+- name: Удаление записи
+  duration_minutes: 9
+  tasks: 1
+  order: 8
+- name: Нужно больше вложенных роутеров
+  duration_minutes: 10
+  tasks: 1
+  order: 9
+- name: Обновление PUT
+  duration_minutes: 19
+  tasks: 1
+  order: 10
+- name: Обновление PATCH
+  duration_minutes: 10
+  tasks: 1
+  order: 11
+- name: Важность схемы ответа
+  duration_minutes: 7
+  tasks: 1
+  order: 12
+- name: Хранение данных. Задание и решение
+  duration_minutes: 14
+  tasks: 1
+  order: 13
+- name: Логирование событий
+  duration_minutes: 19
+  tasks: 1
+  order: 14
+- name: Цикл жизни приложения
+  duration_minutes: 14
+  tasks: 1
+  order: 15
+- name: BackgroundTasks - откладываем действия
+  duration_minutes: 16
+  tasks: 1
+  order: 16
+- name: Зависимости на уровне роутера
+  duration_minutes: 15
+  tasks: 1
+  order: 17
+- name: Проверка метода запроса
+  duration_minutes: 8
+  tasks: 1
+  order: 18

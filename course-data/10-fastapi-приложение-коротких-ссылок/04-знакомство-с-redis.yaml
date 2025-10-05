@@ -1,0 +1,16 @@
+name: Знакомство с Redis
+order: 4
+description: ''
+lessons:
+- name: Что такое Redis
+  duration_minutes: 9
+  tasks: 4
+  order: 1
+- name: Запуск Redis и первое знакомство
+  duration_minutes: 8
+  tasks: 1
+  order: 2
+- name: Базы данных в Redis
+  duration_minutes: 3
+  tasks: 1
+  order: 3

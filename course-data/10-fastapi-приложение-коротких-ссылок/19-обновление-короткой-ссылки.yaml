@@ -1,0 +1,32 @@
+name: Обновление короткой ссылки
+order: 19
+description: ''
+lessons:
+- name: Рефакторинг ответа с формой
+  duration_minutes: 15
+  tasks: 1
+  order: 1
+- name: Рефакторинг HTML формы
+  duration_minutes: 11
+  tasks: 1
+  order: 2
+- name: Переход к редактированию короткой ссылки
+  duration_minutes: 3
+  tasks: 1
+  order: 3
+- name: Страница редактирования короткой ссылки
+  duration_minutes: 5
+  tasks: 1
+  order: 4
+- name: Проброс текущей короткой ссылки
+  duration_minutes: 6
+  tasks: 1
+  order: 5
+- name: Обновление короткой ссылки
+  duration_minutes: 7
+  tasks: 1
+  order: 6
+- name: Обработка ошибок при обновлении
+  duration_minutes: 2
+  tasks: 1
+  order: 7

@@ -1,0 +1,20 @@
+name: Установка pipx
+order: 4
+description: ''
+lessons:
+- name: Зачем нужен pipx
+  duration_minutes: 1
+  tasks: 2
+  order: 1
+- name: Установка pipx на Windows
+  duration_minutes: 7
+  tasks: 0
+  order: 2
+- name: Установка pipx на Ubuntu Linux
+  duration_minutes: 7
+  tasks: 0
+  order: 3
+- name: Установка pipx на macOS
+  duration_minutes: 5
+  tasks: 0
+  order: 4

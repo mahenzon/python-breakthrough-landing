@@ -1,0 +1,16 @@
+name: Установка и использование инструментов
+order: 4
+description: ''
+lessons:
+- name: Установка black через uv tool на Windows
+  duration_minutes: 2
+  tasks: 1
+  order: 1
+- name: Использование black в терминале
+  duration_minutes: 3
+  tasks: 0
+  order: 2
+- name: автоформатирование black в PyCharm
+  duration_minutes: 3
+  tasks: 1
+  order: 3

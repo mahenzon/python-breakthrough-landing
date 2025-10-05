@@ -1,0 +1,44 @@
+name: Автотесты и проверка покрытия в GitHub Actions
+order: 13
+description: ''
+lessons:
+- name: Обязательный успех для запуска следующей джобы в GitHub Action
+  duration_minutes: 7
+  tasks: 1
+  order: 1
+- name: Запуск тестов в GitHub Actions
+  duration_minutes: 7
+  tasks: 1
+  order: 2
+- name: Запуск контейнеров в GitHub Actions
+  duration_minutes: 10
+  tasks: 1
+  order: 3
+- name: GitHub CLI
+  duration_minutes: 3
+  tasks: 0
+  order: 4
+- name: Локальный запуск CI через act
+  duration_minutes: 15
+  tasks: 0
+  order: 5
+- name: Секреты в локальном act
+  duration_minutes: 5
+  tasks: 0
+  order: 6
+- name: Интерактивные отчёты о покрытии в GitHub
+  duration_minutes: 54
+  tasks: 0
+  order: 7
+- name: Важность проверки покрытия
+  duration_minutes: 24
+  tasks: 1
+  order: 8
+- name: Кастомный бейдж своими силами
+  duration_minutes: 45
+  tasks: 0
+  order: 9
+- name: Артефакты по результатам CI
+  duration_minutes: 47
+  tasks: 1
+  order: 10

@@ -1,0 +1,24 @@
+name: Удаление короткой ссылки
+order: 20
+description: ''
+lessons:
+- name: Модальное окно
+  duration_minutes: 14
+  tasks: 1
+  order: 1
+- name: Представление для удаления короткой ссылки
+  duration_minutes: 4
+  tasks: 1
+  order: 2
+- name: Форма для удаления короткой ссылки
+  duration_minutes: 2
+  tasks: 1
+  order: 3
+- name: Удаление короткой ссылки из хранилища
+  duration_minutes: 2
+  tasks: 1
+  order: 4
+- name: Внезапный HTMX
+  duration_minutes: 16
+  tasks: 3
+  order: 5

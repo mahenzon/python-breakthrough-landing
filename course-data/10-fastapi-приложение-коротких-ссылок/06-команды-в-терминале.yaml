@@ -1,0 +1,24 @@
+name: Команды в терминале
+order: 6
+description: ''
+lessons:
+- name: Свои команды в терминале
+  duration_minutes: 19
+  tasks: 1
+  order: 1
+- name: Команда для проверки токена
+  duration_minutes: 7
+  tasks: 1
+  order: 2
+- name: Команда для отображения токенов
+  duration_minutes: 5
+  tasks: 1
+  order: 3
+- name: Команды для управления токенами
+  duration_minutes: 6
+  tasks: 1
+  order: 4
+- name: Запуск manage скрипта на Windows
+  duration_minutes: 4
+  tasks: 0
+  order: 5

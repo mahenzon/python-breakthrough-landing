@@ -1,0 +1,20 @@
+name: Отображение коротких ссылок
+order: 17
+description: ''
+lessons:
+- name: Раздел коротких ссылок
+  duration_minutes: 8
+  tasks: 2
+  order: 1
+- name: Пустой список коротких ссылок
+  duration_minutes: 3
+  tasks: 1
+  order: 2
+- name: Список всех коротких ссылок
+  duration_minutes: 8
+  tasks: 3
+  order: 3
+- name: Переход на целевой сайт
+  duration_minutes: 3
+  tasks: 4
+  order: 4

@@ -1,0 +1,8 @@
+name: Плагины
+order: 2
+description: ''
+lessons:
+- name: Ставим тему в PyCharm
+  duration_minutes: 7
+  tasks: 0
+  order: 1

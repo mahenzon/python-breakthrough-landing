@@ -1,0 +1,28 @@
+name: Терминал
+order: 1
+description: ''
+lessons:
+- name: Windows CMD
+  duration_minutes: 1
+  tasks: 1
+  order: 1
+- name: PowerShell
+  duration_minutes: 2
+  tasks: 1
+  order: 2
+- name: WSL - Ubuntu на Windows
+  duration_minutes: 11
+  tasks: 1
+  order: 3
+- name: zsh
+  duration_minutes: 0
+  tasks: 0
+  order: 4
+- name: Настройка шрифтов в oh-my-posh
+  duration_minutes: 3
+  tasks: 0
+  order: 5
+- name: Настройка шрифта в терминале PyCharm на Windows
+  duration_minutes: 2
+  tasks: 0
+  order: 6

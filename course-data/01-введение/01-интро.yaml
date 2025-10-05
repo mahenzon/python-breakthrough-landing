@@ -1,0 +1,12 @@
+name: Интро
+order: 1
+description: ''
+lessons:
+- name: Знакомство
+  duration_minutes: 0
+  tasks: 0
+  order: 1
+- name: Чат
+  duration_minutes: 0
+  tasks: 0
+  order: 2

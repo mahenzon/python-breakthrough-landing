@@ -1,0 +1,52 @@
+name: Знакомство с GitHub Actions
+order: 12
+description: ''
+lessons:
+- name: Что такое CI
+  duration_minutes: 6
+  tasks: 3
+  order: 1
+- name: Знакомство с GitHub Actions
+  duration_minutes: 18
+  tasks: 3
+  order: 2
+- name: Контекст текущего запуска
+  duration_minutes: 10
+  tasks: 2
+  order: 3
+- name: События и условия для действий
+  duration_minutes: 22
+  tasks: 0
+  order: 4
+- name: Установка Python и запуск black в Github Actions
+  duration_minutes: 26
+  tasks: 0
+  order: 5
+- name: Доступ PyCharm к GitHub для чтения Actions
+  duration_minutes: 9
+  tasks: 0
+  order: 6
+- name: Обновляем и фиксируем версию uv
+  duration_minutes: 6
+  tasks: 0
+  order: 7
+- name: Установка uv зависимостей в GitHub Actions
+  duration_minutes: 10
+  tasks: 0
+  order: 8
+- name: Запуск mypy в GitHub Actions
+  duration_minutes: 10
+  tasks: 0
+  order: 9
+- name: Запуск ruff в GitHub Actions
+  duration_minutes: 20
+  tasks: 0
+  order: 10
+- name: Запуск pre-commit в GitHub Actions
+  duration_minutes: 14
+  tasks: 0
+  order: 11
+- name: Бейджи по результатам CI
+  duration_minutes: 19
+  tasks: 1
+  order: 12
