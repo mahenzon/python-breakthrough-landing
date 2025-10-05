@@ -315,13 +315,13 @@
 <script setup lang="ts">
 import type { Module, Topic } from '~/types/course'
 
-const { getStatistics, getCourse } = useCourseData()
+const { getStatistics, getCourseData } = useCourseData()
 const { getConfig } = useConfig()
 const { t, tm } = useI18n()
 
 const config = await getConfig()
 const stats = await getStatistics(config.statistics.numberOfStudents)
-const course = await getCourse()
+const course = await getCourseData()
 
 // Extract translation arrays as strings
 const whatYouLearnItems = (tm('home.whatYouLearnList') as string[])
