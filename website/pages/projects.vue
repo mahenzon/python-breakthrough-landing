@@ -11,9 +11,14 @@
         <div class="bg-white rounded-lg shadow-lg p-6 border-2 border-primary-200">
           <h3 class="text-xl font-bold mb-3">URL Shortener</h3>
           <p class="text-gray-600 mb-4">Сервис для создания коротких ссылок. Разработаете полноценное веб-приложение с базой данных, REST API и современным интерфейсом.</p>
-          <div class="inline-block px-4 py-2 bg-gray-100 text-gray-600 rounded">
-            {{ $t('projects.comingSoon') }}
-          </div>
+          <a 
+            href="https://example.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-block px-4 py-2 bg-primary-600 text-white rounded hover:bg-primary-700 transition"
+          >
+            {{ $t('projects.viewProject') }} →
+          </a>
         </div>
         
         <div class="bg-white rounded-lg shadow-lg p-6 border-2 border-primary-200">
