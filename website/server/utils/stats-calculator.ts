@@ -1,4 +1,4 @@
-import type { Course, CourseStatistics } from '~/types/course'
+import type { Course, CourseStatistics } from '../../types/course'
 
 export function calculateStatistics(course: Course, numberOfStudents: number): CourseStatistics {
   let totalLessons = 0

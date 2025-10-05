@@ -1,6 +1,6 @@
 import { join } from 'path'
-import type { Module, Topic, Course } from '~/types/course'
-import { loadYamlFile, getDirectories, getFiles } from '~/server/utils/yaml-loader'
+import type { Module, Topic, Course } from '../../types/course'
+import { loadYamlFile, getDirectories, getFiles } from './yaml-loader'
 
 export function parseCourseData(courseDataPath: string): Course {
   const modules: Module[] = []
