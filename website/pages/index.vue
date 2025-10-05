@@ -77,15 +77,25 @@
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-12">{{ $t('stats.title') }}</h2>
         
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
           <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
             <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.modulesCount }}</div>
-            <div class="text-gray-600 text-sm">{{ pluralizeModules(stats.modulesCount) }}</div>
+            <div class="text-gray-600 text-sm">{{ $t('stats.modules') }}</div>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
+            <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.topicsCount }}</div>
+            <div class="text-gray-600 text-sm">{{ $t('stats.topics') }}</div>
           </div>
           
           <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
             <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.totalLessons }}</div>
-            <div class="text-gray-600 text-sm">{{ pluralizeLessons(stats.totalLessons) }}</div>
+            <div class="text-gray-600 text-sm">{{ $t('stats.lessons') }}</div>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
+            <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.totalTasks }}</div>
+            <div class="text-gray-600 text-sm">{{ $t('stats.tasks') }}</div>
           </div>
           
           <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
@@ -382,39 +392,6 @@ function getTopicDurationMinutes(topic: Topic): number {
 function getTopicDuration(topic: Topic): string {
   const totalMinutes = getTopicDurationMinutes(topic)
   return formatDuration(totalMinutes)
-}
-
-// Pluralization functions for Russian
-function pluralizeLessons(count: number): string {
-  const lastDigit = count % 10
-  const lastTwoDigits = count % 100
-
-  if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
-    return `${count} Уроков`
-  }
-  if (lastDigit === 1) {
-    return `${count} Урок`
-  }
-  if (lastDigit >= 2 && lastDigit <= 4) {
-    return `${count} Урока`
-  }
-  return `${count} Уроков`
-}
-
-function pluralizeModules(count: number): string {
-  const lastDigit = count % 10
-  const lastTwoDigits = count % 100
-
-  if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
-    return `${count} Модулей`
-  }
-  if (lastDigit === 1) {
-    return `${count} Модуль`
-  }
-  if (lastDigit >= 2 && lastDigit <= 4) {
-    return `${count} Модуля`
-  }
-  return `${count} Модулей`
 }
 
 useHead({
