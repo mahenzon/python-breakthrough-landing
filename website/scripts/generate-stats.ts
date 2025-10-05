@@ -1,8 +1,8 @@
 import { writeFileSync } from 'fs'
 import { join } from 'path'
-import { parseCourseData } from '../utils/course-parser'
-import { calculateStatistics } from '../utils/stats-calculator'
-import { loadYamlFile } from '../utils/yaml-loader'
+import { parseCourseData } from '../server/utils/course-parser'
+import { calculateStatistics } from '../server/utils/stats-calculator'
+import { loadYamlFile } from '../server/utils/yaml-loader'
 import type { SiteConfig } from '../types/site-config'
 
 // Parse course data
