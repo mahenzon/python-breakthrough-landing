@@ -1,0 +1,28 @@
+name: JavaScript
+order: 3
+description: ''
+lessons:
+- name: Зачем нужен JS
+  duration_minutes: 3
+  tasks: 0
+  order: 1
+- name: Первые строки на JS
+  duration_minutes: 6
+  tasks: 3
+  order: 2
+- name: Взаимодействие с компонентами
+  duration_minutes: 17
+  tasks: 4
+  order: 3
+- name: Обновление части элемента
+  duration_minutes: 7
+  tasks: 1
+  order: 4
+- name: Простая обработка событий
+  duration_minutes: 6
+  tasks: 4
+  order: 5
+- name: Слушатели событий
+  duration_minutes: 3
+  tasks: 4
+  order: 6

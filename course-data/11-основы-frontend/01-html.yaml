@@ -1,0 +1,28 @@
+name: HTML
+order: 1
+description: ''
+lessons:
+- name: Что такое HTML
+  duration_minutes: 8
+  tasks: 3
+  order: 1
+- name: Первая HTML страница
+  duration_minutes: 12
+  tasks: 3
+  order: 2
+- name: Популярные теги
+  duration_minutes: 26
+  tasks: 4
+  order: 3
+- name: Формы
+  duration_minutes: 15
+  tasks: 4
+  order: 4
+- name: Стандартные поля ввода
+  duration_minutes: 22
+  tasks: 4
+  order: 5
+- name: Правила хорошего тона
+  duration_minutes: 4
+  tasks: 3
+  order: 6

@@ -1,0 +1,16 @@
+name: Публикация статичного сайта
+order: 6
+description: ''
+lessons:
+- name: Выбор хостинга
+  duration_minutes: 4
+  tasks: 0
+  order: 1
+- name: Загрузка в репозиторий
+  duration_minutes: 3
+  tasks: 1
+  order: 2
+- name: Запуск на GitHub Pages
+  duration_minutes: 5
+  tasks: 4
+  order: 3

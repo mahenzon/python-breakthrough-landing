@@ -1,0 +1,28 @@
+name: Готовые наборы CSS - Bootstrap
+order: 4
+description: ''
+lessons:
+- name: Готовые наборы CSS - зачем нужны и какие бывают
+  duration_minutes: 11
+  tasks: 0
+  order: 1
+- name: Знакомство с Bootstrap
+  duration_minutes: 6
+  tasks: 1
+  order: 2
+- name: Система именования в Bootstrap
+  duration_minutes: 16
+  tasks: 5
+  order: 3
+- name: Подключение Bootstrap CSS
+  duration_minutes: 20
+  tasks: 2
+  order: 4
+- name: Сетка страницы
+  duration_minutes: 29
+  tasks: 4
+  order: 5
+- name: Панель навигации
+  duration_minutes: 14
+  tasks: 4
+  order: 6

@@ -1,0 +1,24 @@
+name: Сторонний JS
+order: 5
+description: ''
+lessons:
+- name: Использование стороннего JS
+  duration_minutes: 7
+  tasks: 1
+  order: 1
+- name: Подключение Bootstrap JS
+  duration_minutes: 6
+  tasks: 3
+  order: 2
+- name: Тултипы и поповеры
+  duration_minutes: 13
+  tasks: 3
+  order: 3
+- name: Фильтр на JS
+  duration_minutes: 12
+  tasks: 3
+  order: 4
+- name: Что если нет JS
+  duration_minutes: 5
+  tasks: 3
+  order: 5

@@ -1,0 +1,20 @@
+name: CSS
+order: 2
+description: ''
+lessons:
+- name: Знакомство с CSS
+  duration_minutes: 5
+  tasks: 2
+  order: 1
+- name: Стиль элемента
+  duration_minutes: 6
+  tasks: 4
+  order: 2
+- name: Базовые стили элементов страницы
+  duration_minutes: 14
+  tasks: 4
+  order: 3
+- name: Стили и классы
+  duration_minutes: 11
+  tasks: 0
+  order: 4
