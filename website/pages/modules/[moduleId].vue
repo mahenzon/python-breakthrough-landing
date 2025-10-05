@@ -164,12 +164,12 @@ function formatDuration(minutes: number): string {
   const hours = Math.floor(minutes / 60)
   const mins = minutes % 60
   if (hours > 0 && mins > 0) {
-    return `${hours}${t('course.hours')} ${mins}${t('course.minutes')}`
+    return `${hours} ${t('course.hours')} ${mins} ${t('course.minutes')}`
   }
   if (hours > 0) {
-    return `${hours}${t('course.hours')}`
+    return `${hours} ${t('course.hours')}`
   }
-  return `${mins}${t('course.minutes')}`
+  return `${mins} ${t('course.minutes')}`
 }
 
 function getTopicDuration(topic: Topic): string {

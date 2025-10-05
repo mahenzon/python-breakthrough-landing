@@ -352,9 +352,9 @@ function formatDuration(minutes: number | undefined): string {
   const hours = Math.floor(minutes / 60)
   const mins = minutes % 60
   if (hours > 0) {
-    return mins > 0 ? `${hours}ч ${mins}м` : `${hours}ч`
+    return mins > 0 ? `${hours} ч ${mins} м` : `${hours} ч`
   }
-  return `${mins}м`
+  return `${mins} м`
 }
 
 function getModuleDurationMinutes(module: Module): number {

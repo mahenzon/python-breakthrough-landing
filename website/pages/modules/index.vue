@@ -69,9 +69,9 @@ function formatDuration(module: Module): string {
   const mins = totalMinutes % 60
 
   if (hours > 0) {
-    return mins > 0 ? `${hours}ч ${mins}м` : `${hours}ч`
+    return mins > 0 ? `${hours} ч ${mins} м` : `${hours} ч`
   }
-  return `${mins}м`
+  return `${mins} м`
 }
 
 useHead({
