@@ -91,9 +91,9 @@
 
 <script setup lang="ts">
 const { getStatistics } = useCourseData()
-const { getSiteConfig } = useSiteConfig()
+const { getConfig } = useConfig()
 
-const config = getSiteConfig()
+const config = getConfig()
 const stats = getStatistics(config.statistics.numberOfStudents)
 
 useHead({

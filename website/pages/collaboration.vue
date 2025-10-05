@@ -42,8 +42,8 @@
 </template>
 
 <script setup lang="ts">
-const { getSiteConfig } = useSiteConfig()
-const config = getSiteConfig()
+const { getConfig } = useConfig()
+const config = getConfig()
 
 useHead({
   title: 'Сотрудничество - Python Breakthrough',
