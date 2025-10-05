@@ -17,28 +17,42 @@
           </div>
           
           <!-- Mobile menu button -->
-          <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-gray-700">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path v-if="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          <button class="md:hidden text-gray-700" @click="mobileMenuOpen = !mobileMenuOpen">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                v-if="!mobileMenuOpen"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+              <path
+                v-else
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
         
         <!-- Mobile menu -->
         <div v-if="mobileMenuOpen" class="md:hidden mt-4 space-y-2 pb-4">
-          <NuxtLink to="/" @click="mobileMenuOpen = false" class="block py-2 hover:text-primary-600 transition">{{ $t('nav.home') }}</NuxtLink>
-          <NuxtLink to="/modules" @click="mobileMenuOpen = false" class="block py-2 hover:text-primary-600 transition">{{ $t('nav.modules') }}</NuxtLink>
-          <NuxtLink to="/statistics" @click="mobileMenuOpen = false" class="block py-2 hover:text-primary-600 transition">{{ $t('nav.statistics') }}</NuxtLink>
-          <NuxtLink to="/projects" @click="mobileMenuOpen = false" class="block py-2 hover:text-primary-600 transition">{{ $t('nav.projects') }}</NuxtLink>
-          <NuxtLink to="/faq" @click="mobileMenuOpen = false" class="block py-2 hover:text-primary-600 transition">{{ $t('nav.faq') }}</NuxtLink>
-          <NuxtLink to="/latest-changes" @click="mobileMenuOpen = false" class="block py-2 hover:text-primary-600 transition">{{ $t('nav.latest') }}</NuxtLink>
+          <NuxtLink to="/" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.home') }}</NuxtLink>
+          <NuxtLink to="/modules" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.modules') }}</NuxtLink>
+          <NuxtLink to="/statistics" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.statistics') }}</NuxtLink>
+          <NuxtLink to="/projects" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.projects') }}</NuxtLink>
+          <NuxtLink to="/faq" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.faq') }}</NuxtLink>
+          <NuxtLink to="/latest-changes" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.latest') }}</NuxtLink>
         </div>
       </nav>
     </header>
     
     <main class="flex-grow">
-      <slot />
+      <slot ></slot>
     </main>
     
     <footer class="bg-white border-t mt-12">
@@ -52,5 +66,5 @@
 </template>
 
 <script setup lang="ts">
-const mobileMenuOpen = ref(false);
+const mobileMenuOpen = ref(false)
 </script>

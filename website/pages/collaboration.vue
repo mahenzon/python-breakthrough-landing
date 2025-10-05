@@ -42,8 +42,8 @@
 </template>
 
 <script setup lang="ts">
-const { getSiteConfig } = useSiteConfig();
-const config = getSiteConfig();
+const { getSiteConfig } = useSiteConfig()
+const config = getSiteConfig()
 
 useHead({
   title: 'Сотрудничество - Python Breakthrough',
@@ -51,7 +51,7 @@ useHead({
     { name: 'description', content: 'Корпоративное обучение и консультации по веб-разработке на Python' },
     { property: 'og:title', content: 'Сотрудничество' },
     { property: 'og:description', content: 'Корпоративное обучение и консультации' },
-    { property: 'og:type', content: 'website' }
-  ]
-});
+    { property: 'og:type', content: 'website' },
+  ],
+})
 </script>

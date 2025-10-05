@@ -31,8 +31,8 @@
 </template>
 
 <script setup lang="ts">
-const { getProjects } = useProjectsData();
-const projects = getProjects();
+const { getProjects } = useProjectsData()
+const projects = getProjects()
 
 useHead({
   title: 'Проекты студентов - Python Breakthrough',
@@ -40,7 +40,7 @@ useHead({
     { name: 'description', content: 'Проекты, созданные студентами курса Python Breakthrough' },
     { property: 'og:title', content: 'Проекты студентов' },
     { property: 'og:description', content: 'Проекты, созданные студентами курса' },
-    { property: 'og:type', content: 'website' }
-  ]
-});
+    { property: 'og:type', content: 'website' },
+  ],
+})
 </script>

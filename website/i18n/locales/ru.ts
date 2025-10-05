@@ -7,7 +7,7 @@ export default {
     projects: 'Проекты',
     faq: 'Вопросы',
     latest: 'Обновления',
-    collaboration: 'Сотрудничество'
+    collaboration: 'Сотрудничество',
   },
   course: {
     modules: 'Модули курса',
@@ -17,11 +17,11 @@ export default {
     tasks: 'Задач',
     minutes: 'мин',
     module: 'Модуль',
-    topic: 'Тема'
+    topic: 'Тема',
   },
   accordion: {
     expandAll: 'Развернуть всё',
-    collapseAll: 'Свернуть всё'
+    collapseAll: 'Свернуть всё',
   },
   stats: {
     title: 'Статистика курса',
@@ -31,30 +31,30 @@ export default {
     students: 'Студентов',
     modules: 'Модулей',
     topics: 'Тем',
-    tasks: 'Задач'
+    tasks: 'Задач',
   },
   faq: {
-    title: 'Часто задаваемые вопросы'
+    title: 'Часто задаваемые вопросы',
   },
   projects: {
     title: 'Проекты студентов',
     viewProject: 'Посмотреть проект',
-    noProjects: 'Проекты скоро появятся!'
+    noProjects: 'Проекты скоро появятся!',
   },
   latest: {
-    title: 'Последние обновления'
+    title: 'Последние обновления',
   },
   collaboration: {
-    title: 'Сотрудничество'
+    title: 'Сотрудничество',
   },
   footer: {
-    copyright: 'Все права защищены'
+    copyright: 'Все права защищены',
   },
   cta: {
     ready: 'Готовы начать обучение?',
-    explore: 'Изучите все модули или свяжитесь для сотрудничества'
-  }
-} as const;
+    explore: 'Изучите все модули или свяжитесь для сотрудничества',
+  },
+} as const
 
 // Optional: Export type for other locales to follow
 export type LocaleMessages = typeof import('./ru').default;

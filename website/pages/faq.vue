@@ -9,8 +9,8 @@
         class="bg-white rounded-lg shadow"
       >
         <button
-          @click="toggleFaq(index)"
           class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition"
+          @click="toggleFaq(index)"
         >
           <span class="font-medium text-lg">{{ faq.question }}</span>
           <span class="transform transition-transform" :class="{ 'rotate-180': openFaq === index }">
@@ -27,13 +27,13 @@
 </template>
 
 <script setup lang="ts">
-const { getFaqItems } = useFaqData();
-const faqs = getFaqItems();
+const { getFaqItems } = useFaqData()
+const faqs = getFaqItems()
 
-const openFaq = ref<number | null>(null);
+const openFaq = ref<number | null>(null)
 
 function toggleFaq(index: number) {
-  openFaq.value = openFaq.value === index ? null : index;
+  openFaq.value = openFaq.value === index ? null : index
 }
 
 useHead({
@@ -42,7 +42,7 @@ useHead({
     { name: 'description', content: 'Часто задаваемые вопросы о курсе Python Breakthrough' },
     { property: 'og:title', content: 'Часто задаваемые вопросы' },
     { property: 'og:description', content: 'Ответы на частые вопросы о курсе' },
-    { property: 'og:type', content: 'website' }
-  ]
-});
+    { property: 'og:type', content: 'website' },
+  ],
+})
 </script>

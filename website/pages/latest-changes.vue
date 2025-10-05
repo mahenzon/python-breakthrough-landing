@@ -11,11 +11,11 @@
 </template>
 
 <script setup lang="ts">
-import { marked } from 'marked';
+import { marked } from 'marked'
 
-const { getLatestChanges } = useLatestChanges();
-const content = getLatestChanges();
-const renderedContent = marked(content);
+const { getLatestChanges } = useLatestChanges()
+const content = getLatestChanges()
+const renderedContent = marked(content)
 
 useHead({
   title: 'Последние обновления - Python Breakthrough',
@@ -23,7 +23,7 @@ useHead({
     { name: 'description', content: 'Последние изменения и обновления курса' },
     { property: 'og:title', content: 'Последние обновления' },
     { property: 'og:description', content: 'Последние изменения и обновления курса' },
-    { property: 'og:type', content: 'website' }
-  ]
-});
+    { property: 'og:type', content: 'website' },
+  ],
+})
 </script>

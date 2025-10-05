@@ -6,7 +6,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxt/eslint',
   ],
 
   css: ['~/assets/css/tailwind.css'],
@@ -14,11 +15,11 @@ export default defineNuxtConfig({
   i18n: {
     defaultLocale: 'ru',
     locales: [
-      { code: 'ru', file: 'ru.ts', name: 'Русский' }
+      { code: 'ru', file: 'ru.ts', name: 'Русский' },
     ],
     langDir: 'locales',
     strategy: 'no_prefix',
-    detectBrowserLanguage: false
+    detectBrowserLanguage: false,
   },
 
   site: {
@@ -26,6 +27,6 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'github_pages'
-  }
+    preset: 'github_pages',
+  },
 })

@@ -90,12 +90,11 @@
 </template>
 
 <script setup lang="ts">
-const { getCourseData, getStatistics } = useCourseData();
-const { getSiteConfig } = useSiteConfig();
+const { getStatistics } = useCourseData()
+const { getSiteConfig } = useSiteConfig()
 
-const config = getSiteConfig();
-const course = getCourseData();
-const stats = getStatistics(config.statistics.numberOfStudents);
+const config = getSiteConfig()
+const stats = getStatistics(config.statistics.numberOfStudents)
 
 useHead({
   title: config.course.title,
@@ -103,7 +102,7 @@ useHead({
     { name: 'description', content: config.course.subtitle },
     { property: 'og:title', content: config.course.title },
     { property: 'og:description', content: config.course.subtitle },
-    { property: 'og:type', content: 'website' }
-  ]
-});
+    { property: 'og:type', content: 'website' },
+  ],
+})
 </script>

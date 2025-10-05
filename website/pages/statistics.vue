@@ -44,11 +44,11 @@
 </template>
 
 <script setup lang="ts">
-const { getStatistics } = useCourseData();
-const { getSiteConfig } = useSiteConfig();
+const { getStatistics } = useCourseData()
+const { getSiteConfig } = useSiteConfig()
 
-const config = getSiteConfig();
-const stats = getStatistics(config.statistics.numberOfStudents);
+const config = getSiteConfig()
+const stats = getStatistics(config.statistics.numberOfStudents)
 
 useHead({
   title: 'Статистика курса - Python Breakthrough',
@@ -56,7 +56,7 @@ useHead({
     { name: 'description', content: `Курс содержит ${stats.totalLessons} уроков общей длительностью ${stats.totalDurationFormatted}` },
     { property: 'og:title', content: 'Статистика курса' },
     { property: 'og:description', content: `${stats.totalLessons} уроков, ${stats.totalDurationFormatted}` },
-    { property: 'og:type', content: 'website' }
-  ]
-});
+    { property: 'og:type', content: 'website' },
+  ],
+})
 </script>

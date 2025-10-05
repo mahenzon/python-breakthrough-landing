@@ -29,27 +29,27 @@
 </template>
 
 <script setup lang="ts">
-import type { Module } from '~/types/course';
+import type { Module } from '~/types/course'
 
-const { getCourseData } = useCourseData();
-const course = getCourseData();
+const { getCourseData } = useCourseData()
+const course = getCourseData()
 
 function getPlainText(markdown: string): string {
-  return markdown.replace(/[#*`]/g, '').substring(0, 150) + '...';
+  return markdown.replace(/[#*`]/g, '').substring(0, 150) + '...'
 }
 
 function countModuleLessons(module: Module): number {
-  return module.topics.reduce((sum, topic) => sum + topic.lessons.length, 0);
+  return module.topics.reduce((sum, topic) => sum + topic.lessons.length, 0)
 }
 
 function calculateModuleDuration(module: Module): number {
-  let total = 0;
+  let total = 0
   module.topics.forEach(topic => {
     topic.lessons.forEach(lesson => {
-      total += lesson.duration_minutes;
-    });
-  });
-  return total;
+      total += lesson.duration_minutes
+    })
+  })
+  return total
 }
 
 useHead({
@@ -58,7 +58,7 @@ useHead({
     { name: 'description', content: 'Все модули курса Python Breakthrough' },
     { property: 'og:title', content: 'Модули курса' },
     { property: 'og:description', content: 'Все модули курса Python Breakthrough' },
-    { property: 'og:type', content: 'website' }
-  ]
-});
+    { property: 'og:type', content: 'website' },
+  ],
+})
 </script>
