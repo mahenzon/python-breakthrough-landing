@@ -4,7 +4,7 @@
       <nav class="container mx-auto px-4 py-4">
         <div class="flex justify-between items-center">
           <NuxtLink to="/" class="text-2xl font-bold text-primary-600">
-            Python Breakthrough
+            {{ $t('brand.name') }}
           </NuxtLink>
           
           <div class="hidden md:flex space-x-6">
@@ -58,7 +58,7 @@
     <footer class="bg-white border-t mt-12">
       <div class="container mx-auto px-4 py-8">
         <div class="text-center text-sm text-gray-600">
-          © {{ new Date().getFullYear() }} Python Breakthrough. {{ $t('footer.copyright') }}
+          © {{ new Date().getFullYear() }} {{ $t('brand.name') }}. {{ $t('footer.copyright') }}
         </div>
       </div>
     </footer>
