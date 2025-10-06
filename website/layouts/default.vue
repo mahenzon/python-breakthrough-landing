@@ -10,7 +10,7 @@
           <div class="hidden md:flex space-x-6">
             <NuxtLink to="/" class="hover:text-primary-600 transition">{{ $t('nav.home') }}</NuxtLink>
             <NuxtLink to="/modules" class="hover:text-primary-600 transition">{{ $t('nav.modules') }}</NuxtLink>
-            <NuxtLink to="/course-links" class="hover:text-primary-600 transition font-semibold text-primary-600">{{ $t('nav.courseLinks') }}</NuxtLink>
+            <NuxtLink to="/course-links" class="hover:text-primary-600 transition">{{ $t('nav.courseLinks') }}</NuxtLink>
             <NuxtLink to="/statistics" class="hover:text-primary-600 transition">{{ $t('nav.statistics') }}</NuxtLink>
             <NuxtLink to="/projects" class="hover:text-primary-600 transition">{{ $t('nav.projects') }}</NuxtLink>
             <NuxtLink to="/faq" class="hover:text-primary-600 transition">{{ $t('nav.faq') }}</NuxtLink>
@@ -44,7 +44,7 @@
         <div v-if="mobileMenuOpen" class="md:hidden mt-4 space-y-2 pb-4">
           <NuxtLink to="/" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.home') }}</NuxtLink>
           <NuxtLink to="/modules" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.modules') }}</NuxtLink>
-          <NuxtLink to="/course-links" class="block py-2 hover:text-primary-600 transition font-semibold text-primary-600" @click="mobileMenuOpen = false">{{ $t('nav.courseLinks') }}</NuxtLink>
+          <NuxtLink to="/course-links" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.courseLinks') }}</NuxtLink>
           <NuxtLink to="/statistics" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.statistics') }}</NuxtLink>
           <NuxtLink to="/projects" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.projects') }}</NuxtLink>
           <NuxtLink to="/faq" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.faq') }}</NuxtLink>
