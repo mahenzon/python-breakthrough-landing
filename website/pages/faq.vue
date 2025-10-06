@@ -23,6 +23,21 @@
         </div>
       </div>
     </div>
+    
+    <!-- Contact CTA Section -->
+    <div class="max-w-3xl mx-auto mt-12">
+      <div class="bg-gradient-to-br from-primary-50 to-primary-100 rounded-lg shadow-lg p-8 text-center">
+        <div class="text-5xl mb-4">💬</div>
+        <h2 class="text-2xl font-bold mb-2">{{ $t('faq.stillHaveQuestions') }}</h2>
+        <p class="text-lg text-gray-700 mb-6">{{ $t('faq.happyToAnswer') }}</p>
+        <NuxtLink 
+          to="/contacts" 
+          class="inline-block px-8 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-semibold text-lg"
+        >
+          {{ $t('faq.contactMe') }} →
+        </NuxtLink>
+      </div>
+    </div>
   </div>
 </template>
 

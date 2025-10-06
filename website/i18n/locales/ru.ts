@@ -45,6 +45,9 @@ export default {
   },
   faq: {
     title: 'Часто задаваемые вопросы',
+    stillHaveQuestions: 'Остались вопросы?',
+    happyToAnswer: 'С удовольствием отвечу',
+    contactMe: 'Связаться со мной',
   },
   projects: {
     title: 'Проекты студентов',
