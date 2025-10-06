@@ -23,7 +23,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: 'https://yourdomain.com', // Update with actual domain
+    url: 'https://web.mahenzon.ru',
   },
 
   sitemap: {

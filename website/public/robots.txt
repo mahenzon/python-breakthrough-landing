@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /_nuxt/
 
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://web.mahenzon.ru/sitemap.xml
