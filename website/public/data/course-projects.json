@@ -1,0 +1,18 @@
+[
+  {
+    "id": "url-shortener",
+    "title": "URL Shortener",
+    "description": "Сервис для создания коротких ссылок. Разработаете полноценное веб-приложение с базой данных, REST API и современным интерфейсом.",
+    "url": "https://example.com",
+    "status": "available",
+    "order": 1
+  },
+  {
+    "id": "classified",
+    "title": "Classified",
+    "description": "To be delivered",
+    "url": "",
+    "status": "coming_soon",
+    "order": 2
+  }
+]

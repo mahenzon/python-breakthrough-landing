@@ -4,7 +4,7 @@ import { parseCourseData } from '../server/utils/course-parser'
 import { calculateStatistics } from '../server/utils/stats-calculator'
 import { loadYamlFile } from '../server/utils/yaml-loader'
 import type { SiteConfig } from '../types/site-config'
-import type { FaqItem, StudentProject } from '../types/content'
+import type { FaqItem, StudentProject, CourseProject } from '../types/content'
 import { marked } from 'marked'
 
 const publicDir = join(process.cwd(), 'public', 'data')
@@ -66,13 +66,19 @@ const faqData = loadYamlFile<FaqItem[]>(faqPath)
 writeFileSync(join(publicDir, 'faq.json'), JSON.stringify(faqData, null, 2))
 console.log('✅ faq.json generated')
 
-// 5. Generate projects data
-const projectsPath = join(process.cwd(), 'content', 'projects.yaml')
-const projectsData = loadYamlFile<StudentProject[]>(projectsPath)
-writeFileSync(join(publicDir, 'projects.json'), JSON.stringify(projectsData, null, 2))
-console.log('✅ projects.json generated')
+// 5. Generate student projects data
+const studentProjectsPath = join(process.cwd(), 'content', 'students-projects.yaml')
+const studentProjectsData = loadYamlFile<StudentProject[]>(studentProjectsPath)
+writeFileSync(join(publicDir, 'students-projects.json'), JSON.stringify(studentProjectsData, null, 2))
+console.log('✅ students-projects.json generated')
 
-// 6. Generate latest changes HTML
+// 6. Generate course projects data
+const courseProjectsPath = join(process.cwd(), 'content', 'course-projects.yaml')
+const courseProjectsData = loadYamlFile<CourseProject[]>(courseProjectsPath)
+writeFileSync(join(publicDir, 'course-projects.json'), JSON.stringify(courseProjectsData, null, 2))
+console.log('✅ course-projects.json generated')
+
+// 7. Generate latest changes HTML
 const latestChangesPath = join(process.cwd(), 'content', 'latest-changes.md')
 const latestChangesContent = readFileSync(latestChangesPath, 'utf-8')
 const latestChangesHtml = await marked(latestChangesContent)

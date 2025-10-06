@@ -11,3 +11,12 @@ export interface StudentProject {
   author?: string;
   order: number;
 }
+
+export interface CourseProject {
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+  status: 'available' | 'coming_soon';
+  order: number;
+}

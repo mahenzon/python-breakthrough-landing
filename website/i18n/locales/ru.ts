@@ -44,6 +44,8 @@ export default {
     lessonsPlural: 'Уроков | Урок | Урока',
     tasks: 'Задач | Задача | Задачи',
     studentsPlural: 'Студентов | Студент | Студента',
+    courseProjects: 'Проекты курса',
+    studentProjects: 'Проекты студентов',
   },
   faq: {
     title: 'Часто задаваемые вопросы',

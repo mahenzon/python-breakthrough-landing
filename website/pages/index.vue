@@ -79,36 +79,65 @@
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-12">{{ $t('stats.title') }}</h2>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
-          <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
-            <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.modulesCount }}</div>
-            <div class="text-gray-600 text-sm">{{ $t('stats.modules', stats.modulesCount) }}</div>
-          </div>
+        <!-- Main Statistics -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+          <UiStatsCard 
+            :value="stats.modulesCount"
+            :label="$t('stats.modules', stats.modulesCount)"
+            value-color="text-primary-600"
+          />
 
-          <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
-            <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.topicsCount }}</div>
-            <div class="text-gray-600 text-sm">{{ $t('stats.topics', stats.topicsCount) }}</div>
-          </div>
+          <UiStatsCard 
+            :value="stats.topicsCount"
+            :label="$t('stats.topics', stats.topicsCount)"
+            value-color="text-primary-600"
+          />
 
-          <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
-            <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.totalLessons }}</div>
-            <div class="text-gray-600 text-sm">{{ $t('stats.lessonsPlural', stats.totalLessons) }}</div>
-          </div>
+          <UiStatsCard 
+            :value="stats.totalLessons"
+            :label="$t('stats.lessonsPlural', stats.totalLessons)"
+            value-color="text-primary-600"
+          />
 
-          <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
-            <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.totalTasks }}</div>
-            <div class="text-gray-600 text-sm">{{ $t('stats.tasks', stats.totalTasks) }}</div>
-          </div>
+          <UiStatsCard 
+            :value="stats.totalTasks"
+            :label="$t('stats.tasks', stats.totalTasks)"
+            value-color="text-primary-600"
+          />
 
-          <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
-            <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.totalDurationFormatted }}</div>
-            <div class="text-gray-600 text-sm">{{ $t('stats.totalVideosDuration') }}</div>
-          </div>
+          <UiStatsCard 
+            :value="stats.numberOfStudents"
+            :label="$t('stats.studentsPlural', stats.numberOfStudents)"
+            value-color="text-primary-600"
+          />
+        </div>
 
-          <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
-            <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.numberOfStudents }}</div>
-            <div class="text-gray-600 text-sm">{{ $t('stats.studentsPlural', stats.numberOfStudents) }}</div>
-          </div>
+        <!-- Divider -->
+        <div class="max-w-4xl mx-auto my-8">
+          <div class="border-t-2 border-dashed border-gray-300"></div>
+        </div>
+
+        <!-- Additional Statistics -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <UiStatsCard 
+            :value="stats.totalDurationFormatted"
+            :label="$t('stats.totalVideosDuration')"
+            value-color="text-primary-600"
+          />
+
+          <UiStatsCard 
+            :value="courseProjectsCount"
+            :label="$t('stats.courseProjects')"
+            value-color="text-primary-600"
+            to="/projects"
+          />
+
+          <UiStatsCard 
+            :value="studentProjectsCount"
+            :label="$t('stats.studentProjects')"
+            value-color="text-primary-600"
+            to="/projects"
+          />
         </div>
       </div>
     </section>
@@ -461,11 +490,18 @@ import {
 } from '~/content/home-content'
 const { getStatistics, getCourseData } = useCourseData()
 const { getConfig } = useConfig()
+const { getStudentProjects, getCourseProjects } = useProjectsData()
 const { t } = useI18n()
 
 const config = await getConfig()
 const stats = await getStatistics()
 const course = await getCourseData()
+const studentProjects = await getStudentProjects()
+const courseProjects = await getCourseProjects()
+
+// Count projects
+const courseProjectsCount = courseProjects.length
+const studentProjectsCount = studentProjects.length
 
 // Use content arrays from separate file (no i18n processing)
 const whatYouLearnItems = whatYouLearnList

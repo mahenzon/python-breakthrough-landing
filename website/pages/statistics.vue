@@ -2,47 +2,84 @@
   <div class="container mx-auto px-4 py-12">
     <h1 class="text-4xl font-bold mb-8">{{ $t('stats.title') }}</h1>
     
+    <!-- Main Statistics -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-      <div class="bg-white rounded-lg shadow-lg p-8 text-center">
-        <div class="text-5xl font-bold text-primary-600 mb-2">{{ stats.totalLessons }}</div>
-        <div class="text-gray-600">{{ $t('stats.totalLessons') }}</div>
-      </div>
+      <UiStatsCard 
+        :value="stats.totalLessons"
+        :label="$t('stats.totalLessons')"
+        value-color="text-primary-600"
+      />
       
-      <div class="bg-white rounded-lg shadow-lg p-8 text-center">
-        <div class="text-5xl font-bold text-primary-600 mb-2">{{ stats.totalDurationFormatted }}</div>
-        <div class="text-gray-600">{{ $t('stats.totalVideosDuration') }}</div>
-      </div>
+      <UiStatsCard 
+        :value="stats.totalDurationFormatted"
+        :label="$t('stats.totalVideosDuration')"
+        value-color="text-primary-600"
+      />
       
-      <div class="bg-white rounded-lg shadow-lg p-8 text-center">
-        <div class="text-5xl font-bold text-primary-600 mb-2">{{ stats.numberOfStudents }}</div>
-        <div class="text-gray-600">{{ $t('stats.studentsPlural', stats.numberOfStudents) }}</div>
-      </div>
+      <UiStatsCard 
+        :value="stats.numberOfStudents"
+        :label="$t('stats.studentsPlural', stats.numberOfStudents)"
+        value-color="text-primary-600"
+      />
     </div>
     
+    <!-- Detailed Statistics -->
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white rounded-lg shadow-lg p-8 text-center">
-        <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.modulesCount }}</div>
-        <div class="text-gray-600">{{ $t('stats.modules', stats.modulesCount) }}</div>
-      </div>
+      <UiStatsCard 
+        :value="stats.modulesCount"
+        :label="$t('stats.modules', stats.modulesCount)"
+        value-color="text-primary-600"
+      />
       
-      <div class="bg-white rounded-lg shadow-lg p-8 text-center">
-        <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.topicsCount }}</div>
-        <div class="text-gray-600">{{ $t('stats.topics', stats.topicsCount) }}</div>
-      </div>
+      <UiStatsCard 
+        :value="stats.topicsCount"
+        :label="$t('stats.topics', stats.topicsCount)"
+        value-color="text-primary-600"
+      />
       
-      <div class="bg-white rounded-lg shadow-lg p-8 text-center">
-        <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.totalTasks }}</div>
-        <div class="text-gray-600">{{ $t('stats.tasks', stats.totalTasks) }}</div>
-      </div>
+      <UiStatsCard 
+        :value="stats.totalTasks"
+        :label="$t('stats.tasks', stats.totalTasks)"
+        value-color="text-primary-600"
+      />
+    </div>
+
+    <!-- Divider -->
+    <div class="max-w-2xl mx-auto my-8">
+      <div class="border-t-2 border-dashed border-gray-300"></div>
+    </div>
+
+    <!-- Projects Statistics -->
+    <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+      <UiStatsCard 
+        :value="courseProjectsCount"
+        :label="$t('stats.courseProjects')"
+        value-color="text-primary-600"
+        to="/projects"
+      />
+      
+      <UiStatsCard 
+        :value="studentProjectsCount"
+        :label="$t('stats.studentProjects')"
+        value-color="text-primary-600"
+        to="/projects"
+      />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 const { getStatistics } = useCourseData()
+const { getStudentProjects, getCourseProjects } = useProjectsData()
 
 const stats = await getStatistics()
+const studentProjects = await getStudentProjects()
+const courseProjects = await getCourseProjects()
 const { t } = useI18n()
+
+// Count projects
+const courseProjectsCount = courseProjects.length
+const studentProjectsCount = studentProjects.length
 
 useHead({
   title: `Статистика курса - ${t('brand.name')}`,
