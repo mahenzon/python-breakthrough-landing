@@ -467,11 +467,6 @@ const config = await getConfig()
 const stats = await getStatistics()
 const course = await getCourseData()
 
-for (let index = 0; index < 112; index++) {
-  const text = t('stats.modules', index);
-  console.log('so??', index, text)
-}
-
 // Use content arrays from separate file (no i18n processing)
 const whatYouLearnItems = whatYouLearnList
 const forWhomItems = forWhomText
