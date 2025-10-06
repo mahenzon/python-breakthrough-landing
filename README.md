@@ -1,6 +1,6 @@
 # Python Breakthrough Landing Site
 
-A static landing site for the Python Breakthrough web development course, built with Nuxt 3 and deployed to GitHub Pages.
+A [static landing site for the Python Breakthrough web development course](https://web.mahenzon.ru/), built with Nuxt 3 and deployed to GitHub Pages.
 
 ## Project Structure
 
@@ -194,27 +194,6 @@ npm run stats        # Regenerate data files only (course.json, stats.json, faq.
 
 **Note:** `npm run generate` automatically runs `npm run stats` first, so data files are always up-to-date in production builds.
 
-## Project Status
-
-🚧 **In Development** - Core features implemented, refinement ongoing.
-
-### Completed
-- ✅ Project setup and configuration
-- ✅ TypeScript types and data models
-- ✅ Content loading utilities
-- ✅ Layout and navigation
-- ✅ Core pages (home, modules, statistics, etc.)
-- ✅ Deployment documentation
-
-### Todo
-- ⏳ Complete server-side data loading
-- ⏳ Module and topic detail pages
-- ⏳ Advanced components (accordions, etc.)
-- ⏳ Final testing and optimization
-
-## Contributing
-
-This is a personal project for the Python Breakthrough course. Contributions are not currently accepted.
 
 ## License
 
