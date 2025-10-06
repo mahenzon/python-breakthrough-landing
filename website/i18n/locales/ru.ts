@@ -10,7 +10,7 @@ export default {
     projects: 'Проекты',
     faq: 'Вопросы',
     latest: 'Обновления',
-    collaboration: 'Сотрудничество',
+    contacts: 'Контакты',
     courseLinks: 'Ссылки на курс',
   },
   course: {
@@ -57,8 +57,21 @@ export default {
   latest: {
     title: 'Последние обновления',
   },
-  collaboration: {
-    title: 'Сотрудничество',
+  contacts: {
+    title: 'Контакты',
+    subtitle: 'Свяжитесь со мной',
+    emailTitle: 'Любые вопросы по почте',
+    emailDescription: 'Отвечу на любые вопросы о курсе и обучении',
+    socialTitle: 'Отвечу на любые вопросы в соц. сетях и мессенджерах',
+    corporateTitle: 'Корпоративное обучение',
+    corporateDescription: 'Предлагаю услуги по обучению сотрудников вашей компании веб-разработке на Python. Возможны индивидуальные и групповые консультации.',
+    corporateIncludesTitle: 'Что включено:',
+    corporateInclude1: 'Групповые занятия для команды',
+    corporateInclude2: 'Индивидуальные консультации',
+    corporateInclude3: 'Ревью кода и архитектуры',
+    corporateInclude4: 'Адаптация программы под ваши задачи',
+    legalTitle: 'Для юридических лиц:',
+    legalDescription: 'Работаю с организациями по договору. Предоставляю все необходимые документы.',
   },
   footer: {
     copyright: 'Все права защищены',

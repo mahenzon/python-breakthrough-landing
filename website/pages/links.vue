@@ -90,7 +90,7 @@
         <p class="text-gray-700 text-lg mb-8 max-w-2xl mx-auto">{{ $t('courseLinks.invoiceDescription') }}</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <NuxtLink 
-            to="/collaboration" 
+            to="/contacts" 
             class="px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-semibold text-lg"
           >
             {{ $t('courseLinks.contactsTitle') }} →

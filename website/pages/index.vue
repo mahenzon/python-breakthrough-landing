@@ -15,8 +15,8 @@
                 <NuxtLink to="/modules" class="px-8 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-semibold">
                   {{ $t('nav.modules') }}
                 </NuxtLink>
-                <NuxtLink to="/collaboration" class="px-8 py-3 bg-white border-2 border-primary-600 text-primary-600 rounded-lg hover:bg-primary-50 transition font-semibold">
-                  {{ $t('nav.collaboration') }}
+                <NuxtLink to="/contacts" class="px-8 py-3 bg-white border-2 border-primary-600 text-primary-600 rounded-lg hover:bg-primary-50 transition font-semibold">
+                  {{ $t('nav.contacts') }}
                 </NuxtLink>
               </div>
             </div>
@@ -386,7 +386,7 @@
             <h3 class="text-3xl font-bold mb-6">{{ $t('courseLinks.invoiceTitle') }}</h3>
             <p class="text-gray-700 text-lg mb-8 max-w-2xl mx-auto">{{ $t('courseLinks.invoiceDescription') }}</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-              <NuxtLink to="/collaboration" class="px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-semibold text-lg">
+              <NuxtLink to="/contacts" class="px-8 py-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-semibold text-lg">
                 {{ $t('courseLinks.contactsTitle') }} →
               </NuxtLink>
             </div>

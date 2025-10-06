@@ -14,7 +14,7 @@
             <NuxtLink to="/statistics" active-class="font-semibold text-primary-600" class="hover:text-primary-600 transition">{{ $t('nav.statistics') }}</NuxtLink>
             <NuxtLink to="/projects" active-class="font-semibold text-primary-600" class="hover:text-primary-600 transition">{{ $t('nav.projects') }}</NuxtLink>
             <NuxtLink to="/faq" active-class="font-semibold text-primary-600" class="hover:text-primary-600 transition">{{ $t('nav.faq') }}</NuxtLink>
-            <NuxtLink to="/latest-changes" active-class="font-semibold text-primary-600" class="hover:text-primary-600 transition">{{ $t('nav.latest') }}</NuxtLink>
+            <NuxtLink to="/contacts" active-class="font-semibold text-primary-600" class="hover:text-primary-600 transition">{{ $t('nav.contacts') }}</NuxtLink>
           </div>
           
           <!-- Mobile menu button -->
@@ -48,7 +48,7 @@
           <NuxtLink to="/statistics" active-class="font-semibold text-primary-600" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.statistics') }}</NuxtLink>
           <NuxtLink to="/projects" active-class="font-semibold text-primary-600" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.projects') }}</NuxtLink>
           <NuxtLink to="/faq" active-class="font-semibold text-primary-600" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.faq') }}</NuxtLink>
-          <NuxtLink to="/latest-changes" active-class="font-semibold text-primary-600" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.latest') }}</NuxtLink>
+          <NuxtLink to="/contacts" active-class="font-semibold text-primary-600" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.contacts') }}</NuxtLink>
         </div>
       </nav>
     </header>
