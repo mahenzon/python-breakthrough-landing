@@ -72,5 +72,4 @@ defineProps<{
   studentProjectsCount: number
 }>()
 
-const { t } = useI18n()
 </script>
