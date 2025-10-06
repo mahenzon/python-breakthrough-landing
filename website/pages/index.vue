@@ -212,7 +212,7 @@
     </section>
     
     <!-- Under Development Section -->
-    <section class="py-16 bg-white border-t-4 border-primary-500">
+    <section class="py-16 bg-white border-t-4 border-b-4 border-primary-500">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
           <div class="text-center mb-8">
