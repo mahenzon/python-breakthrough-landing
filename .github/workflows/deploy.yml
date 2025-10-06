@@ -37,6 +37,9 @@ jobs:
         run: |
           cd website
           npm run generate
+        # Note: This runs "npm run stats && nuxt generate"
+        # - npm run stats: Generates data files (course.json, stats.json, latest-changes.json, etc.)
+        # - nuxt generate: Builds static site with pre-rendered pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

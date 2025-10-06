@@ -135,7 +135,37 @@ All content files are in `website/content/`:
 - `site-config.yaml` - Author info, course details
 - `faq.yaml` - FAQ questions and answers
 - `projects.yaml` - Student projects
-- `latest-changes.md` - Latest updates
+- `latest-changes.md` - Latest updates (changelog)
+
+### Update Changelog
+
+The changelog page (`/changelog`) displays content from `website/content/latest-changes.md`.
+
+**Important:** After editing the markdown file, you must regenerate the data files:
+
+```bash
+cd website
+
+# Option 1: Regenerate all data files (recommended)
+npm run stats
+
+# Option 2: Full rebuild (includes data generation)
+npm run generate
+
+# Option 3: Just for development
+npm run dev
+# Then visit http://localhost:3000/changelog
+```
+
+**How it works:**
+1. Edit `website/content/latest-changes.md` - Add your changelog entries in Markdown
+2. Run `npm run stats` - Converts Markdown to HTML and generates `public/data/latest-changes.json`
+3. The `/changelog` page reads from the generated JSON file
+
+**For deployment:**
+- The GitHub Actions workflow automatically runs `npm run generate` which includes data generation
+- All JSON files (including `latest-changes.json`) are regenerated on every deployment
+- Just commit and push your markdown changes - the rest happens automatically
 
 ## Deployment
 
@@ -154,12 +184,15 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete guide.
 ## Development Commands
 
 ```bash
-npm run dev          # Start dev server
+npm run dev          # Start dev server (auto-regenerates data on restart)
 npm run build        # Build for production
-npm run generate     # Generate static site
+npm run generate     # Generate static site (includes data generation)
 npm run preview      # Preview production build
 npm run typecheck    # TypeScript type checking
+npm run stats        # Regenerate data files only (course.json, stats.json, faq.json, projects.json, latest-changes.json)
 ```
+
+**Note:** `npm run generate` automatically runs `npm run stats` first, so data files are always up-to-date in production builds.
 
 ## Project Status
 
