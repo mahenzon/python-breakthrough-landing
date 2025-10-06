@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
 
   i18n: {
+    vueI18n: './i18n.config.ts',
     defaultLocale: 'ru',
     locales: [
       { code: 'ru', file: 'ru.ts', name: 'Русский' },
