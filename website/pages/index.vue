@@ -24,9 +24,10 @@
             <!-- Course Image -->
             <div class="rounded-lg overflow-hidden shadow-2xl">
               <img 
-                src="https://placehold.co/1024x768/2563eb/ffffff?text=Python+%D0%9F%D0%A0%D0%9E%D1%80%D1%8B%D0%B2" 
+                src="/img/python-breakthrough.jpg" 
                 alt="Python ПРОрыв - курс веб-разработки"
                 class="w-full h-auto"
+                loading="lazy"
               />
             </div>
           </div>
@@ -42,9 +43,10 @@
             <!-- Author Photo -->
             <div class="flex-shrink-0">
               <img 
-                src="https://placehold.co/200x200/6366f1/ffffff?text=Сурен" 
+                src="/img/avatar-square-min.jpg" 
                 alt="Сурен Хоренян"
                 class="w-48 h-48 rounded-full object-cover shadow-lg"
+                loading="lazy"
               />
             </div>
             
