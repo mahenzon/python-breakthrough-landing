@@ -1,7 +1,332 @@
 # Deployment Guide
 ## Python Breakthrough Course Landing Site
 
-This document provides comprehensive instructions for deploying the site to GitHub Pages.
+This document provides comprehensive instructions for deploying the site to GitHub Pages with a custom domain.
+
+**Repository:** https://github.com/mahenzon/python-breakthrough-landing/  
+**Custom Domain:** web.mahenzon.ru  
+**GitHub Pages URL:** https://mahenzon.github.io/python-breakthrough-landing/
+
+---
+
+## Table of Contents
+
+1. [Quick Start Deployment](#quick-start-deployment)
+2. [Prerequisites](#prerequisites)
+3. [Step-by-Step Deployment Guide](#step-by-step-deployment-guide)
+4. [Custom Domain Setup](#custom-domain-setup)
+5. [Local Development](#local-development)
+6. [Content Updates](#content-updates)
+7. [Troubleshooting](#troubleshooting)
+
+---
+
+## Quick Start Deployment
+
+If you're familiar with GitHub Pages and just need the essentials:
+
+```bash
+# 1. Push your code to GitHub
+git push origin master
+
+# 2. Enable GitHub Pages in Settings → Pages → Source: GitHub Actions
+
+# 3. Configure DNS:
+# Add A records pointing to GitHub Pages IPs (see Custom Domain Setup section)
+
+# 4. Add custom domain in GitHub Settings → Pages → Custom domain: web.mahenzon.ru
+
+# 5. Wait for DNS propagation and SSL certificate (10-20 minutes)
+
+# Done! Your site will be live at https://web.mahenzon.ru
+```
+
+---
+
+## Prerequisites
+
+### Required Software
+
+- **Node.js** (v20 or higher)
+- **npm** (comes with Node.js)
+- **Git**
+- **GitHub account** with access to https://github.com/mahenzon/python-breakthrough-landing/
+
+### Verify Installation
+
+```bash
+node --version  # Should be v20.x or higher
+npm --version   # Should be 10.x or higher
+git --version   # Any recent version
+```
+
+---
+
+## Step-by-Step Deployment Guide
+
+### Step 1: Repository Setup
+
+The repository is already set up at https://github.com/mahenzon/python-breakthrough-landing/
+
+**Verify your repository:**
+
+```bash
+# Check remote URL
+git remote -v
+# Should show: origin https://github.com/mahenzon/python-breakthrough-landing.git
+
+# Check current branch
+git branch
+# Should show: * master
+```
+
+### Step 2: Configure GitHub Pages
+
+1. Go to https://github.com/mahenzon/python-breakthrough-landing/settings/pages
+
+2. Under **"Build and deployment"**:
+   - **Source:** Select **"GitHub Actions"**
+   - Click **Save**
+
+**Why GitHub Actions?**
+- Automatic deployment on every push to `master` branch
+- No manual build steps required
+- Uses the `.github/workflows/deploy.yml` workflow (already configured)
+
+### Step 3: Trigger First Deployment
+
+The GitHub Actions workflow is already configured and will trigger automatically:
+
+```bash
+# Make a small change (if needed)
+echo "# Deployed $(date)" >> .deployment-timestamp
+git add .deployment-timestamp
+git commit -m "Initial GitHub Pages deployment"
+git push origin master
+```
+
+**Monitor deployment:**
+
+1. Go to https://github.com/mahenzon/python-breakthrough-landing/actions
+2. Click on the latest workflow run ("Deploy to GitHub Pages")
+3. Watch the progress:
+   - **build** job: Installs dependencies and generates static site (~2-3 minutes)
+   - **deploy** job: Deploys to GitHub Pages (~30 seconds)
+
+4. Once complete (green checkmark ✅), your site is live at:
+   - https://mahenzon.github.io/python-breakthrough-landing/
+
+### Step 4: Verify Deployment
+
+**Test the GitHub Pages URL first:**
+
+```bash
+# Check if site is accessible
+curl -I https://mahenzon.github.io/python-breakthrough-landing/
+# Should return: HTTP/2 200
+
+# Open in browser
+open https://mahenzon.github.io/python-breakthrough-landing/
+```
+
+**What to verify:**
+- ✅ Homepage loads correctly
+- ✅ Navigation works (Modules, Statistics, etc.)
+- ✅ Images load
+- ✅ Sitemap is accessible: /sitemap.xml
+- ✅ No console errors in browser DevTools
+
+---
+
+## Custom Domain Setup
+
+Now configure your custom domain: **web.mahenzon.ru**
+
+### Step 1: DNS Configuration
+
+Go to your DNS provider (where you registered `mahenzon.ru`) and add these records:
+
+#### Option A: Using CNAME (Recommended for Subdomains)
+
+**Best for:** `web.mahenzon.ru`
+
+```
+Type: CNAME
+Name: web
+Value: mahenzon.github.io
+TTL: 3600 (or Auto)
+```
+
+#### Option B: Using A Records (Alternative)
+
+If CNAME doesn't work, use A records:
+
+```
+Type: A
+Name: web
+Value: 185.199.108.153
+TTL: 3600
+
+Type: A
+Name: web
+Value: 185.199.109.153
+TTL: 3600
+
+Type: A
+Name: web
+Value: 185.199.110.153
+TTL: 3600
+
+Type: A
+Name: web
+Value: 185.199.111.153
+TTL: 3600
+```
+
+**DNS Provider Examples:**
+
+<details>
+<summary><strong>Cloudflare</strong></summary>
+
+1. Log in to Cloudflare
+2. Select your domain `mahenzon.ru`
+3. Go to **DNS** tab
+4. Click **Add record**
+5. Type: `CNAME`, Name: `web`, Target: `mahenzon.github.io`, Proxy status: **DNS only** (gray cloud)
+6. Click **Save**
+
+⚠️ **Important:** Turn off Cloudflare proxy (orange cloud) or HTTPS won't work properly with GitHub Pages.
+
+</details>
+
+<details>
+<summary><strong>Reg.ru / REG.RU</strong></summary>
+
+1. Log in to REG.RU
+2. Go to **Domains** → Select `mahenzon.ru`
+3. Click **DNS management** or **DNS records**
+4. Add new record:
+   - Type: `CNAME`
+   - Subdomain: `web`
+   - Value: `mahenzon.github.io.` (note the trailing dot)
+5. Click **Add** or **Save**
+
+</details>
+
+<details>
+<summary><strong>Namecheap</strong></summary>
+
+1. Log in to Namecheap
+2. Go to **Domain List** → Manage `mahenzon.ru`
+3. Go to **Advanced DNS** tab
+4. Click **Add New Record**
+5. Type: `CNAME Record`, Host: `web`, Value: `mahenzon.github.io`, TTL: Automatic
+6. Click **Save**
+
+</details>
+
+### Step 2: Add Custom Domain to GitHub
+
+1. Go to https://github.com/mahenzon/python-breakthrough-landing/settings/pages
+
+2. Under **"Custom domain"**:
+   - Enter: `web.mahenzon.ru`
+   - Click **Save**
+
+3. **Wait for DNS check** (1-5 minutes)
+   - GitHub will verify DNS records
+   - You'll see: ✅ **"DNS check successful"**
+
+4. **Enable HTTPS:**
+   - Check the box: ☑️ **"Enforce HTTPS"**
+   - ⚠️ This option appears only after DNS check succeeds
+   - SSL certificate generation takes 10-20 minutes
+
+### Step 3: Verify DNS Propagation
+
+**Check DNS records:**
+
+```bash
+# Check CNAME record
+dig web.mahenzon.ru +short
+# Should return: mahenzon.github.io
+
+# Or using nslookup
+nslookup web.mahenzon.ru
+# Should show: mahenzon.github.io
+
+# Check if site is accessible
+curl -I https://web.mahenzon.ru
+# Should return: HTTP/2 200 (after SSL certificate is issued)
+```
+
+**Propagation time:**
+- Usually: 5-30 minutes
+- Maximum: up to 24-48 hours for global propagation
+- You can check status at: https://dnschecker.org/#CNAME/web.mahenzon.ru
+
+### Step 4: Update Site Configuration
+
+The site is already configured with the custom domain! Verify:
+
+```bash
+# Check nuxt.config.ts
+grep -A2 "site:" website/nuxt.config.ts
+# Should show: url: 'https://web.mahenzon.ru'
+
+# Check CNAME file exists
+cat website/public/CNAME
+# Should show: web.mahenzon.ru
+```
+
+If you need to change the domain in the future:
+
+1. Edit `website/nuxt.config.ts`:
+```typescript
+site: {
+  url: 'https://your-new-domain.com',
+},
+```
+
+2. Edit `website/public/CNAME`:
+```
+your-new-domain.com
+```
+
+3. Commit and push:
+```bash
+git add website/nuxt.config.ts website/public/CNAME
+git commit -m "Update custom domain"
+git push origin master
+```
+
+### Step 5: Final Verification
+
+Once DNS has propagated and SSL is active:
+
+**Test your custom domain:**
+
+```bash
+# Check HTTPS redirect
+curl -I http://web.mahenzon.ru
+# Should redirect to https://web.mahenzon.ru
+
+# Check site loads
+curl -I https://web.mahenzon.ru
+# Should return: HTTP/2 200
+
+# Open in browser
+open https://web.mahenzon.ru
+```
+
+**Verify in browser:**
+- ✅ Site loads at https://web.mahenzon.ru
+- ✅ HTTPS padlock icon shows "Secure"
+- ✅ Certificate is valid (click padlock to check)
+- ✅ All pages work correctly
+- ✅ No mixed content warnings
+
+🎉 **Congratulations!** Your site is now live at https://web.mahenzon.ru
 
 ---
 
@@ -435,7 +760,7 @@ npm run generate  # Test locally
 ```
 
 **View logs:**
-- Go to Actions tab
+- Go to https://github.com/mahenzon/python-breakthrough-landing/actions
 - Click failed workflow
 - Expand steps to see errors
 
@@ -445,31 +770,83 @@ npm run generate  # Test locally
    - Hard refresh: Ctrl+F5 (Windows) or Cmd+Shift+R (Mac)
 
 2. **Check deployment status:**
-   - Actions tab → Latest workflow
-   - Should show green checkmark
+   - Go to https://github.com/mahenzon/python-breakthrough-landing/actions
+   - Should show green checkmark ✅
 
 3. **Verify files deployed:**
 ```bash
-curl -I https://mahenzon.github.io/python-breakthrough-landing/
-# Should return 200 OK
+curl -I https://web.mahenzon.ru/
+# Should return: HTTP/2 200
 ```
 
-### Custom Domain Issues
+### Custom Domain Issues (web.mahenzon.ru)
 
-1. **DNS not propagating:**
+**Problem 1: DNS not propagating**
+
+Check DNS configuration:
 ```bash
-dig yourdomain.com
-# Should show GitHub Pages IPs
+dig web.mahenzon.ru +short
+# Should return: mahenzon.github.io
 ```
-Wait up to 24-48 hours for full propagation.
 
-2. **SSL Certificate pending:**
-- Can take 10-20 minutes after DNS setup
-- Check Settings → Pages for status
+**Solutions:**
+- Wait 5-30 minutes for propagation
+- Check your DNS provider settings
+- Verify CNAME record is correct: `web` → `mahenzon.github.io`
+- Use https://dnschecker.org/#CNAME/web.mahenzon.ru to check global propagation
 
-3. **Mixed content warnings:**
-- Ensure all links use HTTPS
-- Update nuxt.config.ts `site.url` to use https://
+**Problem 2: SSL Certificate pending**
+
+Symptoms:
+- "Not secure" warning in browser
+- HTTPS doesn't work
+
+**Solutions:**
+- Wait 10-20 minutes after DNS check succeeds
+- Check GitHub Settings → Pages → "Enforce HTTPS" checkbox
+- Verify DNS propagation is complete
+- Try accessing via http first, then https
+
+**Problem 3: "Domain's DNS record could not be retrieved"**
+
+**Solutions:**
+1. Verify DNS records are correct:
+   - CNAME: `web` → `mahenzon.github.io` (recommended)
+   - OR A records pointing to GitHub Pages IPs
+
+2. Wait for DNS propagation (can take up to 48 hours)
+
+3. Remove and re-add domain in GitHub Settings → Pages
+
+4. If using Cloudflare:
+   - Turn off proxy (orange cloud → gray cloud)
+   - Use "DNS only" mode
+
+**Problem 4: Mixed content warnings**
+
+Check all resources use HTTPS:
+```bash
+# Verify site.url in config
+grep -A2 "site:" website/nuxt.config.ts
+# Should show: url: 'https://web.mahenzon.ru'
+```
+
+**Problem 5: 404 errors after deployment**
+
+**Solutions:**
+1. Verify CNAME file exists:
+```bash
+cat website/public/CNAME
+# Should contain: web.mahenzon.ru
+```
+
+2. Check if custom domain is set in GitHub:
+   - Go to Settings → Pages
+   - Custom domain field should show: `web.mahenzon.ru`
+
+3. Wait a few minutes after deployment
+
+4. Clear browser cache and retry
 
 ### YAML Parsing Errors
 
@@ -671,7 +1048,7 @@ npm run preview          # Preview build
 # Deployment
 git add .
 git commit -m "message"
-git push origin main     # Triggers auto-deploy
+git push origin master   # Triggers auto-deploy
 
 # Maintenance
 npm install              # Install dependencies
@@ -684,6 +1061,7 @@ npm audit fix            # Fix security issues
 ```
 .github/workflows/deploy.yml  # Deployment workflow
 website/nuxt.config.ts        # Nuxt configuration
+website/public/CNAME          # Custom domain configuration
 website/content/              # Editable content
 course-data/                  # Course structure
 ```
@@ -691,8 +1069,8 @@ course-data/                  # Course structure
 ### URLs
 
 - **Development:** http://localhost:3000
-- **Production:** https://mahenzon.github.io/python-breakthrough-landing
-- **Custom Domain:** https://yourdomain.com
+- **GitHub Pages:** https://mahenzon.github.io/python-breakthrough-landing/
+- **Custom Domain:** https://web.mahenzon.ru
 
 ---
 
