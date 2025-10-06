@@ -82,22 +82,22 @@
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
           <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
             <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.modulesCount }}</div>
-            <div class="text-gray-600 text-sm">{{ $t('stats.modules') }}</div>
+            <div class="text-gray-600 text-sm">{{ pluralLabels.modules }}</div>
           </div>
           
           <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
             <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.topicsCount }}</div>
-            <div class="text-gray-600 text-sm">{{ $t('stats.topics') }}</div>
+            <div class="text-gray-600 text-sm">{{ pluralLabels.topics }}</div>
           </div>
           
           <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
             <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.totalLessons }}</div>
-            <div class="text-gray-600 text-sm">{{ $t('stats.lessons') }}</div>
+            <div class="text-gray-600 text-sm">{{ pluralLabels.lessons }}</div>
           </div>
           
           <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
             <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.totalTasks }}</div>
-            <div class="text-gray-600 text-sm">{{ $t('stats.tasks') }}</div>
+            <div class="text-gray-600 text-sm">{{ pluralLabels.tasks }}</div>
           </div>
           
           <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
@@ -107,7 +107,7 @@
           
           <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
             <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.numberOfStudents }}</div>
-            <div class="text-gray-600 text-sm">{{ $t('stats.students') }}</div>
+            <div class="text-gray-600 text-sm">{{ pluralLabels.students }}</div>
           </div>
         </div>
       </div>
@@ -459,14 +459,29 @@ import {
   howItWorksText,
   whatYouGetList,
 } from '~/content/home-content'
+import { getPluralForm, type PluralForms } from '~/utils/pluralize'
 
 const { getStatistics, getCourseData } = useCourseData()
 const { getConfig } = useConfig()
-const { t } = useI18n()
+const { t, tm } = useI18n()
 
 const config = await getConfig()
 const stats = await getStatistics()
 const course = await getCourseData()
+
+const modulesForms = tm('stats.modulesForms') as PluralForms
+const topicsForms = tm('stats.topicsForms') as PluralForms
+const lessonsForms = tm('stats.lessonsForms') as PluralForms
+const tasksForms = tm('stats.tasksForms') as PluralForms
+const studentsForms = tm('stats.studentsForms') as PluralForms
+
+const pluralLabels = {
+  modules: getPluralForm(stats.modulesCount, modulesForms),
+  topics: getPluralForm(stats.topicsCount, topicsForms),
+  lessons: getPluralForm(stats.totalLessons, lessonsForms),
+  tasks: getPluralForm(stats.totalTasks, tasksForms),
+  students: getPluralForm(stats.numberOfStudents, studentsForms),
+}
 
 // Use content arrays from separate file (no i18n processing)
 const whatYouLearnItems = whatYouLearnList

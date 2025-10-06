@@ -42,6 +42,11 @@ export default {
     modules: 'Модулей',
     topics: 'Тем',
     tasks: 'Задач',
+    modulesForms: ['Модуль', 'Модуля', 'Модулей'] as const,
+    topicsForms: ['Тема', 'Темы', 'Тем'] as const,
+    lessonsForms: ['Урок', 'Урока', 'Уроков'] as const,
+    tasksForms: ['Задача', 'Задачи', 'Задач'] as const,
+    studentsForms: ['Студент', 'Студента', 'Студентов'] as const,
   },
   faq: {
     title: 'Часто задаваемые вопросы',

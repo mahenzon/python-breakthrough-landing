@@ -15,34 +15,48 @@
       
       <div class="bg-white rounded-lg shadow-lg p-8 text-center">
         <div class="text-5xl font-bold text-primary-600 mb-2">{{ stats.numberOfStudents }}</div>
-        <div class="text-gray-600">{{ $t('stats.students') }}</div>
+        <div class="text-gray-600">{{ pluralLabels.students }}</div>
       </div>
     </div>
     
     <div class="grid md:grid-cols-3 gap-6">
       <div class="bg-white rounded-lg shadow-lg p-8 text-center">
         <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.modulesCount }}</div>
-        <div class="text-gray-600">{{ $t('stats.modules') }}</div>
+        <div class="text-gray-600">{{ pluralLabels.modules }}</div>
       </div>
       
       <div class="bg-white rounded-lg shadow-lg p-8 text-center">
         <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.topicsCount }}</div>
-        <div class="text-gray-600">{{ $t('stats.topics') }}</div>
+        <div class="text-gray-600">{{ pluralLabels.topics }}</div>
       </div>
       
       <div class="bg-white rounded-lg shadow-lg p-8 text-center">
         <div class="text-4xl font-bold text-primary-600 mb-2">{{ stats.totalTasks }}</div>
-        <div class="text-gray-600">{{ $t('stats.tasks') }}</div>
+        <div class="text-gray-600">{{ pluralLabels.tasks }}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { getPluralForm, type PluralForms } from '~/utils/pluralize'
+
 const { getStatistics } = useCourseData()
 
 const stats = await getStatistics()
-const { t } = useI18n()
+const { t, tm } = useI18n()
+
+const modulesForms = tm('stats.modulesForms') as PluralForms
+const topicsForms = tm('stats.topicsForms') as PluralForms
+const tasksForms = tm('stats.tasksForms') as PluralForms
+const studentsForms = tm('stats.studentsForms') as PluralForms
+
+const pluralLabels = {
+  modules: getPluralForm(stats.modulesCount, modulesForms),
+  topics: getPluralForm(stats.topicsCount, topicsForms),
+  tasks: getPluralForm(stats.totalTasks, tasksForms),
+  students: getPluralForm(stats.numberOfStudents, studentsForms),
+}
 
 useHead({
   title: `Статистика курса - ${t('brand.name')}`,
