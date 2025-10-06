@@ -2,7 +2,7 @@
   "modules": [
     {
       "name": "Введение",
-      "description": "",
+      "description": "Знакомство",
       "order": 1,
       "id": "01-введение",
       "topics": [
