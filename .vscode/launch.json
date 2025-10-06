@@ -22,6 +22,16 @@
       "internalConsoleOptions": "neverOpen"
     },
     {
+      "name": "Regenerate Data Files",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/website",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "stats"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
       "name": "ESLint: Fix All",
       "type": "node",
       "request": "launch",
