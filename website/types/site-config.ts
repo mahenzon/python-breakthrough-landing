@@ -11,6 +11,11 @@ export interface AuthorInfo {
   links: SocialLink[];
 }
 
+export interface OpenGraphInfo {
+  title: string;
+  description: string;
+}
+
 export interface CourseInfo {
   title: string;
   subtitle: string;
@@ -21,6 +26,7 @@ export interface CourseInfo {
 export interface SiteConfig {
   author: AuthorInfo;
   course: CourseInfo;
+  og: OpenGraphInfo;
   statistics: {
     numberOfStudents: number;
   };

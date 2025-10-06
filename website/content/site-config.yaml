@@ -5,15 +5,22 @@ author:
     Open Source Contributor.
     Преподаватель по веб-разработке на Python.
   links:
+    - name: "Обо мне"
+      url: "https://www.mahenzon.ru"
+      icon: "homepage"
     - name: "GitHub"
       url: "https://github.com/mahenzon"
       icon: "github"
-    - name: "Telegram"
+    - name: "Телеграм"
       url: "https://t.me/Khorenyan"
       icon: "telegram"
     - name: "YouTube"
       url: "https://www.youtube.com/@SurenKhorenyan"
       icon: "youtube"
+
+og:
+  title: "Python ПРОрыв - Веб разработка на Python."
+  description: "Курс. Полный цикл разработки веб разработки на Python с нуля до продакшн."
 
 course:
   title: "Python ПРОрыв"
