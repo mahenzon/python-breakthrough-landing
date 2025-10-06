@@ -8,13 +8,16 @@
           </NuxtLink>
           
           <div class="hidden md:flex space-x-6">
-            <NuxtLink to="/" exact-active-class="font-semibold text-primary-600" class="hover:text-primary-600 transition">{{ $t('nav.home') }}</NuxtLink>
-            <NuxtLink to="/modules" active-class="font-semibold text-primary-600" class="hover:text-primary-600 transition">{{ $t('nav.modules') }}</NuxtLink>
-            <NuxtLink to="/links" active-class="font-semibold text-primary-600" class="hover:text-primary-600 transition">{{ $t('nav.courseLinks') }}</NuxtLink>
-            <NuxtLink to="/statistics" active-class="font-semibold text-primary-600" class="hover:text-primary-600 transition">{{ $t('nav.statistics') }}</NuxtLink>
-            <NuxtLink to="/projects" active-class="font-semibold text-primary-600" class="hover:text-primary-600 transition">{{ $t('nav.projects') }}</NuxtLink>
-            <NuxtLink to="/faq" active-class="font-semibold text-primary-600" class="hover:text-primary-600 transition">{{ $t('nav.faq') }}</NuxtLink>
-            <NuxtLink to="/contacts" active-class="font-semibold text-primary-600" class="hover:text-primary-600 transition">{{ $t('nav.contacts') }}</NuxtLink>
+            <NuxtLink 
+              v-for="link in navLinks" 
+              :key="link.to"
+              :to="link.to" 
+              :exact-active-class="link.exact ? 'font-semibold text-primary-600' : undefined"
+              :active-class="!link.exact ? 'font-semibold text-primary-600' : undefined"
+              class="hover:text-primary-600 transition"
+            >
+              {{ $t(link.labelKey) }}
+            </NuxtLink>
           </div>
           
           <!-- Mobile menu button -->
@@ -42,13 +45,17 @@
         
         <!-- Mobile menu -->
         <div v-if="mobileMenuOpen" class="md:hidden mt-4 space-y-2 pb-4">
-          <NuxtLink to="/" exact-active-class="font-semibold text-primary-600" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.home') }}</NuxtLink>
-          <NuxtLink to="/modules" active-class="font-semibold text-primary-600" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.modules') }}</NuxtLink>
-          <NuxtLink to="/links" active-class="font-semibold text-primary-600" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.courseLinks') }}</NuxtLink>
-          <NuxtLink to="/statistics" active-class="font-semibold text-primary-600" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.statistics') }}</NuxtLink>
-          <NuxtLink to="/projects" active-class="font-semibold text-primary-600" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.projects') }}</NuxtLink>
-          <NuxtLink to="/faq" active-class="font-semibold text-primary-600" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.faq') }}</NuxtLink>
-          <NuxtLink to="/contacts" active-class="font-semibold text-primary-600" class="block py-2 hover:text-primary-600 transition" @click="mobileMenuOpen = false">{{ $t('nav.contacts') }}</NuxtLink>
+          <NuxtLink 
+            v-for="link in navLinks" 
+            :key="link.to"
+            :to="link.to" 
+            :exact-active-class="link.exact ? 'font-semibold text-primary-600' : undefined"
+            :active-class="!link.exact ? 'font-semibold text-primary-600' : undefined"
+            class="block py-2 hover:text-primary-600 transition"
+            @click="mobileMenuOpen = false"
+          >
+            {{ $t(link.labelKey) }}
+          </NuxtLink>
         </div>
       </nav>
     </header>
@@ -68,5 +75,8 @@
 </template>
 
 <script setup lang="ts">
+import { navigationLinks } from '~/config/navigation'
+
 const mobileMenuOpen = ref(false)
+const navLinks = navigationLinks
 </script>

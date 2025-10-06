@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold mb-8">{{ $t('latest.title') }}</h1>
+    <h1 class="text-4xl font-bold mb-8">{{ $t('changelog.title') }}</h1>
     
     <div class="max-w-3xl mx-auto">
       <article class="prose prose-lg max-w-none bg-white rounded-lg shadow-lg p-8">
@@ -20,11 +20,11 @@ const renderedContent = marked(content)
 const { t } = useI18n()
 
 useHead({
-  title: `Последние обновления - ${t('brand.name')}`,
+  title: `${t('changelog.title')} - ${t('brand.name')}`,
   meta: [
-    { name: 'description', content: 'Последние изменения и обновления курса' },
-    { property: 'og:title', content: 'Последние обновления' },
-    { property: 'og:description', content: 'Последние изменения и обновления курса' },
+    { name: 'description', content: t('changelog.title') },
+    { property: 'og:title', content: t('changelog.title') },
+    { property: 'og:description', content: t('changelog.title') },
     { property: 'og:type', content: 'website' },
   ],
 })

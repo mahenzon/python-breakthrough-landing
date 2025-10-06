@@ -9,7 +9,7 @@ export default {
     statistics: 'Статистика',
     projects: 'Проекты',
     faq: 'Вопросы',
-    latest: 'Обновления',
+    changelog: 'Изменения',
     contacts: 'Контакты',
     courseLinks: 'Ссылки на курс',
   },
@@ -54,8 +54,8 @@ export default {
     noProjects: 'Проекты скоро появятся!',
     comingSoon: 'Скоро',
   },
-  latest: {
-    title: 'Последние обновления',
+  changelog: {
+    title: 'История изменений',
   },
   contacts: {
     title: 'Контакты',
