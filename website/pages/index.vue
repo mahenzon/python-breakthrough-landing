@@ -535,7 +535,7 @@ useHead({
     { property: 'og:title', content: config.course.title },
     { property: 'og:description', content: config.course.subtitle },
     { property: 'og:type', content: 'website' },
-    { property: 'og:image', content: '/img/python-breakthrough-squared-min.jpg' },
+    { property: 'og:image', content: '/img/python-breakthrough-min.jpeg' },
   ],
   script: [
     {
