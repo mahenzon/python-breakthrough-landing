@@ -2,7 +2,7 @@
   <div class="container mx-auto px-4 py-12">
     <div class="max-w-5xl mx-auto">
       <article class="prose prose-lg max-w-none bg-white rounded-lg shadow-lg p-8">
-        <div v-html="renderedContent"></div>
+        <div class="overflow-x-auto" v-html="renderedContent"></div>
       </article>
     </div>
   </div>
