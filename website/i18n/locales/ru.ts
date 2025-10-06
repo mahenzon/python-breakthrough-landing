@@ -90,6 +90,11 @@ export default {
     requirementsText: 'Что нужно уметь до старта:',
     howItWorks: 'Как проходит обучение',
     whatYouGet: 'Что вы получаете',
+    underDevelopmentTitle: 'Курс в активной разработке',
+    underDevelopmentText: 'Программа постоянно развивается — каждый месяц добавляются новые темы и материалы. Присоединяйтесь сейчас и получайте все будущие обновления без дополнительных платежей!',
+    underDevelopmentBenefit1: 'Новые темы каждый месяц',
+    underDevelopmentBenefit2: 'Все обновления бесплатно',
+    underDevelopmentBenefit3: 'Доступ навсегда',
   },
   courseLinks: {
     title: 'Сайт программы',
