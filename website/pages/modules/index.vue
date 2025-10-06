@@ -15,7 +15,7 @@
         <div class="flex flex-wrap gap-3 text-sm text-gray-600 mb-4">
           <span>{{ $t('course.topicsCount') }}: {{ module.topics.length }}</span>
           <span>{{ $t('course.lessonsCount') }}: {{ countModuleLessons(module) }}</span>
-          <span>{{ $t('course.totalVideo') }} {{ formatDuration(module) }}</span>
+          <span v-if="totalModuleMinutes(module)">{{ $t('course.totalVideo') }} {{ formatDuration(module) }}</span>
           <span>{{ $t('course.tasksCount') }}: {{ countModuleTasks(module) }}</span>
         </div>
         <NuxtLink 
@@ -37,7 +37,11 @@ const { t } = useI18n()
 const course = await getCourseData()
 
 function getPlainText(markdown: string): string {
-  return markdown.replace(/[#*`]/g, '').substring(0, 150) + '...'
+  const value = markdown.replace(/[#*`]/g, '')
+  if (value.length < 150) {
+    return value
+  }
+  return value.substring(0, 150).trim() + '...'
 }
 
 function countModuleLessons(module: Module): number {
@@ -54,13 +58,18 @@ function countModuleTasks(module: Module): number {
   return total
 }
 
-function formatDuration(module: Module): string {
+function totalModuleMinutes(module: Module): number {
   let totalMinutes = 0
   module.topics.forEach((topic) => {
     topic.lessons.forEach((lesson) => {
       totalMinutes += lesson.duration_minutes || 0
     })
   })
+  return totalMinutes
+}
+
+function formatDuration(module: Module): string {
+  const totalMinutes = totalModuleMinutes(module)
 
   if (totalMinutes === 0)
     return '—'
