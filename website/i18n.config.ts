@@ -3,21 +3,30 @@ export default defineI18nConfig(() => ({
   locale: 'ru',
   pluralRules: {
     ru: (choice: number, choicesLength: number) => {
+      // 0 -> "Модулей"
       if (choice === 0) {
         return 0
       }
 
-      const teen = choice > 10 && choice < 20
-      const endsWithOne = choice % 10 === 1
+      const lastTwo = choice % 100
+      const lastOne = choice % 10
 
-      if (!teen && endsWithOne) {
+      // 11-14, 111-114, etc -> "Модулей"
+      if (lastTwo >= 11 && lastTwo <= 14) {
+        return choicesLength < 4 ? 2 : 3
+      }
+
+      // 1, 21, 31, 101, etc -> "Модуль"
+      if (lastOne === 1) {
         return 1
       }
 
-      if (!teen && choice % 10 >= 2 && choice % 10 <= 4) {
+      // 2-4, 22-24, 32-34, etc -> "Модуля"
+      if (lastOne >= 2 && lastOne <= 4) {
         return 2
       }
 
+      // 5-20, 25-30, etc -> "Модулей"
       return choicesLength < 4 ? 2 : 3
     },
   },
