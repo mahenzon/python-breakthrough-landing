@@ -74,6 +74,12 @@
       </div>
     </section>
 
+    <!-- Technology Stack Section -->
+    <SectionsTechnologyStackSection
+      v-if="technologyStackData.categories.length"
+      :data="technologyStackData"
+    />
+
     <!-- Statistics Section -->
     <section class="py-16 bg-gray-50">
       <div class="container mx-auto px-4">
@@ -436,6 +442,7 @@ import {
 const { getStatistics, getCourseData } = useCourseData()
 const { getConfig } = useConfig()
 const { getStudentProjects, getCourseProjects } = useProjectsData()
+const { getTechnologyStackData } = useTechnologyStackData()
 const { t } = useI18n()
 
 const config = await getConfig()
@@ -443,6 +450,7 @@ const stats = await getStatistics()
 const course = await getCourseData()
 const studentProjects = await getStudentProjects()
 const courseProjects = await getCourseProjects()
+const technologyStackData = await getTechnologyStackData()
 
 // Count projects
 const courseProjectsCount = courseProjects.length

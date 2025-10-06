@@ -1,0 +1,230 @@
+{
+  "title": "Технологический стек курса",
+  "subtitle": "Практические инструменты, которыми вы овладеете",
+  "categories": [
+    {
+      "title": "Frameworks",
+      "icon": "🧩",
+      "externalIcon": "fa-diagram-project",
+      "items": [
+        {
+          "title": "FastAPI",
+          "icon": "⚡",
+          "externalIcon": "fa-bolt"
+        },
+        {
+          "title": "Pydantic",
+          "icon": "📐",
+          "externalIcon": "fa-ruler-combined"
+        },
+        {
+          "title": "SQLAlchemy",
+          "icon": "🗄️",
+          "externalIcon": "fa-database"
+        },
+        {
+          "title": "Django",
+          "icon": "🌿",
+          "externalIcon": "fa-leaf"
+        },
+        {
+          "title": "DRF",
+          "icon": "🔗",
+          "externalIcon": "fa-plug"
+        },
+        {
+          "title": "FastStream",
+          "icon": "📡",
+          "externalIcon": "fa-signal"
+        },
+        {
+          "title": "Celery",
+          "icon": "🥬",
+          "externalIcon": "fa-seedling"
+        },
+        {
+          "title": "Taskiq",
+          "icon": "🧠",
+          "externalIcon": "fa-brain"
+        }
+      ]
+    },
+    {
+      "title": "Languages",
+      "icon": "🗣️",
+      "externalIcon": "fa-language",
+      "items": [
+        {
+          "title": "Python",
+          "icon": "🐍",
+          "externalIcon": "fa-python"
+        },
+        {
+          "title": "SQL",
+          "icon": "🗃️",
+          "externalIcon": "fa-database"
+        },
+        {
+          "title": "JavaScript",
+          "icon": "🟨",
+          "externalIcon": "fa-js"
+        },
+        {
+          "title": "HTML",
+          "icon": "📄",
+          "externalIcon": "fa-html5"
+        },
+        {
+          "title": "CSS",
+          "icon": "🎨",
+          "externalIcon": "fa-css3-alt"
+        },
+        {
+          "title": "Jinja",
+          "icon": "🪄",
+          "externalIcon": "fa-wand-magic-sparkles"
+        }
+      ]
+    },
+    {
+      "title": "Technologies",
+      "icon": "🧰",
+      "externalIcon": "fa-toolbox",
+      "items": [
+        {
+          "title": "Docker",
+          "icon": "🐳",
+          "externalIcon": "fa-docker"
+        },
+        {
+          "title": "Docker Compose",
+          "icon": "⚙️",
+          "externalIcon": "fa-gears"
+        },
+        {
+          "title": "Podman",
+          "icon": "🐙",
+          "externalIcon": "fa-ship"
+        },
+        {
+          "title": "Redis",
+          "icon": "💾",
+          "externalIcon": "fa-microchip"
+        },
+        {
+          "title": "SQLite",
+          "icon": "📘",
+          "externalIcon": "fa-database"
+        },
+        {
+          "title": "Postgres",
+          "icon": "🐘",
+          "externalIcon": "fa-database"
+        },
+        {
+          "title": "S3",
+          "icon": "🪣",
+          "externalIcon": "fa-cloud"
+        }
+      ]
+    },
+    {
+      "title": "Instruments",
+      "icon": "🛠️",
+      "externalIcon": "fa-screwdriver-wrench",
+      "items": [
+        {
+          "title": "Black",
+          "icon": "🖤",
+          "externalIcon": "fa-brush"
+        },
+        {
+          "title": "ruff",
+          "icon": "🐶",
+          "externalIcon": "fa-dog"
+        },
+        {
+          "title": "pre-commit",
+          "icon": "✅",
+          "externalIcon": "fa-check-double"
+        },
+        {
+          "title": "uv",
+          "icon": "🌠",
+          "externalIcon": "fa-sun"
+        },
+        {
+          "title": "Poetry",
+          "icon": "🖋️",
+          "externalIcon": "fa-feather"
+        },
+        {
+          "title": "gh-cli",
+          "icon": "🐱",
+          "externalIcon": "fa-github"
+        }
+      ]
+    },
+    {
+      "title": "Deploying",
+      "icon": "🚀",
+      "externalIcon": "fa-rocket",
+      "items": [
+        {
+          "title": "GitHub Actions",
+          "icon": "⚙️",
+          "externalIcon": "fa-gears"
+        },
+        {
+          "title": "GitLab CI/CD",
+          "icon": "🦊",
+          "externalIcon": "fa-gitlab"
+        }
+      ]
+    },
+    {
+      "title": "Testing",
+      "icon": "🧪",
+      "externalIcon": "fa-vial",
+      "items": [
+        {
+          "title": "Unittest",
+          "icon": "🧾",
+          "externalIcon": "fa-clipboard-check"
+        },
+        {
+          "title": "Pytest",
+          "icon": "🧫",
+          "externalIcon": "fa-flask"
+        },
+        {
+          "title": "Coverage",
+          "icon": "📈",
+          "externalIcon": "fa-chart-line"
+        },
+        {
+          "title": "Codecov",
+          "icon": "🎯",
+          "externalIcon": "fa-bullseye"
+        }
+      ]
+    },
+    {
+      "title": "Queues",
+      "icon": "📨",
+      "externalIcon": "fa-stream",
+      "items": [
+        {
+          "title": "RabbitMQ",
+          "icon": "🐇",
+          "externalIcon": "fa-rabbit"
+        },
+        {
+          "title": "NATS",
+          "icon": "🛰️",
+          "externalIcon": "fa-satellite"
+        }
+      ]
+    }
+  ]
+}

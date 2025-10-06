@@ -19,3 +19,22 @@ export interface CourseProject {
   status: 'available' | 'coming_soon';
   order: number;
 }
+
+export interface TechnologyStackItem {
+  title: string;
+  icon?: string;
+  externalIcon?: string;
+}
+
+export interface TechnologyStackCategory {
+  title: string;
+  icon: string;
+  externalIcon?: string;
+  items: TechnologyStackItem[];
+}
+
+export interface TechnologyStackData {
+  title: string;
+  subtitle?: string;
+  categories: TechnologyStackCategory[];
+}

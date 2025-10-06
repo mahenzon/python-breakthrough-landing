@@ -4,7 +4,7 @@ import { parseCourseData } from '../server/utils/course-parser'
 import { calculateStatistics } from '../server/utils/stats-calculator'
 import { loadYamlFile } from '../server/utils/yaml-loader'
 import type { SiteConfig } from '../types/site-config'
-import type { FaqItem, StudentProject, CourseProject } from '../types/content'
+import type { FaqItem, StudentProject, CourseProject, TechnologyStackData } from '../types/content'
 import { marked } from 'marked'
 
 const publicDir = join(process.cwd(), 'public', 'data')
@@ -78,7 +78,13 @@ const courseProjectsData = loadYamlFile<CourseProject[]>(courseProjectsPath)
 writeFileSync(join(publicDir, 'course-projects.json'), JSON.stringify(courseProjectsData, null, 2))
 console.log('✅ course-projects.json generated')
 
-// 7. Generate latest changes HTML
+// 7. Generate technology stack data
+const technologyStackPath = join(process.cwd(), 'content', 'technology-stack.yaml')
+const technologyStackData = loadYamlFile<TechnologyStackData>(technologyStackPath)
+writeFileSync(join(publicDir, 'technology-stack.json'), JSON.stringify(technologyStackData, null, 2))
+console.log('✅ technology-stack.json generated')
+
+// 8. Generate latest changes HTML
 const latestChangesPath = join(process.cwd(), 'content', 'latest-changes.md')
 const latestChangesContent = readFileSync(latestChangesPath, 'utf-8')
 
