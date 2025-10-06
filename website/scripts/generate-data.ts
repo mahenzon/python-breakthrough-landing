@@ -81,7 +81,11 @@ console.log('✅ course-projects.json generated')
 // 7. Generate latest changes HTML
 const latestChangesPath = join(process.cwd(), 'content', 'latest-changes.md')
 const latestChangesContent = readFileSync(latestChangesPath, 'utf-8')
-const latestChangesHtml = await marked(latestChangesContent)
+
+// Update lesson headings from "УрокX" to "Урок (X)"
+const updatedContent = latestChangesContent.replace(/\| Урок(\d+) \|/g, '| Урок ($1) |')
+
+const latestChangesHtml = await marked(updatedContent)
 writeFileSync(join(publicDir, 'latest-changes.json'), JSON.stringify({ html: latestChangesHtml }, null, 2))
 console.log('✅ latest-changes.json generated')
 
