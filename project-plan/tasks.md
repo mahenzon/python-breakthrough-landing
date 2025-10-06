@@ -687,7 +687,7 @@ author:
     Multiple lines supported.
   links:
     - name: "GitHub"
-      url: "https://github.com/yourusername"
+      url: "https://github.com/mahenzon"
       icon: "github"
     - name: "Telegram"
       url: "https://t.me/yourusername"

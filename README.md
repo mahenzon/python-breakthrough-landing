@@ -29,7 +29,7 @@ python-breakthrough-landing/
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/python-breakthrough-landing.git
+git clone https://github.com/mahenzon/python-breakthrough-landing.git
 cd python-breakthrough-landing
 
 # Install dependencies

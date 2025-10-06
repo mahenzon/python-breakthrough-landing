@@ -41,7 +41,7 @@ git --version   # Any recent version
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/python-breakthrough-landing.git
+git clone https://github.com/mahenzon/python-breakthrough-landing.git
 cd python-breakthrough-landing/website
 ```
 
@@ -166,7 +166,7 @@ git push origin gh-pages
    - Branch: `gh-pages` / `root`
    - Click Save
 
-5. Visit: `https://yourusername.github.io/python-breakthrough-landing`
+5. Visit: `https://mahenzon.github.io/python-breakthrough-landing`
 
 ### Method 2: Automated Deployment (Recommended)
 
@@ -290,7 +290,7 @@ Add three more A records with:
 ```
 Type: CNAME
 Name: www
-Value: yourusername.github.io
+Value: mahenzon.github.io
 ```
 
 ### 2. Update Nuxt Configuration
@@ -450,7 +450,7 @@ npm run generate  # Test locally
 
 3. **Verify files deployed:**
 ```bash
-curl -I https://yourusername.github.io/python-breakthrough-landing/
+curl -I https://mahenzon.github.io/python-breakthrough-landing/
 # Should return 200 OK
 ```
 
@@ -654,7 +654,7 @@ npm audit fix
 ### Community
 
 - [Nuxt Discord](https://discord.com/invite/nuxt)
-- [GitHub Discussions](https://github.com/yourusername/python-breakthrough-landing/discussions)
+- [GitHub Discussions](https://github.com/mahenzon/python-breakthrough-landing/discussions)
 
 ---
 
@@ -691,7 +691,7 @@ course-data/                  # Course structure
 ### URLs
 
 - **Development:** http://localhost:3000
-- **Production:** https://yourusername.github.io/python-breakthrough-landing
+- **Production:** https://mahenzon.github.io/python-breakthrough-landing
 - **Custom Domain:** https://yourdomain.com
 
 ---
