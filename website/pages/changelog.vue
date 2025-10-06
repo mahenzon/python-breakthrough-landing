@@ -2,7 +2,7 @@
   <div class="container mx-auto px-4 py-12">
     <h1 class="text-4xl font-bold mb-8">{{ $t('changelog.title') }}</h1>
     
-    <div class="max-w-3xl mx-auto">
+    <div class="max-w-5xl mx-auto">
       <article class="prose prose-lg max-w-none bg-white rounded-lg shadow-lg p-8">
         <div v-html="renderedContent"></div>
       </article>
