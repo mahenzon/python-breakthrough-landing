@@ -5,224 +5,224 @@
     {
       "title": "Frameworks",
       "icon": "🧩",
-      "externalIcon": "fa-diagram-project",
+      "path": "/icons/frameworks.svg",
       "items": [
         {
           "title": "FastAPI",
           "icon": "⚡",
-          "externalIcon": "fa-bolt"
+          "path": "/icons/fastapi.svg"
         },
         {
           "title": "Pydantic",
           "icon": "📐",
-          "externalIcon": "fa-ruler-combined"
+          "path": "/icons/pydantic.svg"
         },
         {
           "title": "SQLAlchemy",
           "icon": "🗄️",
-          "externalIcon": "fa-database"
+          "path": "/icons/sqlalchemy.svg"
         },
         {
           "title": "Django",
           "icon": "🌿",
-          "externalIcon": "fa-leaf"
+          "path": "/icons/django.svg"
         },
         {
           "title": "DRF",
           "icon": "🔗",
-          "externalIcon": "fa-plug"
+          "path": "/icons/drf.svg"
         },
         {
           "title": "FastStream",
           "icon": "📡",
-          "externalIcon": "fa-signal"
+          "path": "/icons/faststream.svg"
         },
         {
           "title": "Celery",
           "icon": "🥬",
-          "externalIcon": "fa-seedling"
+          "path": "/icons/celery.svg"
         },
         {
           "title": "Taskiq",
           "icon": "🧠",
-          "externalIcon": "fa-brain"
+          "path": "/icons/taskiq.svg"
         }
       ]
     },
     {
       "title": "Languages",
       "icon": "🗣️",
-      "externalIcon": "fa-language",
+      "path": "/icons/languages.svg",
       "items": [
         {
           "title": "Python",
           "icon": "🐍",
-          "externalIcon": "fa-python"
+          "path": "/icons/python.svg"
         },
         {
           "title": "SQL",
           "icon": "🗃️",
-          "externalIcon": "fa-database"
+          "path": "/icons/sql.svg"
         },
         {
           "title": "JavaScript",
           "icon": "🟨",
-          "externalIcon": "fa-js"
+          "path": "/icons/javascript.svg"
         },
         {
           "title": "HTML",
           "icon": "📄",
-          "externalIcon": "fa-html5"
+          "path": "/icons/html.svg"
         },
         {
           "title": "CSS",
           "icon": "🎨",
-          "externalIcon": "fa-css3-alt"
+          "path": "/icons/css.svg"
         },
         {
           "title": "Jinja",
           "icon": "🪄",
-          "externalIcon": "fa-wand-magic-sparkles"
+          "path": "/icons/jinja.svg"
         }
       ]
     },
     {
       "title": "Technologies",
       "icon": "🧰",
-      "externalIcon": "fa-toolbox",
+      "path": "/icons/technologies.svg",
       "items": [
         {
           "title": "Docker",
           "icon": "🐳",
-          "externalIcon": "fa-docker"
+          "path": "/icons/docker.svg"
         },
         {
           "title": "Docker Compose",
           "icon": "⚙️",
-          "externalIcon": "fa-gears"
+          "path": "/icons/docker-compose.svg"
         },
         {
           "title": "Podman",
           "icon": "🐙",
-          "externalIcon": "fa-ship"
+          "path": "/icons/podman.svg"
         },
         {
           "title": "Redis",
           "icon": "💾",
-          "externalIcon": "fa-microchip"
+          "path": "/icons/redis.svg"
         },
         {
           "title": "SQLite",
           "icon": "📘",
-          "externalIcon": "fa-database"
+          "path": "/icons/sqlite.svg"
         },
         {
           "title": "Postgres",
           "icon": "🐘",
-          "externalIcon": "fa-database"
+          "path": "/icons/postgres.svg"
         },
         {
           "title": "S3",
           "icon": "🪣",
-          "externalIcon": "fa-cloud"
+          "path": "/icons/s3.svg"
         }
       ]
     },
     {
       "title": "Instruments",
       "icon": "🛠️",
-      "externalIcon": "fa-screwdriver-wrench",
+      "path": "/icons/instruments.svg",
       "items": [
         {
           "title": "Black",
           "icon": "🖤",
-          "externalIcon": "fa-brush"
+          "path": "/icons/black.svg"
         },
         {
           "title": "ruff",
           "icon": "🐶",
-          "externalIcon": "fa-dog"
+          "path": "/icons/ruff.svg"
         },
         {
           "title": "pre-commit",
           "icon": "✅",
-          "externalIcon": "fa-check-double"
+          "path": "/icons/pre-commit.svg"
         },
         {
           "title": "uv",
           "icon": "🌠",
-          "externalIcon": "fa-sun"
+          "path": "/icons/uv.svg"
         },
         {
           "title": "Poetry",
           "icon": "🖋️",
-          "externalIcon": "fa-feather"
+          "path": "/icons/poetry.svg"
         },
         {
           "title": "gh-cli",
           "icon": "🐱",
-          "externalIcon": "fa-github"
+          "path": "/icons/gh-cli.svg"
         }
       ]
     },
     {
       "title": "Deploying",
       "icon": "🚀",
-      "externalIcon": "fa-rocket",
+      "path": "/icons/deploying.svg",
       "items": [
         {
           "title": "GitHub Actions",
           "icon": "⚙️",
-          "externalIcon": "fa-gears"
+          "path": "/icons/github-actions.svg"
         },
         {
           "title": "GitLab CI/CD",
           "icon": "🦊",
-          "externalIcon": "fa-gitlab"
+          "path": "/icons/gitlab-ci.svg"
         }
       ]
     },
     {
       "title": "Testing",
       "icon": "🧪",
-      "externalIcon": "fa-vial",
+      "path": "/icons/testing.svg",
       "items": [
         {
           "title": "Unittest",
           "icon": "🧾",
-          "externalIcon": "fa-clipboard-check"
+          "path": "/icons/unittest.svg"
         },
         {
           "title": "Pytest",
           "icon": "🧫",
-          "externalIcon": "fa-flask"
+          "path": "/icons/pytest.svg"
         },
         {
           "title": "Coverage",
           "icon": "📈",
-          "externalIcon": "fa-chart-line"
+          "path": "/icons/coverage.svg"
         },
         {
           "title": "Codecov",
           "icon": "🎯",
-          "externalIcon": "fa-bullseye"
+          "path": "/icons/codecov.svg"
         }
       ]
     },
     {
       "title": "Queues",
       "icon": "📨",
-      "externalIcon": "fa-stream",
+      "path": "/icons/queues.svg",
       "items": [
         {
           "title": "RabbitMQ",
           "icon": "🐇",
-          "externalIcon": "fa-rabbit"
+          "path": "/icons/rabbitmq.svg"
         },
         {
           "title": "NATS",
           "icon": "🛰️",
-          "externalIcon": "fa-satellite"
+          "path": "/icons/nats.svg"
         }
       ]
     }

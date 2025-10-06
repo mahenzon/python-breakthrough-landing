@@ -23,13 +23,13 @@ export interface CourseProject {
 export interface TechnologyStackItem {
   title: string;
   icon?: string;
-  externalIcon?: string;
+  path: string;
 }
 
 export interface TechnologyStackCategory {
   title: string;
   icon: string;
-  externalIcon?: string;
+  path: string;
   items: TechnologyStackItem[];
 }
 
