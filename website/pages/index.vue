@@ -505,11 +505,11 @@ function getTopicDuration(topic: Topic): string {
 }
 
 useHead({
-  title: `${config.course.title} - ${t('brand.name')}`,
+  title: `${config.og.title}`,
   meta: [
-    { name: 'description', content: `${config.course.subtitle}. ${t('home.shortDescription')}` },
-    { property: 'og:title', content: config.course.title },
-    { property: 'og:description', content: config.course.subtitle },
+    { name: 'description', content: `${config.og.description}` },
+    { property: 'og:title', content: config.og.title },
+    { property: 'og:description', content: config.og.description },
     { property: 'og:type', content: 'website' },
     { property: 'og:image', content: '/img/python-breakthrough-min.jpeg' },
   ],

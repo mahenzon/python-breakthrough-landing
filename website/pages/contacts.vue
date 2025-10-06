@@ -26,7 +26,7 @@
         >
           <div class="text-5xl mb-4">✈️</div>
           <h3 class="font-bold text-xl mb-3 text-primary-600">Telegram</h3>
-          <p class="text-gray-700 text-sm mb-4">{{ $t('contacts.socialTitle') }}</p>
+          <p class="text-gray-700 text-sm mb-4">{{ $t('contacts.socialTelegramSubtitle') }}</p>
           <div class="text-primary-600 font-medium">@mahenzon</div>
         </a>
         
@@ -39,7 +39,7 @@
         >
           <div class="text-5xl mb-4">👥</div>
           <h3 class="font-bold text-xl mb-3 text-primary-600">ВКонтакте</h3>
-          <p class="text-gray-700 text-sm mb-4">{{ $t('contacts.socialTitle') }}</p>
+          <p class="text-gray-700 text-sm mb-4">{{ $t('contacts.socialVKSubtitle') }}</p>
           <div class="text-primary-600 font-medium">vk.com/mahenzon</div>
         </a>
       </div>
@@ -54,21 +54,13 @@
         
         <h3 class="text-xl font-bold mb-4">{{ $t('contacts.corporateIncludesTitle') }}</h3>
         <ul class="space-y-3 mb-6">
-          <li class="flex items-start gap-3">
+          <li 
+            v-for="(text, index) in juridicalOptionsAvailableItems" 
+            :key="index"
+            class="flex items-start gap-3"
+          >
             <span class="text-primary-600 font-bold text-xl flex-shrink-0">✓</span>
-            <span class="text-gray-700">{{ $t('contacts.corporateInclude1') }}</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-primary-600 font-bold text-xl flex-shrink-0">✓</span>
-            <span class="text-gray-700">{{ $t('contacts.corporateInclude2') }}</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-primary-600 font-bold text-xl flex-shrink-0">✓</span>
-            <span class="text-gray-700">{{ $t('contacts.corporateInclude3') }}</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-primary-600 font-bold text-xl flex-shrink-0">✓</span>
-            <span class="text-gray-700">{{ $t('contacts.corporateInclude4') }}</span>
+            <span class="text-gray-700">{{ text }}</span>
           </li>
         </ul>
         
@@ -82,7 +74,13 @@
 </template>
 
 <script setup lang="ts">
+import {
+  juridicalOptionsAvailableList,
+} from '~/content/home-content'
 const { t } = useI18n()
+
+// Use content arrays from separate file (no i18n processing)
+const juridicalOptionsAvailableItems = juridicalOptionsAvailableList
 
 useHead({
   title: `${t('contacts.title')} - ${t('brand.name')}`,

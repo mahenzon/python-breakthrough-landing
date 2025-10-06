@@ -18,8 +18,8 @@
           </span>
         </button>
         
-        <div v-show="openFaq === index" class="px-6 pb-6">
-          <p class="text-gray-700 whitespace-pre-line">{{ faq.answer }}</p>
+        <div v-show="openFaq === index" class="px-6 py-4">
+          <p class="text-black whitespace-pre-line">{{ faq.answer }}</p>
         </div>
       </div>
     </div>
