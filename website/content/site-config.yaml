@@ -1,9 +1,9 @@
 author:
-  name: "Ваше Имя"
+  name: "Сурен Хоренян"
   bio: |
-    Краткая биография о вас.
-    Можно использовать несколько строк.
-    Расскажите о своём опыте в преподавании и разработке.
+    Python Backend Developer.
+    Open Source Contributor.
+    Преподаватель по веб-разработке на Python.
   links:
     - name: "GitHub"
       url: "https://github.com/mahenzon"
@@ -11,6 +11,9 @@ author:
     - name: "Telegram"
       url: "https://t.me/yourusername"
       icon: "telegram"
+    - name: "YouTube"
+      url: "https://www.youtube.com/@SurenKhorenyan"
+      icon: "youtube"
 
 course:
   title: "Python ПРОрыв"
@@ -19,11 +22,11 @@ course:
     Комплексный курс по веб-разработке на Python.
     
     Изучите создание современных веб-приложений с нуля до продакшена.
-    Практические проекты и поддержка наставника на всём пути обучения.
+    Практические проекты и поддержка Сурена на всём пути обучения.
   features:
     - "Асинхронное обучение"
     - "Практические проекты"
-    - "Поддержка наставника"
+    - "Поддержка Сурена"
     - "Реальные кейсы из индустрии"
 
 statistics:
