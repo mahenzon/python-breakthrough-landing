@@ -26,6 +26,14 @@
       "detail": "Generate static site"
     },
     {
+      "label": "stats",
+      "type": "npm",
+      "script": "stats",
+      "path": "website/",
+      "problemMatcher": [],
+      "detail": "Regenerate data files (course, stats, faq, projects, latest-changes)"
+    },
+    {
       "label": "lint",
       "type": "npm",
       "script": "lint",
