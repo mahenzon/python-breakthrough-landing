@@ -1,7 +1,6 @@
 export interface FaqItem {
   question: string;
   answer: string;
-  order: number;
 }
 
 export interface StudentProject {
