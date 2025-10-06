@@ -153,7 +153,7 @@
               class="bg-white rounded-lg shadow"
             >
               <!-- Module Header -->
-              <div class="p-6 border-b">
+              <div class="p-6 border-b cursor-pointer hover:bg-gray-50 transition" @click="toggleModule(moduleIndex)">
                 <div class="flex justify-between items-start gap-4">
                   <div class="flex-1">
                     <h3 class="text-xl font-bold mb-2">{{ module.name }}</h3>
@@ -163,18 +163,16 @@
                       <span v-if="getModuleDurationMinutes(module) > 0">{{ $t('course.totalVideo') }} {{ formatModuleDuration(module) }}</span>
                     </div>
                   </div>
-                  <div class="flex gap-2">
-                    <button
-                      class="p-2 hover:bg-gray-100 rounded transition"
-                      @click="toggleModule(moduleIndex)"
-                    >
-                      <span class="transform transition-transform inline-block" :class="{ 'rotate-180': openModules[moduleIndex] }">
+                  <div class="flex gap-2 items-center">
+                    <div class="p-2">
+                      <span class="transform transition-transform inline-block text-gray-600" :class="{ 'rotate-180': openModules[moduleIndex] }">
                         ▼
                       </span>
-                    </button>
+                    </div>
                     <NuxtLink 
                       :to="`/modules/${module.id}`"
                       class="px-4 py-2 text-sm bg-primary-600 text-white rounded hover:bg-primary-700 transition"
+                      @click.stop
                     >
                       Подробнее
                     </NuxtLink>
