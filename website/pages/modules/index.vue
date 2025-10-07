@@ -1,10 +1,10 @@
 <template>
   <div class="container mx-auto px-4 py-12">
     <h1 class="text-4xl font-bold mb-8">{{ $t('course.modules') }}</h1>
-    
+
     <div class="grid md:grid-cols-2 gap-8">
-      <div 
-        v-for="module in course.modules" 
+      <div
+        v-for="module in course.modules"
         :key="module.id"
         class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition"
       >
@@ -12,13 +12,8 @@
         <div class="text-gray-600 mb-4 line-clamp-3">
           {{ getPlainText(module.description) }}
         </div>
-        <div class="flex flex-wrap gap-3 text-sm text-gray-600 mb-4">
-          <span>{{ $t('course.topicsCount') }}: {{ module.topics.length }}</span>
-          <span>{{ $t('course.lessonsCount') }}: {{ countModuleLessons(module) }}</span>
-          <span v-if="totalModuleMinutes(module)">{{ $t('course.totalVideo') }} {{ formatDuration(module) }}</span>
-          <span>{{ $t('course.tasksCount') }}: {{ countModuleTasks(module) }}</span>
-        </div>
-        <NuxtLink 
+        <CourseModuleStats :module="module" />
+        <NuxtLink
           :to="`/modules/${module.id}`"
           class="inline-block px-6 py-2 bg-primary-600 text-white rounded hover:bg-primary-700 transition"
         >
@@ -30,8 +25,6 @@
 </template>
 
 <script setup lang="ts">
-import type { Module } from '~/types/course'
-
 const { getCourseData } = useCourseData()
 const { t } = useI18n()
 const course = await getCourseData()
@@ -42,45 +35,6 @@ function getPlainText(markdown: string): string {
     return value
   }
   return value.substring(0, 150).trim() + '...'
-}
-
-function countModuleLessons(module: Module): number {
-  return module.topics.reduce((sum, topic) => sum + topic.lessons.length, 0)
-}
-
-function countModuleTasks(module: Module): number {
-  let total = 0
-  module.topics.forEach((topic) => {
-    topic.lessons.forEach((lesson) => {
-      total += lesson.tasks || 0
-    })
-  })
-  return total
-}
-
-function totalModuleMinutes(module: Module): number {
-  let totalMinutes = 0
-  module.topics.forEach((topic) => {
-    topic.lessons.forEach((lesson) => {
-      totalMinutes += lesson.duration_minutes || 0
-    })
-  })
-  return totalMinutes
-}
-
-function formatDuration(module: Module): string {
-  const totalMinutes = totalModuleMinutes(module)
-
-  if (totalMinutes === 0)
-    return '—'
-
-  const hours = Math.floor(totalMinutes / 60)
-  const mins = totalMinutes % 60
-
-  if (hours > 0) {
-    return mins > 0 ? `${hours} ч ${mins} м` : `${hours} ч`
-  }
-  return `${mins} м`
 }
 
 useHead({

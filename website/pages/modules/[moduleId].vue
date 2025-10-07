@@ -11,13 +11,14 @@
       <!-- Module Header -->
       <div class="mb-8">
         <h1 class="text-4xl font-bold mb-4">{{ module.name }}</h1>
-        <div v-if="module.description" class="prose text-gray-600 mb-4" v-html="moduleDescriptionHtml"></div>
-        <div class="flex flex-wrap gap-4 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg">
+        <div class="flex flex-wrap gap-4 text-lg text-gray-800 bg-gray-50 rounded-lg">
           <span><strong>{{ $t('course.topicsCount') }}:</strong> {{ module.topics.length }}</span>
           <span><strong>{{ $t('course.lessonsCount') }}:</strong> {{ totalLessons }}</span>
           <span><strong>{{ $t('course.totalVideo') }}</strong> {{ formatDuration(totalDuration) }}</span>
           <span><strong>{{ $t('course.tasksCount') }}:</strong> {{ totalTasks }}</span>
         </div>
+        <!-- eslint-disable-next-line vue/no-v-html -->
+        <div v-if="module.description" class="prose text-gray-800 my-4" v-html="moduleDescriptionHtml"></div>
       </div>
 
       <!-- Topics Accordion -->
@@ -46,7 +47,7 @@
               <h2 class="text-xl font-bold mb-2">
                 {{ topicIndex + 1 }}. {{ topic.name }}
               </h2>
-              <div class="flex flex-wrap gap-3 text-sm text-gray-500">
+              <div class="flex flex-wrap gap-3 text-sm text-gray-700">
                 <span>{{ $t('course.lessonsCount') }}: {{ topic.lessons.length }}</span>
                 <span>{{ $t('course.totalVideo') }} {{ getTopicDuration(topic) }}</span>
                 <span v-if="getTopicTasks(topic) > 0">{{ $t('course.tasksCount') }}: {{ getTopicTasks(topic) }}</span>

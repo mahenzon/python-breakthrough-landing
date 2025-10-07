@@ -86,8 +86,8 @@
     <section class="py-16 bg-gray-50">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-12">{{ $t('stats.title') }}</h2>
-        
-        <SectionsStatsSection 
+
+        <SectionsStatsSection
           :stats="stats"
           :course-projects-count="courseProjectsCount"
           :student-projects-count="studentProjectsCount"
@@ -141,11 +141,7 @@
                 <div class="flex justify-between items-start gap-4">
                   <div class="flex-1">
                     <h3 class="text-xl font-bold mb-2">{{ module.name }}</h3>
-                    <div class="flex flex-wrap gap-3 text-sm text-gray-600 mb-3">
-                      <span>{{ $t('course.topicsCount') }}: {{ module.topics.length }}</span>
-                      <span>{{ $t('course.lessonsCount') }}: {{ countModuleLessons(module) }}</span>
-                      <span v-if="getModuleDurationMinutes(module) > 0">{{ $t('course.totalVideo') }} {{ formatModuleDuration(module) }}</span>
-                    </div>
+                    <CourseModuleStats :module="module" />
                   </div>
                   <div class="flex gap-2 items-center">
                     <div class="p-2">
@@ -433,7 +429,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Module, Topic } from '~/types/course'
+import type { Topic } from '~/types/course'
 import {
   whatYouLearnList,
   forWhomText,
@@ -479,10 +475,6 @@ function toggleAllModules() {
 }
 
 // Helper functions
-function countModuleLessons(module: Module): number {
-  return module.topics.reduce((sum, topic) => sum + topic.lessons.length, 0)
-}
-
 function formatDuration(minutes: number | undefined): string {
   if (!minutes)
     return '—'
@@ -492,17 +484,6 @@ function formatDuration(minutes: number | undefined): string {
     return mins > 0 ? `${hours} ч ${mins} м` : `${hours} ч`
   }
   return `${mins} м`
-}
-
-function getModuleDurationMinutes(module: Module): number {
-  return module.topics.reduce((sum, topic) => {
-    return sum + topic.lessons.reduce((topicSum, lesson) => topicSum + (lesson.duration_minutes || 0), 0)
-  }, 0)
-}
-
-function formatModuleDuration(module: Module): string {
-  const totalMinutes = getModuleDurationMinutes(module)
-  return formatDuration(totalMinutes)
 }
 
 function getTopicDurationMinutes(topic: Topic): number {
