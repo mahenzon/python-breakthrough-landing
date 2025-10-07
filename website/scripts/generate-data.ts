@@ -18,6 +18,14 @@ try {
 }
 
 /**
+ * Normalize unicode string to NFC form
+ * This fixes unicode normalization issues
+ */
+function normalizeUnicode(str: string): string {
+  return str.normalize('NFC')
+}
+
+/**
  * Get all directory names from a path
  */
 function getDirectories(path: string): string[] {
@@ -103,7 +111,7 @@ console.log('🔄 Generating static data files...\n')
 // 1. Generate course data
 const courseDataPath = join(process.cwd(), '..', 'course-data')
 const course = parseCourseData(courseDataPath)
-writeFileSync(join(publicDir, 'course.json'), JSON.stringify(course, null, 2))
+writeFileSync(join(publicDir, 'course.json'), normalizeUnicode(JSON.stringify(course, null, 2)))
 console.log('✅ course.json generated')
 
 // 1a. Ensure all modules are in modules.yaml
@@ -115,7 +123,7 @@ console.log('')
 // 2. Generate site config
 const configPath = join(process.cwd(), 'content', 'site-config.yaml')
 const siteConfig = loadYamlFile<SiteConfig>(configPath)
-writeFileSync(join(publicDir, 'site-config.json'), JSON.stringify(siteConfig, null, 2))
+writeFileSync(join(publicDir, 'site-config.json'), normalizeUnicode(JSON.stringify(siteConfig, null, 2)))
 console.log('✅ site-config.json generated')
 
 // 3. Generate statistics
@@ -144,48 +152,48 @@ const detailedStats = {
     })),
   })),
 }
-writeFileSync(join(publicDir, 'stats.json'), JSON.stringify(detailedStats, null, 2))
+writeFileSync(join(publicDir, 'stats.json'), normalizeUnicode(JSON.stringify(detailedStats, null, 2)))
 console.log('✅ stats.json generated')
 
 // 4. Generate FAQ data
 const faqPath = join(process.cwd(), 'content', 'faq.yaml')
 const faqData = loadYamlFile<FaqItem[]>(faqPath)
-writeFileSync(join(publicDir, 'faq.json'), JSON.stringify(faqData, null, 2))
+writeFileSync(join(publicDir, 'faq.json'), normalizeUnicode(JSON.stringify(faqData, null, 2)))
 console.log('✅ faq.json generated')
 
 // 5. Generate home content data
 const homeContentPath = join(process.cwd(), 'content', 'home-content.yaml')
 const homeContentData = loadYamlFile<HomeContent>(homeContentPath)
-writeFileSync(join(publicDir, 'home-content.json'), JSON.stringify(homeContentData, null, 2))
+writeFileSync(join(publicDir, 'home-content.json'), normalizeUnicode(JSON.stringify(homeContentData, null, 2)))
 console.log('✅ home-content.json generated')
 
 // 5a. Generate course links data
 const courseLinksPath = join(process.cwd(), 'content', 'course-links.yaml')
 const courseLinksData = loadYamlFile<CourseLinksData>(courseLinksPath)
-writeFileSync(join(publicDir, 'course-links.json'), JSON.stringify(courseLinksData, null, 2))
+writeFileSync(join(publicDir, 'course-links.json'), normalizeUnicode(JSON.stringify(courseLinksData, null, 2)))
 console.log('✅ course-links.json generated')
 
 // 6. Generate student projects data
 const studentProjectsPath = join(process.cwd(), 'content', 'students-projects.yaml')
 const studentProjectsData = loadYamlFile<StudentProject[]>(studentProjectsPath)
-writeFileSync(join(publicDir, 'students-projects.json'), JSON.stringify(studentProjectsData, null, 2))
+writeFileSync(join(publicDir, 'students-projects.json'), normalizeUnicode(JSON.stringify(studentProjectsData, null, 2)))
 console.log('✅ students-projects.json generated')
 
 // 7. Generate course projects data
 const courseProjectsPath = join(process.cwd(), 'content', 'course-projects.yaml')
 const courseProjectsData = loadYamlFile<CourseProject[]>(courseProjectsPath)
-writeFileSync(join(publicDir, 'course-projects.json'), JSON.stringify(courseProjectsData, null, 2))
+writeFileSync(join(publicDir, 'course-projects.json'), normalizeUnicode(JSON.stringify(courseProjectsData, null, 2)))
 console.log('✅ course-projects.json generated')
 
 // 8. Generate icons data
 const iconsPath = join(process.cwd(), 'content', 'icons.yaml')
 const iconsData = loadYamlFile<Icon[]>(iconsPath)
-writeFileSync(join(publicDir, 'icons.json'), JSON.stringify(iconsData, null, 2))
+writeFileSync(join(publicDir, 'icons.json'), normalizeUnicode(JSON.stringify(iconsData, null, 2)))
 console.log('✅ icons.json generated')
 
 // 9. Generate modules-tech data
 const modulesTechData = loadYamlFile<ModuleTechData>(modulesTechPath)
-writeFileSync(join(publicDir, 'modules-tech.json'), JSON.stringify(modulesTechData, null, 2))
+writeFileSync(join(publicDir, 'modules-tech.json'), normalizeUnicode(JSON.stringify(modulesTechData, null, 2)))
 console.log('✅ modules-tech.json generated')
 
 // 10. Generate technology stack data (with icon enrichment)
@@ -212,7 +220,7 @@ const enrichedTechStack = {
   })),
 }
 
-writeFileSync(join(publicDir, 'technology-stack.json'), JSON.stringify(enrichedTechStack, null, 2))
+writeFileSync(join(publicDir, 'technology-stack.json'), normalizeUnicode(JSON.stringify(enrichedTechStack, null, 2)))
 console.log('✅ technology-stack.json generated')
 
 // 11. Generate latest changes HTML
@@ -223,7 +231,7 @@ const latestChangesContent = readFileSync(latestChangesPath, 'utf-8')
 const updatedContent = latestChangesContent.replace(/\| Урок(\d+) \|/g, '| Урок ($1) |')
 
 const latestChangesHtml = await marked(updatedContent)
-writeFileSync(join(publicDir, 'latest-changes.json'), JSON.stringify({ html: latestChangesHtml }, null, 2))
+writeFileSync(join(publicDir, 'latest-changes.json'), normalizeUnicode(JSON.stringify({ html: latestChangesHtml }, null, 2)))
 console.log('✅ latest-changes.json generated')
 
 console.log('\n✨ All data files generated in public/data/')
