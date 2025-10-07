@@ -2,15 +2,13 @@ name: Data Generation Check
 
 on:
   pull_request:
-    paths:
+    paths: &path-filters
       - 'website/content/**'
       - 'course-data/**'
   push:
     branches:
       - master
-    paths:
-      - 'website/content/**'
-      - 'course-data/**'
+    paths: *path-filters
 
 permissions:
   contents: write
