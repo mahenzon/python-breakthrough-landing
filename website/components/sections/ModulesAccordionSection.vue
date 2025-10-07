@@ -20,8 +20,8 @@
             class="bg-white rounded-lg shadow"
           >
             <div class="p-6 border-b cursor-pointer hover:bg-gray-50 transition" @click="toggleModule(moduleIndex)">
-              <div class="flex flex-wrap items-start gap-4">
-                <div class="flex-1 min-w-0">
+              <div class="flex flex-wrap items-start gap-4 max-w-full">
+                <div class="flex-1 min-w-0 max-w-full">
                   <div class="flex justify-between items-start gap-2 mb-2">
                     <h3 class="text-3xl font-bold flex-1">{{ module.name }}</h3>
                     <div class="p-2 md:hidden">
@@ -29,7 +29,7 @@
                     </div>
                   </div>
 
-                  <div class="mb-3">
+                  <div class="mb-3 max-w-full">
                     <CourseModuleTechIcons
                       :module-id="module.id"
                       layout="horizontal"

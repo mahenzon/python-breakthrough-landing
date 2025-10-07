@@ -11,7 +11,7 @@
         <h2 class="text-3xl font-bold mb-4">{{ module.name }}</h2>
 
         <!-- Tech Icons (Horizontal) -->
-        <div class="mb-4">
+        <div class="mb-4 max-w-full">
           <CourseModuleTechIcons
             :module-id="module.id"
             layout="horizontal"
