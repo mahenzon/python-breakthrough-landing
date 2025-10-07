@@ -3,14 +3,14 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "npm run stats && nuxt build",
+    "build": "npm run generate-data && nuxt build",
     "dev": "nuxt dev",
-    "generate": "npm run stats && nuxt generate",
+    "generate": "npm run generate-data && nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "stats": "tsx scripts/generate-data.ts",
+    "generate-data": "tsx scripts/generate-data.ts",
     "prepare": "husky"
   },
   "dependencies": {

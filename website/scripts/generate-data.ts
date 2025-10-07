@@ -143,7 +143,6 @@ const detailedStats = {
       totalTasks: topic.lessons.reduce((sum, lesson) => sum + lesson.tasks, 0),
     })),
   })),
-  generatedAt: new Date().toISOString(),
 }
 writeFileSync(join(publicDir, 'stats.json'), JSON.stringify(detailedStats, null, 2))
 console.log('✅ stats.json generated')

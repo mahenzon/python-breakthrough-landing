@@ -3,4 +3,4 @@
 
 cd website
 npx lint-staged
-# npm run stats
+# npm run generate-data

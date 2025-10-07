@@ -27,7 +27,7 @@
       "request": "launch",
       "cwd": "${workspaceFolder}/website",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "stats"],
+      "runtimeArgs": ["run", "generate-data"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     },
