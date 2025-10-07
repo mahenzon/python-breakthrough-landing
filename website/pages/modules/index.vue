@@ -32,14 +32,22 @@
           Подробнее →
         </NuxtLink>
       </div>
+
+      <!-- Ghost Module Card -->
+      <CourseModuleGhostModule
+        v-if="ghostModuleConfig?.enabled"
+        :custom-text="ghostModuleConfig?.customText"
+        layout="card"
+      />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const { getCourseData } = useCourseData()
+const { getCourseData, getGhostModuleConfig } = useCourseData()
 const { t } = useI18n()
 const course = await getCourseData()
+const ghostModuleConfig = await getGhostModuleConfig()
 
 function getPlainText(markdown: string): string {
   const value = markdown.replace(/[#*`]/g, '')

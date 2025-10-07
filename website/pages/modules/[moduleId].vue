@@ -10,7 +10,14 @@
 
       <!-- Module Header -->
       <div class="mb-8">
-        <h1 class="text-4xl font-bold mb-4">{{ module.name }}</h1>
+        <div class="flex items-center gap-3 mb-4 flex-wrap">
+          <h1 class="text-4xl font-bold">{{ module.name }}</h1>
+          <CourseModuleStatusBadge
+            :status="module.status"
+            size="lg"
+            :show-ready="true"
+          />
+        </div>
 
         <!-- Stats Section -->
         <div class="flex flex-wrap gap-4 text-lg text-gray-800 bg-gray-50 rounded-lg p-4 mb-3">
@@ -113,6 +120,13 @@
             </div>
           </div>
         </div>
+
+        <!-- Ghost Topic -->
+        <CourseModuleGhostTopic
+          v-if="module.ghostTopic?.enabled"
+          :custom-text="module.ghostTopic?.customText"
+          :topic-number="module.topics.length + 1"
+        />
       </div>
     </div>
 

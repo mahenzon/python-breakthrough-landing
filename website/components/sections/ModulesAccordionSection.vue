@@ -76,6 +76,13 @@
               </div>
             </div>
           </div>
+
+          <!-- Ghost Module -->
+          <CourseModuleGhostModule
+            v-if="ghostModuleConfig?.enabled"
+            :custom-text="ghostModuleConfig?.customText"
+            layout="accordion"
+          />
         </div>
       </div>
     </div>
@@ -85,8 +92,9 @@
 <script setup lang="ts">
 import type { Topic } from '~/types/course'
 
-const { getCourseData } = useCourseData()
+const { getCourseData, getGhostModuleConfig } = useCourseData()
 const course = await getCourseData()
+const ghostModuleConfig = await getGhostModuleConfig()
 
 const openModules = ref<boolean[]>(new Array(course.modules.length).fill(false))
 const allModulesExpanded = computed(() => openModules.value.every(v => v))
