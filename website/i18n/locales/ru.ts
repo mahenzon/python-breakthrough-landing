@@ -56,7 +56,8 @@ export default {
     collapseAll: 'Свернуть всё',
   },
   stats: {
-    title: 'Статистика курса',
+    title: 'Статистика',
+    subtitle: 'Уже сейчас на курсе:',
     totalLessons: 'Всего уроков',
     lessons: 'Уроков',
     totalVideosDuration: 'Общая длительность видео',

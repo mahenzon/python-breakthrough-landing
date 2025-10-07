@@ -1,8 +1,10 @@
 <template>
   <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">{{ $t('stats.title') }}</h2>
-
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold text-center mb-3">{{ $t('stats.title') }}</h2>
+        <h3 class="text-2xl text-center">{{ $t('stats.subtitle') }}</h3>
+      </div>
       <SectionsStatsSection
         :stats="stats"
         :course-projects-count="courseProjectsCount"
