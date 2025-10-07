@@ -65,6 +65,11 @@
     "path": "/icons/JavaScript.svg"
   },
   {
+    "name": "HTMX",
+    "icon": "🧑‍💻",
+    "path": "/icons/htmx-icon.svg"
+  },
+  {
     "name": "Bootstrap",
     "icon": "🅱️",
     "path": "/icons/Bootstrap.svg"

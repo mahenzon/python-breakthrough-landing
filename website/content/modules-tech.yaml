@@ -83,6 +83,8 @@ modules:
         text: "CSS — стили страниц"
       - icon-name: "Bootstrap"
         text: "Bootstrap фреймворк для переиспользования CSS и JS"
+      - icon-name: "HTMX"
+        text: "HTMX для динамического изменения страницы"
       - icon-name: "Postgres"
         text: "PostgreSQL база данных"
       - icon-name: "SQLAlchemy"
