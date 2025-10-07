@@ -7,7 +7,7 @@
             {{ $t('brand.name') }}
           </NuxtLink>
           
-          <div class="hidden md:flex space-x-6">
+          <div class="hidden lg:flex space-x-6">
             <NuxtLink 
               v-for="link in navLinks" 
               :key="link.to"
@@ -21,7 +21,7 @@
           </div>
           
           <!-- Mobile menu button -->
-          <button class="md:hidden text-gray-700" @click="mobileMenuOpen = !mobileMenuOpen">
+          <button class="lg:hidden text-gray-700" @click="mobileMenuOpen = !mobileMenuOpen">
             <svg
               class="w-6 h-6"
               fill="none"
@@ -44,7 +44,7 @@
         </div>
         
         <!-- Mobile menu -->
-        <div v-if="mobileMenuOpen" class="md:hidden mt-4 space-y-2 pb-4">
+        <div v-if="mobileMenuOpen" class="lg:hidden mt-4 space-y-2 pb-4">
           <NuxtLink 
             v-for="link in navLinks" 
             :key="link.to"
