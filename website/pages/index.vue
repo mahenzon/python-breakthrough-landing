@@ -27,7 +27,8 @@
                 src="/img/python-breakthrough-min.jpeg"
                 alt="Python ПРОрыв - курс веб-разработки"
                 class="w-full h-auto"
-                loading="lazy"
+                loading="eager"
+                decoding="async"
               />
             </div>
           </div>
@@ -41,12 +42,13 @@
         <div class="max-w-4xl mx-auto">
           <div class="flex flex-col md:flex-row items-center gap-8 bg-gray-50 rounded-lg p-8">
             <!-- Author Photo -->
-            <div class="flex-shrink-0">
+            <div class="flex-shrink-0 w-48 h-48">
               <img
                 src="/img/avatar-square-min.jpg"
                 alt="Сурен Хоренян"
                 class="w-48 h-48 rounded-full object-cover shadow-lg"
-                loading="lazy"
+                loading="eager"
+                decoding="async"
               />
             </div>
 
