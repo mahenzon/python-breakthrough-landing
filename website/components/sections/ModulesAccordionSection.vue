@@ -20,9 +20,14 @@
             class="bg-white rounded-lg shadow"
           >
             <div class="p-6 border-b cursor-pointer hover:bg-gray-50 transition" @click="toggleModule(moduleIndex)">
-              <div class="flex justify-between items-start gap-4">
-                <div class="flex-1">
-                  <h3 class="text-3xl font-bold mb-2">{{ module.name }}</h3>
+              <div class="flex flex-wrap items-start gap-4">
+                <div class="flex-1 min-w-0">
+                  <div class="flex justify-between items-start gap-2 mb-2">
+                    <h3 class="text-3xl font-bold flex-1">{{ module.name }}</h3>
+                    <div class="p-2 md:hidden">
+                      <ModuleToggleIcon :is-expanded="!!openModules[moduleIndex]" />
+                    </div>
+                  </div>
 
                   <div class="mb-3">
                     <CourseModuleTechIcons
@@ -34,20 +39,16 @@
 
                   <CourseModuleStats :module="module" />
                 </div>
-                <div class="flex gap-2 items-center">
-                  <div class="p-2">
-                    <span class="transform transition-transform inline-block text-gray-600" :class="{ 'rotate-180': openModules[moduleIndex] }">
-                      ▼
-                    </span>
-                  </div>
-                  <NuxtLink
-                    :to="`/modules/${module.id}`"
-                    class="px-4 py-2 text-md bg-primary-600 text-white rounded hover:bg-primary-700 transition"
-                    @click.stop
-                  >
-                    Подробнее
-                  </NuxtLink>
+                <div class="hidden md:block p-2">
+                  <ModuleToggleIcon :is-expanded="!!openModules[moduleIndex]" />
                 </div>
+                <NuxtLink
+                  :to="`/modules/${module.id}`"
+                  class="w-full md:w-auto px-4 py-2 text-md text-center bg-primary-600 text-white rounded hover:bg-primary-700 transition"
+                  @click.stop
+                >
+                  Подробнее
+                </NuxtLink>
               </div>
             </div>
 
