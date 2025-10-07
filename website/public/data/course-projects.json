@@ -4,15 +4,13 @@
     "title": "URL Shortener",
     "description": "Сервис для создания коротких ссылок. Вы разработаете полноценное веб-приложение с базой данных, REST API и современным интерфейсом.\n",
     "url": "",
-    "status": "coming_soon",
-    "order": 1
+    "status": "coming_soon"
   },
   {
     "id": "wip",
     "title": "Work In Progress",
     "description": "To be announced",
     "url": "",
-    "status": "coming_soon",
-    "order": 2
+    "status": "coming_soon"
   }
 ]

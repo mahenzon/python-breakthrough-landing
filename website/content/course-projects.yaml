@@ -5,11 +5,9 @@
     Вы разработаете полноценное веб-приложение с базой данных, REST API и современным интерфейсом.
   url: ""
   status: "coming_soon"
-  order: 1
 
 - id: "wip"
   title: "Work In Progress"
   description: "To be announced"
   url: ""
   status: "coming_soon"
-  order: 2

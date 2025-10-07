@@ -4,13 +4,13 @@ export const useProjectsData = () => {
   // Use useState to share data between server and client
   const studentProjects = useState<StudentProject[]>('student-projects', () => [])
   const courseProjects = useState<CourseProject[]>('course-projects', () => [])
-  
+
   const getStudentProjects = async (): Promise<StudentProject[]> => {
     // If data is already loaded, return it
     if (studentProjects.value.length > 0) {
       return studentProjects.value
     }
-    
+
     // Load data differently based on environment
     if (import.meta.server) {
       // During SSR, read from filesystem
@@ -24,8 +24,7 @@ export const useProjectsData = () => {
       const response = await fetch('/data/students-projects.json')
       studentProjects.value = await response.json()
     }
-    
-    studentProjects.value.sort((a, b) => a.order - b.order)
+
     return studentProjects.value
   }
 
@@ -34,7 +33,7 @@ export const useProjectsData = () => {
     if (courseProjects.value.length > 0) {
       return courseProjects.value
     }
-    
+
     // Load data differently based on environment
     if (import.meta.server) {
       // During SSR, read from filesystem
@@ -48,11 +47,10 @@ export const useProjectsData = () => {
       const response = await fetch('/data/course-projects.json')
       courseProjects.value = await response.json()
     }
-    
-    courseProjects.value.sort((a, b) => a.order - b.order)
+
     return courseProjects.value
   }
-  
+
   return {
     getStudentProjects,
     getCourseProjects,

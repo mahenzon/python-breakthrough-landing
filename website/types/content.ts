@@ -8,7 +8,6 @@ export interface StudentProject {
   description: string;
   url: string;
   author?: string;
-  order: number;
 }
 
 export interface CourseProject {
@@ -17,7 +16,6 @@ export interface CourseProject {
   description: string;
   url: string;
   status: 'available' | 'coming_soon';
-  order: number;
 }
 
 // ============================================
