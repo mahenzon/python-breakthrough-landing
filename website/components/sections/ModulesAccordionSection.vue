@@ -2,11 +2,11 @@
   <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
       <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl lg:text-5xl font-bold mb-8 text-center">{{ $t('course.modules') }}</h2>
+        <h2 class="text-4xl font-bold mb-8 text-center">{{ $t('course.modules') }}</h2>
 
         <div class="flex justify-end mb-4">
           <button
-            class="px-4 py-2 text-md lg:text-xl text-primary-600 hover:text-primary-700 font-medium"
+            class="px-4 py-2 text-md text-primary-600 hover:text-primary-700 font-medium"
             @click="toggleAllModules()"
           >
             {{ allModulesExpanded ? $t('accordion.collapseAll') : $t('accordion.expandAll') }}
@@ -42,7 +42,7 @@
                   </div>
                   <NuxtLink
                     :to="`/modules/${module.id}`"
-                    class="px-4 py-2 text-md lg:text-xl bg-primary-600 text-white rounded hover:bg-primary-700 transition"
+                    class="px-4 py-2 text-md bg-primary-600 text-white rounded hover:bg-primary-700 transition"
                     @click.stop
                   >
                     Подробнее
@@ -58,8 +58,8 @@
                   :key="topic.id"
                   class="border-l-4 border-primary-200 pl-4 py-2"
                 >
-                  <div class="font-semibold mb-1 text-lg lg:text-xl">{{ topicIndex + 1 }}. {{ topic.name }}</div>
-                  <div class="text-md lg:text-xl text-gray-600 mb-2">
+                  <div class="font-semibold mb-1 text-lg">{{ topicIndex + 1 }}. {{ topic.name }}</div>
+                  <div class="text-md text-gray-600 mb-2">
                     <span>{{ $t('course.lessonsCount') }}: {{ topic.lessons.length }}</span>
                     <span v-if="getTopicDurationMinutes(topic) > 0"> • {{ getTopicDuration(topic) }}</span>
                   </div>
@@ -67,7 +67,7 @@
                     <div
                       v-for="(lesson, lessonIndex) in topic.lessons"
                       :key="lesson.order"
-                      class="text-md lg:text-xl text-gray-500"
+                      class="text-md text-gray-500"
                     >
                       {{ lessonIndex + 1 }}. {{ lesson.name }}
                     </div>
