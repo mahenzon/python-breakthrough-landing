@@ -440,13 +440,7 @@
 
 <script setup lang="ts">
 import type { Topic } from '~/types/course'
-import {
-  whatYouLearnList,
-  forWhomText,
-  requirementsList,
-  howItWorksText,
-  whatYouGetList,
-} from '~/content/home-content'
+
 const { getStatistics, getCourseData } = useCourseData()
 const { getConfig } = useConfig()
 const { getStudentProjects, getCourseProjects } = useProjectsData()
@@ -460,16 +454,20 @@ const studentProjects = await getStudentProjects()
 const courseProjects = await getCourseProjects()
 const technologyStackData = await getTechnologyStackData()
 
+// Load home content from YAML
+const { getHomeContent } = useHomeContent()
+const homeContent = await getHomeContent()
+
 // Count projects
 const courseProjectsCount = courseProjects.length
 const studentProjectsCount = studentProjects.length
 
-// Use content arrays from separate file (no i18n processing)
-const whatYouLearnItems = whatYouLearnList
-const forWhomItems = forWhomText
-const requirementsItems = requirementsList
-const howItWorksItems = howItWorksText
-const whatYouGetItems = whatYouGetList
+// Use content arrays from home content
+const whatYouLearnItems = homeContent.whatYouLearn
+const forWhomItems = homeContent.forWhom
+const requirementsItems = homeContent.requirements
+const howItWorksItems = homeContent.howItWorks
+const whatYouGetItems = homeContent.whatYouGet
 
 // Module accordion state
 const openModules = ref<boolean[]>(new Array(course.modules.length).fill(false))

@@ -74,13 +74,14 @@
 </template>
 
 <script setup lang="ts">
-import {
-  juridicalOptionsAvailableList,
-} from '~/content/home-content'
 const { t } = useI18n()
 
-// Use content arrays from separate file (no i18n processing)
-const juridicalOptionsAvailableItems = juridicalOptionsAvailableList
+// Load home content from YAML
+const { getHomeContent } = useHomeContent()
+const homeContent = await getHomeContent()
+
+// Use content arrays from home content
+const juridicalOptionsAvailableItems = homeContent.juridicalOptionsAvailable
 
 useHead({
   title: `${t('contacts.title')} - ${t('brand.name')}`,
