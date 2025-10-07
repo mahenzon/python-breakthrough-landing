@@ -2,12 +2,12 @@
   <span
     v-if="shouldShowBadge"
     :class="badgeClasses"
-    :aria-label="ariaLabel"
+    :aria-label="badgeText"
     role="status"
   >
     <span v-if="status === 'ready'" aria-hidden="true">✓</span>
     <span v-else aria-hidden="true">🔨</span>
-    <span class="ml-1">{{ badgeText }}</span>
+    <span class="ml-1">&nbsp;{{ badgeText }}</span>
   </span>
 </template>
 
@@ -40,12 +40,6 @@ const badgeText = computed(() => {
   return props.status === 'ready'
     ? t('course.status.ready')
     : t('course.status.inDevelopment')
-})
-
-const ariaLabel = computed(() => {
-  return props.status === 'ready'
-    ? t('course.underDevelopment.iconAccessibleReady')
-    : t('course.underDevelopment.iconAccessible')
 })
 
 const sizeClasses = computed(() => {

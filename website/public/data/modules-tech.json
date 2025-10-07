@@ -1,6 +1,11 @@
 {
+  "ghostModule": {
+    "enabled": true,
+    "customText": "Курс постоянно обновляется, скоро тут появятся новые темы. Например аренда сервера, настройка SSH, работа с Django.\n"
+  },
   "modules": {
     "01-введение": {
+      "status": "ready",
       "tech": [
         {
           "icon-name": "Telegram",
@@ -85,6 +90,11 @@
       ]
     },
     "10-fastapi-приложение-коротких-ссылок": {
+      "status": "in_development",
+      "ghostTopic": {
+        "enabled": true,
+        "customText": "Скоро тут будут новые модули по работе с базой данных и деплою приложения"
+      },
       "tech": [
         {
           "icon-name": "FastAPI",
@@ -193,6 +203,11 @@
       ]
     },
     "12-sql": {
+      "status": "in_development",
+      "ghostTopic": {
+        "enabled": true,
+        "customText": "Мы уже начали работать с Postgres, впереди знакомство с ограничениями и внешними ключами."
+      },
       "tech": [
         {
           "icon-name": "SQL",

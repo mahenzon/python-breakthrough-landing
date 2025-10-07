@@ -1,7 +1,9 @@
 # Ghost module configuration
 ghostModule:
   enabled: true  # Set to true to show "new modules coming" indicator
-  customText: "Новые модули уже разрабатываются! Курс постоянно обновляется."
+  customText: >
+    Курс постоянно обновляется, скоро тут появятся новые темы.
+    Например аренда сервера, настройка SSH, работа с Django.
 
 modules:
 
@@ -12,10 +14,6 @@ modules:
         text: "Чат курса"
 
   "03-работа-на-локальном-компьютере":
-    status: "in_development"
-    ghostTopic:
-      enabled: true
-      customText: "Готовим материалы о дополнительных инструментах и пакетных менеджерах"
     tech:
       - icon-name: "bash"
         text: "Работа в терминале"
@@ -58,10 +56,10 @@ modules:
         text: "Работа с git в VS Code"
 
   "10-fastapi-приложение-коротких-ссылок":
-    status: "ready"
+    status: "in_development"
     ghostTopic:
       enabled: true
-      customText: "Планируется добавить темы про CI/CD, деплой и мониторинг приложения"
+      customText: "Скоро тут будут новые модули по работе с базой данных и деплою приложения"
     tech:
       - icon-name: "FastAPI"
         text: "FastAPI — современный веб-фреймворк"
@@ -118,6 +116,10 @@ modules:
         text: "Публикация на GitHub Pages"
 
   "12-sql":
+    status: "in_development"
+    ghostTopic:
+      enabled: true
+      customText: "Мы уже начали работать с Postgres, впереди знакомство с ограничениями и внешними ключами."
     tech:
       - icon-name: "SQL"
         text: "SQL запросы"

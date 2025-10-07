@@ -10,8 +10,8 @@
 
       <!-- Module Header -->
       <div class="mb-8">
-        <div class="flex items-center gap-3 mb-4 flex-wrap">
-          <h1 class="text-4xl font-bold">{{ module.name }}</h1>
+        <div class="items-center gap-3 mb-4">
+          <h1 class="text-4xl font-bold mb-3">{{ module.name }}</h1>
           <CourseModuleStatusBadge
             :status="module.status"
             size="lg"

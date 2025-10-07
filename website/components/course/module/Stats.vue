@@ -1,6 +1,8 @@
 <template>
-  <div class="flex flex-wrap gap-3 text-md text-gray-600 mb-4 items-center">
+  <div class="my-3">
     <CourseModuleStatusBadge :status="module.status" :show-ready="false" />
+  </div>
+  <div class="flex flex-wrap gap-3 text-md text-gray-600 mb-4 items-center">
     <span>{{ $t('course.topicsCount') }}: {{ module.topics.length }}</span>
     <span>{{ $t('course.lessonsCount') }}: {{ countModuleLessons(module) }}</span>
     <span v-if="totalModuleMinutes(module)">{{ $t('course.totalVideo') }} {{ formatDuration(module) }}</span>

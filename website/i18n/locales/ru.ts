@@ -32,31 +32,24 @@ export default {
 
     // Status translations
     status: {
-      ready: 'Готов',
-      inDevelopment: 'В разработке',
+      ready: 'Модуль готов',
+      inDevelopment: 'Модуль в активной разработке',
     },
 
     // Ghost Module translations
     ghostModule: {
       title: 'Новые модули в разработке',
       defaultText: 'Курс постоянно обновляется. Новые модули появятся совсем скоро!',
-      followUpdates: 'Следите за обновлениями в чате курса',
+      followUpdates: 'Следите за обновлениями в канале или в разделе изменений',
     },
 
     // Ghost Topic translations
     ghostTopic: {
       title: 'Дополнительные темы в разработке',
       defaultText: 'В этом модуле скоро появятся новые темы и уроки',
-      followUpdates: 'Следите за обновлениями',
+      followUpdates: 'Обновления появятся на этом сайте',
     },
 
-    // Development indicators
-    underDevelopment: {
-      badge: 'В разработке',
-      badgeReady: 'Готов',
-      iconAccessible: 'Модуль в разработке',
-      iconAccessibleReady: 'Модуль готов',
-    },
   },
   accordion: {
     expandAll: 'Развернуть всё',

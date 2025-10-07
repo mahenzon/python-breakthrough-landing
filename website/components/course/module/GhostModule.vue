@@ -37,7 +37,7 @@
           <p class="text-md lg:text-xl text-gray-600 mb-2">
             {{ displayText }}
           </p>
-          <p class="text-sm text-gray-500">
+          <p class="text-md lg:text-lg text-gray-500">
             {{ $t('course.ghostModule.followUpdates') }}
           </p>
         </div>
