@@ -1,239 +1,183 @@
-title: "Технологический стек курса"
-subtitle: "Инструменты, которые ты освоишь на практике:"
+- name: "FastAPI"
+  icon: "⚡"
+  path: "/icons/FastAPI.svg"
 
-categories:
+- name: "Pydantic"
+  icon: "📐"
+  path: "/icons/Pydantic.svg"
 
-  - title: "Бэкенд"
-    icon:
-    path:
-    items:
+- name: "SQLAlchemy"
+  icon: "🗄️"
+  path: "/icons/SQLAlchemy.svg"
 
-      - title: "FastAPI"
-        icon: "⚡"
-        path: "/icons/FastAPI.svg"
+- name: "Django"
+  icon: "🌿"
+  path: "/icons/Django-filled.svg"
 
-      - title: "Pydantic"
-        icon: "📐"
-        path: "/icons/Pydantic.svg"
+- name: "DRF"
+  icon: "🔗"
+  path: "/icons/Django-REST-custom.svg"
 
-      - title: "SQLAlchemy"
-        icon: "🗄️"
-        path: "/icons/SQLAlchemy.svg"
+- name: "Python"
+  icon: "🐍"
+  path: "/icons/Python.svg"
 
-      - title: "Django"
-        icon: "🌿"
-        path: "/icons/Django-filled.svg"
+- name: "SQL"
+  icon: "🗃️"
+  path: "/icons/database.svg"
 
-      - title: "Django REST Framework"
-        icon: "🔗"
-        path: "/icons/Django-REST-custom.svg"
+- name: "Jinja"
+  icon: "🪄"
+  path: "/icons/jinja.svg"
 
-  - title: "Языки и шаблоны"
-    icon:
-    path:
-    items:
+- name: "HTML"
+  icon: "📄"
+  path: "/icons/HTML5.svg"
 
-      - title: "Python"
-        icon: "🐍"
-        path: "/icons/Python.svg"
+- name: "CSS"
+  icon: "🎨"
+  path: "/icons/CSS3.svg"
 
-      - title: "SQL"
-        icon: "🗃️"
-        path: "/icons/database.svg"
+- name: "JS"
+  icon: "🟨"
+  path: "/icons/JavaScript.svg"
 
-      - title: "Jinja"
-        icon: "🪄"
-        path: "/icons/jinja.svg"
+- name: "Bootstrap"
+  icon: "🅱️"
+  path: "/icons/Bootstrap.svg"
 
-  - title: "Основы фронтенда"
-    icon:
-    path:
-    items:
+- name: "Docker"
+  icon: "🐳"
+  path: "/icons/docker-minimal.svg"
 
-      - title: "HTML"
-        icon: "📄"
-        path: "/icons/HTML5.svg"
+- name: "Docker-Compose"
+  icon: "⚙️"
+  path: "/icons/containers.svg"
 
-      - title: "CSS"
-        icon: "🎨"
-        path: "/icons/CSS3.svg"
+- name: "Podman"
+  icon: "🐙"
+  path: "/icons/Podman.svg"
 
-      - title: "JavaScript"
-        icon: "🟨"
-        path: "/icons/JavaScript.svg"
+- name: "Redis"
+  icon: "💾"
+  path: "/icons/Redis.svg"
 
-      - title: "Bootstrap"
-        icon: "🅱️"
-        path: "/icons/Bootstrap.svg"
+- name: "SQLite"
+  icon: "📘"
+  path: "/icons/SQLite.svg"
 
-  - title: "Инфраструктура и данные"
-    icon:
-    path:
-    items:
+- name: "Postgres"
+  icon: "🐘"
+  path: "/icons/PostgresSQL.svg"
 
-      - title: "Docker"
-        icon: "🐳"
-        path: "/icons/docker-minimal.svg"
+- name: "S3"
+  icon: "🪣"
+  path: "/icons/s3-bucket.svg"
 
-      - title: "Docker Compose"
-        icon: "⚙️"
-        path: "/icons/containers.svg"
+- name: "Black"
+  icon: "🖤"
+  path: "/icons/Black-formatter.svg"
 
-      - title: "Podman"
-        icon: "🐙"
-        path: "/icons/Podman.svg"
+- name: "ruff"
+  icon: "🐶"
+  path: "/icons/ruff-r.svg"
 
-      - title: "Redis"
-        icon: "💾"
-        path: "/icons/Redis.svg"
+- name: "mypy"
+  icon: "✏️"
+  path: "/icons/mypy.svg"
 
-      - title: "SQLite"
-        icon: "📘"
-        path: "/icons/SQLite.svg"
+- name: "pre-commit"
+  icon: "✅"
+  path: "/icons/pre-commit-logo.svg"
 
-      - title: "Postgres"
-        icon: "🐘"
-        path: "/icons/PostgresSQL.svg"
+- name: "uv"
+  icon: "🌠"
+  path: "/icons/uv.svg"
 
-      - title: "S3"
-        icon: "🪣"
-        path: "/icons/s3-bucket.svg"
+- name: "Poetry"
+  icon: "🖋️"
+  path: "/icons/Python-Poetry.svg"
 
-  - title: "Инструменты разработки"
-    icon:
-    path:
-    items:
+- name: "GitHub-Actions"
+  icon: "⚙️"
+  path: "/icons/GitHub-Actions.svg"
 
-      - title: "Black"
-        icon: "🖤"
-        path: "/icons/Black-formatter.svg"
+- name: "GitLab-CI-CD"
+  icon: "🦊"
+  path: "/icons/gitlab-ci.svg"
 
-      - title: "ruff"
-        icon: "🐶"
-        path: "/icons/ruff-r.svg"
+- name: "Unittest"
+  icon: "🧾"
+  path: "/icons/test-tube.svg"
 
-      - title: "my[py]"
-        icon: "✏️"
-        path: "/icons/mypy.svg"
+- name: "Pytest"
+  icon: "🧫"
+  path: "/icons/pytest.svg"
 
-      - title: "pre-commit"
-        icon: "✅"
-        path: "/icons/pre-commit-logo.svg"
+- name: "Coverage"
+  icon: "📈"
+  path: "/icons/chart-bar-alt.svg"
 
-      - title: "uv"
-        icon: "🌠"
-        path: "/icons/uv.svg"
+- name: "Codecov"
+  icon: "🎯"
+  path: "/icons/Codecov.svg"
 
-      - title: "Poetry"
-        icon: "🖋️"
-        path: "/icons/Python-Poetry.svg"
+- name: "RabbitMQ"
+  icon: "🐇"
+  path: "/icons/RabbitMQ.svg"
 
-  - title: "CI/CD и деплой"
-    icon:
-    path:
-    items:
+- name: "NATS"
+  icon: "🛰️"
+  path: "/icons/nats.svg"
 
-      - title: "GitHub Actions"
-        icon: "⚙️"
-        path: "/icons/GitHub-Actions.svg"
+- name: "FastStream"
+  icon: "📡"
+  path: "/icons/FastStream.svg"
 
-      - title: "GitLab CI/CD"
-        icon: "🦊"
-        path: "/icons/gitlab-ci.svg"
+- name: "Celery"
+  icon: "🥬"
+  path: "/icons/celery-logo.svg"
 
-  - title: "Тестирование и покрытие"
-    icon:
-    path:
-    items:
+- name: "Taskiq"
+  icon: "🧠"
+  path: "/icons/taskiq-small-logo.svg"
 
-      - title: "Unittest"
-        icon: "🧾"
-        path: "/icons/test-tube.svg"
+- name: "bash"
+  icon: "💻"
+  path: "/icons/Bash.svg"
 
-      - title: "Pytest"
-        icon: "🧫"
-        path: "/icons/pytest.svg"
+- name: "PowerShell"
+  icon: "🛰️"
+  path: "/icons/PowerShell.svg"
 
-      - title: "Coverage"
-        icon: "📈"
-        path: "/icons/chart-bar-alt.svg"
+- name: "Typer"
+  icon: "🎹"
+  path: "/icons/Typer.svg"
 
-      - title: "Codecov"
-        icon: "🎯"
-        path: "/icons/Codecov.svg"
+- name: "Scoop"
+  icon: "🪟"
+  path: "/icons/icecream-scoop.svg"
 
-  - title: "Брокеры сообщений и очереди задач"
-    icon:
-    path:
-    items:
+- name: "Homebrew"
+  icon: "🍺"
+  path: "/icons/Homebrew.svg"
 
-      - title: "RabbitMQ"
-        icon: "🐇"
-        path: "/icons/RabbitMQ.svg"
+- name: "PyCharm"
+  icon: "🔮"
+  path: "/icons/PyCharm.svg"
 
-      - title: "NATS"
-        icon: "🛰️"
-        path: "/icons/nats.svg"
+- name: "DBeaver"
+  icon: "🦫"
+  path: "/icons/DBeaver.svg"
 
-      - title: "FastStream"
-        icon: "📡"
-        path: "/icons/FastStream.svg"
+- name: "GitHub-CLI"
+  icon: "🐱"
+  path: "/icons/github-inverted.svg"
 
-      - title: "Celery"
-        icon: "🥬"
-        path: "/icons/celery-logo.svg"
+- name: "GitHub"
+  icon: "😼"
+  path: "/icons/github-octocat.svg"
 
-      - title: "Taskiq"
-        icon: "🧠"
-        path: "/icons/taskiq-small-logo.svg"
-
-  - title: "Терминал, CLI"
-    icon:
-    path:
-    items:
-
-      - title: "bash / zsh"
-        icon: "💻"
-        path: "/icons/Bash.svg"
-
-      - title: "PowerShell"
-        icon: "🛰️"
-        path: "/icons/PowerShell.svg"
-
-      - title: "Typer"
-        icon: "🎹"
-        path: "/icons/Typer.svg"
-
-      - title: "Scoop"
-        icon: "🪟"
-        path: "/icons/icecream-scoop.svg"
-
-      - title: "Homebrew"
-        icon: "🍺"
-        path: "/icons/Homebrew.svg"
-
-
-  - title: "Инструменты и платформы"
-    icon:
-    path:
-    items:
-
-      - title: "PyCharm"
-        icon: "🔮"
-        path: "/icons/PyCharm.svg"
-
-      - title: "DBeaver"
-        icon: "🦫"
-        path: "/icons/DBeaver.svg"
-
-      - title: "GitHub CLI"
-        icon: "🐱"
-        path: "/icons/github-inverted.svg"
-
-      - title: "GitHub"
-        icon: "😼"
-        path: "/icons/github-octocat.svg"
-
-      - title: "GitLab"
-        icon: "🦊"
-        path: "/icons/GitLab.svg"
+- name: "GitLab"
+  icon: "🦊"
+  path: "/icons/GitLab.svg"
