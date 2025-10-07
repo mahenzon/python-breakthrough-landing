@@ -1,3 +1,10 @@
+- title: "Movie Catalog"
+  description: >
+    Простой сервис для ведения каталога фильмов и выставления оценок.
+    Создан в рамках учебного проекта.
+  url: "https://github.com/Nottezz/FastAPI-Movie-Catalog"
+  author: "Nottezz"
+
 - title: "Пример проекта 1"
   description: >
     Описание первого проекта студента.
