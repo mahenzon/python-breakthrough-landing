@@ -97,3 +97,21 @@ export interface HomeContent {
   juridicalOptionsAvailable: string[];
   valueProposition: ValuePropositionItem[];
 }
+
+// ============================================
+// Course Links
+// ============================================
+export interface CoursePlatform {
+  id: string;
+  name: string;
+  emoji: string;
+  title: string;
+  description: string;
+  url: string;
+  note: string;
+  order: number;
+}
+
+export interface CourseLinksData {
+  platforms: CoursePlatform[];
+}
