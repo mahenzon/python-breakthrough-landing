@@ -3,81 +3,51 @@
   "subtitle": "Практические инструменты, которыми вы овладеете",
   "categories": [
     {
-      "title": "Frameworks",
-      "icon": "🧩",
-      "path": "/icons/frameworks.svg",
+      "title": "Бэкенд",
+      "icon": null,
+      "path": null,
       "items": [
         {
           "title": "FastAPI",
           "icon": "⚡",
-          "path": "/icons/fastapi.svg"
+          "path": "/icons/FastAPI.svg"
         },
         {
           "title": "Pydantic",
           "icon": "📐",
-          "path": "/icons/pydantic.svg"
+          "path": "/icons/Pydantic.svg"
         },
         {
           "title": "SQLAlchemy",
           "icon": "🗄️",
-          "path": "/icons/sqlalchemy.svg"
+          "path": "/icons/SQLAlchemy.svg"
         },
         {
           "title": "Django",
           "icon": "🌿",
-          "path": "/icons/django.svg"
+          "path": "/icons/Django-filled.svg"
         },
         {
-          "title": "DRF",
+          "title": "Django REST Framework",
           "icon": "🔗",
-          "path": "/icons/drf.svg"
-        },
-        {
-          "title": "FastStream",
-          "icon": "📡",
-          "path": "/icons/faststream.svg"
-        },
-        {
-          "title": "Celery",
-          "icon": "🥬",
-          "path": "/icons/celery.svg"
-        },
-        {
-          "title": "Taskiq",
-          "icon": "🧠",
-          "path": "/icons/taskiq.svg"
+          "path": "/icons/Django-REST-custom.svg"
         }
       ]
     },
     {
-      "title": "Languages",
-      "icon": "🗣️",
-      "path": "/icons/languages.svg",
+      "title": "Языки и шаблоны",
+      "icon": null,
+      "path": null,
       "items": [
         {
           "title": "Python",
           "icon": "🐍",
-          "path": "/icons/python.svg"
+          "path": "/icons/Python.svg"
         },
         {
           "title": "SQL",
           "icon": "🗃️",
-          "path": "/icons/sql.svg"
-        },
-        {
-          "title": "JavaScript",
-          "icon": "🟨",
-          "path": "/icons/javascript.svg"
-        },
-        {
-          "title": "HTML",
-          "icon": "📄",
-          "path": "/icons/html.svg"
-        },
-        {
-          "title": "CSS",
-          "icon": "🎨",
-          "path": "/icons/css.svg"
+          "path": "/icons/database.svg"
         },
         {
           "title": "Jinja",
@@ -87,66 +57,98 @@
       ]
     },
     {
-      "title": "Technologies",
-      "icon": "🧰",
-      "path": "/icons/technologies.svg",
+      "title": "Основы фронтенда",
+      "icon": null,
+      "path": null,
       "items": [
         {
-          "title": "Docker",
-          "icon": "🐳",
-          "path": "/icons/docker.svg"
+          "title": "HTML",
+          "icon": "📄",
+          "path": "/icons/HTML5.svg"
         },
         {
-          "title": "Docker Compose",
-          "icon": "⚙️",
-          "path": "/icons/docker-compose.svg"
+          "title": "CSS",
+          "icon": "🎨",
+          "path": "/icons/CSS3.svg"
         },
         {
-          "title": "Podman",
-          "icon": "🐙",
-          "path": "/icons/podman.svg"
+          "title": "JavaScript",
+          "icon": "🟨",
+          "path": "/icons/JavaScript.svg"
         },
         {
-          "title": "Redis",
-          "icon": "💾",
-          "path": "/icons/redis.svg"
-        },
-        {
-          "title": "SQLite",
-          "icon": "📘",
-          "path": "/icons/sqlite.svg"
-        },
-        {
-          "title": "Postgres",
-          "icon": "🐘",
-          "path": "/icons/postgres.svg"
-        },
-        {
-          "title": "S3",
-          "icon": "🪣",
-          "path": "/icons/s3.svg"
+          "title": "Bootstrap",
+          "icon": "🅱️",
+          "path": "/icons/Bootstrap.svg"
         }
       ]
     },
     {
-      "title": "Instruments",
-      "icon": "🛠️",
-      "path": "/icons/instruments.svg",
+      "title": "Инфраструктура и данные",
+      "icon": null,
+      "path": null,
+      "items": [
+        {
+          "title": "Docker",
+          "icon": "🐳",
+          "path": "/icons/docker-minimal.svg"
+        },
+        {
+          "title": "Docker Compose",
+          "icon": "⚙️",
+          "path": "/icons/containers.svg"
+        },
+        {
+          "title": "Podman",
+          "icon": "🐙",
+          "path": "/icons/Podman.svg"
+        },
+        {
+          "title": "Redis",
+          "icon": "💾",
+          "path": "/icons/Redis.svg"
+        },
+        {
+          "title": "SQLite",
+          "icon": "📘",
+          "path": "/icons/SQLite.svg"
+        },
+        {
+          "title": "Postgres",
+          "icon": "🐘",
+          "path": "/icons/PostgresSQL.svg"
+        },
+        {
+          "title": "S3",
+          "icon": "🪣",
+          "path": "/icons/s3-bucket.svg"
+        }
+      ]
+    },
+    {
+      "title": "Инструменты разработки",
+      "icon": null,
+      "path": null,
       "items": [
         {
           "title": "Black",
           "icon": "🖤",
-          "path": "/icons/black.svg"
+          "path": "/icons/Black-formatter.svg"
         },
         {
           "title": "ruff",
           "icon": "🐶",
-          "path": "/icons/ruff.svg"
+          "path": "/icons/ruff-r.svg"
+        },
+        {
+          "title": "my[py]",
+          "icon": "✏️",
+          "path": "/icons/mypy.svg"
         },
         {
           "title": "pre-commit",
           "icon": "✅",
-          "path": "/icons/pre-commit.svg"
+          "path": "/icons/pre-commit-logo.svg"
         },
         {
           "title": "uv",
@@ -156,19 +158,14 @@
         {
           "title": "Poetry",
           "icon": "🖋️",
-          "path": "/icons/poetry.svg"
-        },
-        {
-          "title": "gh-cli",
-          "icon": "🐱",
-          "path": "/icons/gh-cli.svg"
+          "path": "/icons/Python-Poetry.svg"
         }
       ]
     },
     {
-      "title": "Deploying",
-      "icon": "🚀",
-      "path": "/icons/deploying.svg",
+      "title": "CI/CD и деплой",
+      "icon": null,
+      "path": null,
       "items": [
         {
           "title": "GitHub Actions",
@@ -183,14 +180,14 @@
       ]
     },
     {
-      "title": "Testing",
-      "icon": "🧪",
-      "path": "/icons/testing.svg",
+      "title": "Тестирование и покрытие",
+      "icon": null,
+      "path": null,
       "items": [
         {
           "title": "Unittest",
           "icon": "🧾",
-          "path": "/icons/unittest.svg"
+          "path": "/icons/test-tube.svg"
         },
         {
           "title": "Pytest",
@@ -200,29 +197,108 @@
         {
           "title": "Coverage",
           "icon": "📈",
-          "path": "/icons/coverage.svg"
+          "path": "/icons/chart-bar-alt.svg"
         },
         {
           "title": "Codecov",
           "icon": "🎯",
-          "path": "/icons/codecov.svg"
+          "path": "/icons/Codecov.svg"
         }
       ]
     },
     {
-      "title": "Queues",
-      "icon": "📨",
-      "path": "/icons/queues.svg",
+      "title": "Брокеры сообщений и очереди задач",
+      "icon": null,
+      "path": null,
       "items": [
         {
           "title": "RabbitMQ",
           "icon": "🐇",
-          "path": "/icons/rabbitmq.svg"
+          "path": "/icons/RabbitMQ.svg"
         },
         {
           "title": "NATS",
           "icon": "🛰️",
           "path": "/icons/nats.svg"
+        },
+        {
+          "title": "FastStream",
+          "icon": "📡",
+          "path": "/icons/FastStream.svg"
+        },
+        {
+          "title": "Celery",
+          "icon": "🥬",
+          "path": "/icons/celery-logo.svg"
+        },
+        {
+          "title": "Taskiq",
+          "icon": "🧠",
+          "path": "/icons/taskiq-small-logo.svg"
+        }
+      ]
+    },
+    {
+      "title": "Терминал, CLI",
+      "icon": null,
+      "path": null,
+      "items": [
+        {
+          "title": "bash / zsh",
+          "icon": "💻",
+          "path": "/icons/Bash.svg"
+        },
+        {
+          "title": "PowerShell",
+          "icon": "🛰️",
+          "path": "/icons/PowerShell.svg"
+        },
+        {
+          "title": "Typer",
+          "icon": "🎹",
+          "path": "/icons/Typer.svg"
+        },
+        {
+          "title": "Scoop",
+          "icon": "🪟",
+          "path": "/icons/icecream-scoop.svg"
+        },
+        {
+          "title": "Homebrew",
+          "icon": "🍺",
+          "path": "/icons/Homebrew.svg"
+        }
+      ]
+    },
+    {
+      "title": "Инструменты и платформы",
+      "icon": null,
+      "path": null,
+      "items": [
+        {
+          "title": "PyCharm",
+          "icon": "🔮",
+          "path": "/icons/PyCharm.svg"
+        },
+        {
+          "title": "DBeaver",
+          "icon": "🦫",
+          "path": "/icons/DBeaver.svg"
+        },
+        {
+          "title": "gh-cli",
+          "icon": "🐱",
+          "path": "/icons/github-inverted.svg"
+        },
+        {
+          "title": "GitHub",
+          "icon": "😼",
+          "path": "/icons/github-octocat.svg"
+        },
+        {
+          "title": "GitLab",
+          "icon": "🦊",
+          "path": "/icons/GitLab.svg"
         }
       ]
     }

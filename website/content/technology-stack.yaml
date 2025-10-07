@@ -1,136 +1,239 @@
 title: "Технологический стек курса"
 subtitle: "Практические инструменты, которыми вы овладеете"
+
 categories:
-  - title: "Frameworks"
-    icon: "🧩"
-    path: "/icons/frameworks.svg"
+
+  - title: "Бэкенд"
+    icon:
+    path:
     items:
+
       - title: "FastAPI"
         icon: "⚡"
-        path: "/icons/fastapi.svg"
+        path: "/icons/FastAPI.svg"
+
       - title: "Pydantic"
         icon: "📐"
-        path: "/icons/pydantic.svg"
+        path: "/icons/Pydantic.svg"
+
       - title: "SQLAlchemy"
         icon: "🗄️"
-        path: "/icons/sqlalchemy.svg"
+        path: "/icons/SQLAlchemy.svg"
+
       - title: "Django"
         icon: "🌿"
-        path: "/icons/django.svg"
-      - title: "DRF"
+        path: "/icons/Django-filled.svg"
+
+      - title: "Django REST Framework"
         icon: "🔗"
-        path: "/icons/drf.svg"
-      - title: "FastStream"
-        icon: "📡"
-        path: "/icons/faststream.svg"
-      - title: "Celery"
-        icon: "🥬"
-        path: "/icons/celery.svg"
-      - title: "Taskiq"
-        icon: "🧠"
-        path: "/icons/taskiq.svg"
-  - title: "Languages"
-    icon: "🗣️"
-    path: "/icons/languages.svg"
+        path: "/icons/Django-REST-custom.svg"
+
+  - title: "Языки и шаблоны"
+    icon:
+    path:
     items:
+
       - title: "Python"
         icon: "🐍"
-        path: "/icons/python.svg"
+        path: "/icons/Python.svg"
+
       - title: "SQL"
         icon: "🗃️"
-        path: "/icons/sql.svg"
-      - title: "JavaScript"
-        icon: "🟨"
-        path: "/icons/javascript.svg"
-      - title: "HTML"
-        icon: "📄"
-        path: "/icons/html.svg"
-      - title: "CSS"
-        icon: "🎨"
-        path: "/icons/css.svg"
+        path: "/icons/database.svg"
+
       - title: "Jinja"
         icon: "🪄"
         path: "/icons/jinja.svg"
-  - title: "Technologies"
-    icon: "🧰"
-    path: "/icons/technologies.svg"
+
+  - title: "Основы фронтенда"
+    icon:
+    path:
     items:
+
+      - title: "HTML"
+        icon: "📄"
+        path: "/icons/HTML5.svg"
+
+      - title: "CSS"
+        icon: "🎨"
+        path: "/icons/CSS3.svg"
+
+      - title: "JavaScript"
+        icon: "🟨"
+        path: "/icons/JavaScript.svg"
+
+      - title: "Bootstrap"
+        icon: "🅱️"
+        path: "/icons/Bootstrap.svg"
+
+  - title: "Инфраструктура и данные"
+    icon:
+    path:
+    items:
+
       - title: "Docker"
         icon: "🐳"
-        path: "/icons/docker.svg"
+        path: "/icons/docker-minimal.svg"
+
       - title: "Docker Compose"
         icon: "⚙️"
-        path: "/icons/docker-compose.svg"
+        path: "/icons/containers.svg"
+
       - title: "Podman"
         icon: "🐙"
-        path: "/icons/podman.svg"
+        path: "/icons/Podman.svg"
+
       - title: "Redis"
         icon: "💾"
-        path: "/icons/redis.svg"
+        path: "/icons/Redis.svg"
+
       - title: "SQLite"
         icon: "📘"
-        path: "/icons/sqlite.svg"
+        path: "/icons/SQLite.svg"
+
       - title: "Postgres"
         icon: "🐘"
-        path: "/icons/postgres.svg"
+        path: "/icons/PostgresSQL.svg"
+
       - title: "S3"
         icon: "🪣"
-        path: "/icons/s3.svg"
-  - title: "Instruments"
-    icon: "🛠️"
-    path: "/icons/instruments.svg"
+        path: "/icons/s3-bucket.svg"
+
+  - title: "Инструменты разработки"
+    icon:
+    path:
     items:
+
       - title: "Black"
         icon: "🖤"
-        path: "/icons/black.svg"
+        path: "/icons/Black-formatter.svg"
+
       - title: "ruff"
         icon: "🐶"
-        path: "/icons/ruff.svg"
+        path: "/icons/ruff-r.svg"
+
+      - title: "my[py]"
+        icon: "✏️"
+        path: "/icons/mypy.svg"
+
       - title: "pre-commit"
         icon: "✅"
-        path: "/icons/pre-commit.svg"
+        path: "/icons/pre-commit-logo.svg"
+
       - title: "uv"
         icon: "🌠"
         path: "/icons/uv.svg"
+
       - title: "Poetry"
         icon: "🖋️"
-        path: "/icons/poetry.svg"
-      - title: "gh-cli"
-        icon: "🐱"
-        path: "/icons/gh-cli.svg"
-  - title: "Deploying"
-    icon: "🚀"
-    path: "/icons/deploying.svg"
+        path: "/icons/Python-Poetry.svg"
+
+  - title: "CI/CD и деплой"
+    icon:
+    path:
     items:
+
       - title: "GitHub Actions"
         icon: "⚙️"
         path: "/icons/github-actions.svg"
+
       - title: "GitLab CI/CD"
         icon: "🦊"
         path: "/icons/gitlab-ci.svg"
-  - title: "Testing"
-    icon: "🧪"
-    path: "/icons/testing.svg"
+
+  - title: "Тестирование и покрытие"
+    icon:
+    path:
     items:
+
       - title: "Unittest"
         icon: "🧾"
-        path: "/icons/unittest.svg"
+        path: "/icons/test-tube.svg"
+
       - title: "Pytest"
         icon: "🧫"
         path: "/icons/pytest.svg"
+
       - title: "Coverage"
         icon: "📈"
-        path: "/icons/coverage.svg"
+        path: "/icons/chart-bar-alt.svg"
+
       - title: "Codecov"
         icon: "🎯"
-        path: "/icons/codecov.svg"
-  - title: "Queues"
-    icon: "📨"
-    path: "/icons/queues.svg"
+        path: "/icons/Codecov.svg"
+
+  - title: "Брокеры сообщений и очереди задач"
+    icon:
+    path:
     items:
+
       - title: "RabbitMQ"
         icon: "🐇"
-        path: "/icons/rabbitmq.svg"
+        path: "/icons/RabbitMQ.svg"
+
       - title: "NATS"
         icon: "🛰️"
         path: "/icons/nats.svg"
+
+      - title: "FastStream"
+        icon: "📡"
+        path: "/icons/FastStream.svg"
+
+      - title: "Celery"
+        icon: "🥬"
+        path: "/icons/celery-logo.svg"
+
+      - title: "Taskiq"
+        icon: "🧠"
+        path: "/icons/taskiq-small-logo.svg"
+
+  - title: "Терминал, CLI"
+    icon:
+    path:
+    items:
+
+      - title: "bash / zsh"
+        icon: "💻"
+        path: "/icons/Bash.svg"
+
+      - title: "PowerShell"
+        icon: "🛰️"
+        path: "/icons/PowerShell.svg"
+
+      - title: "Typer"
+        icon: "🎹"
+        path: "/icons/Typer.svg"
+
+      - title: "Scoop"
+        icon: "🪟"
+        path: "/icons/icecream-scoop.svg"
+
+      - title: "Homebrew"
+        icon: "🍺"
+        path: "/icons/Homebrew.svg"
+
+
+  - title: "Инструменты и платформы"
+    icon:
+    path:
+    items:
+
+      - title: "PyCharm"
+        icon: "🔮"
+        path: "/icons/PyCharm.svg"
+
+      - title: "DBeaver"
+        icon: "🦫"
+        path: "/icons/DBeaver.svg"
+
+      - title: "GitHub CLI"
+        icon: "🐱"
+        path: "/icons/github-inverted.svg"
+
+      - title: "GitHub"
+        icon: "😼"
+        path: "/icons/github-octocat.svg"
+
+      - title: "GitLab"
+        icon: "🦊"
+        path: "/icons/GitLab.svg"
