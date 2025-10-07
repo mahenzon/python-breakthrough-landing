@@ -5,7 +5,7 @@ import { parseCourseData } from '../server/utils/course-parser'
 import { calculateStatistics } from '../server/utils/stats-calculator'
 import { loadYamlFile } from '../server/utils/yaml-loader'
 import type { SiteConfig } from '../types/site-config'
-import type { FaqItem, StudentProject, CourseProject, TechnologyStackData, Icon, ModuleTechData, ModuleTechMapping } from '../types/content'
+import type { FaqItem, StudentProject, CourseProject, TechnologyStackData, Icon, ModuleTechData, ModuleTechMapping, HomeContent } from '../types/content'
 import { marked } from 'marked'
 
 const publicDir = join(process.cwd(), 'public', 'data')
@@ -154,30 +154,36 @@ const faqData = loadYamlFile<FaqItem[]>(faqPath)
 writeFileSync(join(publicDir, 'faq.json'), JSON.stringify(faqData, null, 2))
 console.log('✅ faq.json generated')
 
-// 5. Generate student projects data
+// 5. Generate home content data
+const homeContentPath = join(process.cwd(), 'content', 'home-content.yaml')
+const homeContentData = loadYamlFile<HomeContent>(homeContentPath)
+writeFileSync(join(publicDir, 'home-content.json'), JSON.stringify(homeContentData, null, 2))
+console.log('✅ home-content.json generated')
+
+// 6. Generate student projects data
 const studentProjectsPath = join(process.cwd(), 'content', 'students-projects.yaml')
 const studentProjectsData = loadYamlFile<StudentProject[]>(studentProjectsPath)
 writeFileSync(join(publicDir, 'students-projects.json'), JSON.stringify(studentProjectsData, null, 2))
 console.log('✅ students-projects.json generated')
 
-// 6. Generate course projects data
+// 7. Generate course projects data
 const courseProjectsPath = join(process.cwd(), 'content', 'course-projects.yaml')
 const courseProjectsData = loadYamlFile<CourseProject[]>(courseProjectsPath)
 writeFileSync(join(publicDir, 'course-projects.json'), JSON.stringify(courseProjectsData, null, 2))
 console.log('✅ course-projects.json generated')
 
-// 7. Generate icons data
+// 8. Generate icons data
 const iconsPath = join(process.cwd(), 'content', 'icons.yaml')
 const iconsData = loadYamlFile<Icon[]>(iconsPath)
 writeFileSync(join(publicDir, 'icons.json'), JSON.stringify(iconsData, null, 2))
 console.log('✅ icons.json generated')
 
-// 8. Generate modules-tech data
+// 9. Generate modules-tech data
 const modulesTechData = loadYamlFile<ModuleTechData>(modulesTechPath)
 writeFileSync(join(publicDir, 'modules-tech.json'), JSON.stringify(modulesTechData, null, 2))
 console.log('✅ modules-tech.json generated')
 
-// 9. Generate technology stack data (with icon enrichment)
+// 10. Generate technology stack data (with icon enrichment)
 const technologyStackPath = join(process.cwd(), 'content', 'technology-stack.yaml')
 const technologyStackData = loadYamlFile<TechnologyStackData>(technologyStackPath)
 
@@ -204,7 +210,7 @@ const enrichedTechStack = {
 writeFileSync(join(publicDir, 'technology-stack.json'), JSON.stringify(enrichedTechStack, null, 2))
 console.log('✅ technology-stack.json generated')
 
-// 10. Generate latest changes HTML
+// 11. Generate latest changes HTML
 const latestChangesPath = join(process.cwd(), 'content', 'latest-changes.md')
 const latestChangesContent = readFileSync(latestChangesPath, 'utf-8')
 

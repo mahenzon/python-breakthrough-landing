@@ -78,3 +78,22 @@ export interface TechnologyStackData {
   subtitle?: string;
   categories: TechnologyStackCategory[];
 }
+
+// ============================================
+// Home Content
+// ============================================
+export interface ValuePropositionItem {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface HomeContent {
+  whatYouLearn: string[];
+  forWhom: string[];
+  requirements: string[];
+  howItWorks: string[];
+  whatYouGet: string[];
+  juridicalOptionsAvailable: string[];
+  valueProposition: ValuePropositionItem[];
+}
