@@ -3,8 +3,8 @@
     "id": "url-shortener",
     "title": "URL Shortener",
     "description": "Сервис для создания коротких ссылок. Вы разработаете полноценное веб-приложение с базой данных, REST API и современным интерфейсом.\n",
-    "url": "",
-    "status": "coming_soon"
+    "url": "https://github.com/mahenzon/fastapi-url-shortener/",
+    "status": "available"
   },
   {
     "id": "wip",

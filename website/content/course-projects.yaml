@@ -3,8 +3,8 @@
   description: >
     Сервис для создания коротких ссылок.
     Вы разработаете полноценное веб-приложение с базой данных, REST API и современным интерфейсом.
-  url: ""
-  status: "coming_soon"
+  url: "https://github.com/mahenzon/fastapi-url-shortener/"
+  status: "available"
 
 - id: "wip"
   title: "Work In Progress"
