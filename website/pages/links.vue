@@ -51,7 +51,7 @@
     </div>
     
     <!-- Value Proposition -->
-    <ValuePropositionSection />
+    <SectionsValuePropositionSection />
     
     <!-- Payment by Invoice -->
     <div class="max-w-4xl mx-auto">
