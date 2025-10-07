@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap gap-3 text-sm text-gray-600 mb-4">
+  <div class="flex flex-wrap gap-3 text-md text-gray-600 mb-4">
     <span>{{ $t('course.topicsCount') }}: {{ module.topics.length }}</span>
     <span>{{ $t('course.lessonsCount') }}: {{ countModuleLessons(module) }}</span>
     <span v-if="totalModuleMinutes(module)">{{ $t('course.totalVideo') }} {{ formatDuration(module) }}</span>

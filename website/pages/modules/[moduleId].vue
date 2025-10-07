@@ -2,7 +2,7 @@
   <div class="container mx-auto px-4 py-12">
     <div v-if="module" class="max-w-4xl mx-auto">
       <!-- Breadcrumb -->
-      <nav class="mb-8 text-sm">
+      <nav class="mb-8 text-md">
         <NuxtLink to="/modules" class="text-primary-600 hover:text-primary-700">
           ← {{ $t('course.modules') }}
         </NuxtLink>
@@ -13,7 +13,7 @@
         <h1 class="text-4xl font-bold mb-4">{{ module.name }}</h1>
 
         <!-- Stats Section -->
-        <div class="flex flex-wrap gap-4 text-lg text-gray-800 bg-gray-50 rounded-lg p-4 mb-4">
+        <div class="flex flex-wrap gap-4 text-lg text-gray-800 bg-gray-50 rounded-lg p-4 mb-3">
           <span><strong>{{ $t('course.topicsCount') }}:</strong> {{ module.topics.length }}</span>
           <span><strong>{{ $t('course.lessonsCount') }}:</strong> {{ totalLessons }}</span>
           <span><strong>{{ $t('course.totalVideo') }}</strong> {{ formatDuration(totalDuration) }}</span>
@@ -21,15 +21,15 @@
         </div>
 
         <!-- Tech Icons Section (Vertical with Text) -->
-        <div class="bg-gray-50 rounded-lg p-4 mb-4">
-          <h3 class="text-sm font-semibold text-gray-600 uppercase tracking-wide mb-3">
+        <div class="bg-gray-50 rounded-lg p-4 mb-5">
+          <h3 class="text-lg font-semibold text-gray-700 tracking-wide mb-3">
             Технологии модуля
           </h3>
           <CourseModuleTechIcons
             :module-id="module.id"
             layout="vertical"
             :show-text="true"
-            icon-size="sm"
+            icon-size="md"
           />
         </div>
 

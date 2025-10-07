@@ -8,18 +8,18 @@
         :key="module.id"
         class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition"
       >
-        <h2 class="text-2xl font-bold mb-4">{{ module.name }}</h2>
+        <h2 class="text-3xl font-bold mb-4">{{ module.name }}</h2>
 
         <!-- Tech Icons (Horizontal) -->
         <div class="mb-4">
           <CourseModuleTechIcons
             :module-id="module.id"
             layout="horizontal"
-            icon-size="sm"
+            icon-size="md"
           />
         </div>
 
-        <div class="text-gray-600 mb-4 line-clamp-3">
+        <div class="text-gray-700 text-lg mb-4 line-clamp-3">
           {{ getPlainText(module.description) }}
         </div>
 

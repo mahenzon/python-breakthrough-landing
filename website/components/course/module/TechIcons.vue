@@ -48,7 +48,7 @@
           :class="iconClasses"
           loading="lazy"
         />
-        <span v-if="showText" class="text-gray-700">{{ tech.text }}</span>
+        <span v-if="showText" class="text-gray-800 text-lg">{{ tech.text }}</span>
       </div>
     </template>
   </div>
