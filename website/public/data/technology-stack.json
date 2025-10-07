@@ -170,7 +170,7 @@
         {
           "title": "GitHub Actions",
           "icon": "⚙️",
-          "path": "/icons/github-actions.svg"
+          "path": "/icons/Github-Actions.svg"
         },
         {
           "title": "GitLab CI/CD",
@@ -286,7 +286,7 @@
           "path": "/icons/DBeaver.svg"
         },
         {
-          "title": "gh-cli",
+          "title": "GitHub CLI",
           "icon": "🐱",
           "path": "/icons/github-inverted.svg"
         },
