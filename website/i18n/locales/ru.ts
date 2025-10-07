@@ -12,7 +12,7 @@ export default {
     faqMin: 'ЧаВо',
     changelog: 'Изменения',
     contacts: 'Контакты',
-    courseLinks: 'Ссылки на курс',
+    courseLinks: 'Присоединиться',
   },
   course: {
     modules: 'Модули курса',
@@ -129,7 +129,7 @@ export default {
     underDevelopmentBenefit3: 'Доступ навсегда',
   },
   courseLinks: {
-    title: 'Программа',
+    title: 'Присоединиться',
     description: 'Образовательная программа расположена на разных ресурсах для вашего удобства',
     valueTitle: 'Ценность программы',
     invoiceTitle: 'Оплата по счёту (для юр. лиц)',
