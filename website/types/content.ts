@@ -20,10 +20,50 @@ export interface CourseProject {
   order: number;
 }
 
+// ============================================
+// Icons
+// ============================================
+export interface Icon {
+  name: string;
+  icon: string;
+  path: string;
+}
+
+// ============================================
+// Module Technology Mapping
+// ============================================
+export interface ModuleTech {
+  'icon-name': string;
+  text: string;
+}
+
+export interface ModuleTechConfig {
+  tech: ModuleTech[];
+}
+
+export interface ModuleTechMapping {
+  [moduleId: string]: ModuleTechConfig;
+}
+
+export interface ModuleTechData {
+  modules: ModuleTechMapping;
+}
+
+export interface EnrichedModuleTech extends ModuleTech {
+  icon: string;
+  path: string;
+  name: string; // same as icon-name, for convenience
+}
+
+// ============================================
+// Technology Stack
+// ============================================
 export interface TechnologyStackItem {
   title: string;
+  'icon-name': string;  // UPDATED: now uses icon-name instead of icon + path
+  // Optional enriched fields (can be added during generation)
   icon?: string;
-  path: string;
+  path?: string;
 }
 
 export interface TechnologyStackCategory {
