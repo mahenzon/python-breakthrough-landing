@@ -1,0 +1,96 @@
+modules:
+  "01-введение":
+    tech:
+      - icon-name: "Python"
+        text: "Основы Python"
+      - icon-name: "PyCharm"
+        text: "Знакомство с PyCharm"
+
+  "03-работа-на-локальном-компьютере":
+    tech:
+      - icon-name: "bash"
+        text: "Работа в терминале"
+      - icon-name: "PowerShell"
+        text: "PowerShell для Windows"
+      - icon-name: "Homebrew"
+        text: "Установка через Homebrew"
+      - icon-name: "Scoop"
+        text: "Установка через Scoop"
+
+  "04-pycharm":
+    tech:
+      - icon-name: "PyCharm"
+        text: "Профессиональная разработка в PyCharm"
+
+  "06-рабочее-окружение":
+    tech:
+      - icon-name: "uv"
+        text: "Менеджер пакетов uv"
+      - icon-name: "Poetry"
+        text: "Poetry для управления зависимостями"
+      - icon-name: "Docker"
+        text: "Контейнеризация приложений"
+
+  "07-git":
+    tech:
+      - icon-name: "GitHub"
+        text: "Работа с GitHub"
+      - icon-name: "GitLab"
+        text: "GitLab CI/CD"
+      - icon-name: "GitHub-CLI"
+        text: "GitHub CLI инструменты"
+
+  "10-fastapi-приложение-коротких-ссылок":
+    tech:
+      - icon-name: "FastAPI"
+        text: "FastAPI веб-фреймворк"
+      - icon-name: "Pydantic"
+        text: "Валидация данных"
+      - icon-name: "SQLAlchemy"
+        text: "ORM для работы с базами данных"
+      - icon-name: "Postgres"
+        text: "PostgreSQL база данных"
+      - icon-name: "Redis"
+        text: "Кэширование с Redis"
+      - icon-name: "Docker"
+        text: "Контейнеризация"
+      - icon-name: "Docker-Compose"
+        text: "Оркестрация контейнеров"
+      - icon-name: "Pytest"
+        text: "Тестирование приложения"
+      - icon-name: "GitHub-Actions"
+        text: "CI/CD Pipeline"
+      - icon-name: "Jinja"
+        text: "Шаблонизация"
+      - icon-name: "HTML"
+        text: "HTML разметка"
+      - icon-name: "CSS"
+        text: "Стилизация"
+      - icon-name: "Bootstrap"
+        text: "Bootstrap фреймворк"
+
+  "11-основы-frontend":
+    tech:
+      - icon-name: "HTML"
+        text: "HTML разметка"
+      - icon-name: "CSS"
+        text: "CSS стилизация"
+      - icon-name: "JS"
+        text: "JavaScript основы"
+      - icon-name: "Bootstrap"
+        text: "Bootstrap UI фреймворк"
+      - icon-name: "Jinja"
+        text: "Шаблонизатор Jinja2"
+
+  "12-sql":
+    tech:
+      - icon-name: "SQL"
+        text: "SQL запросы"
+      - icon-name: "SQLite"
+        text: "SQLite база данных"
+      - icon-name: "Postgres"
+        text: "PostgreSQL"
+      - icon-name: "DBeaver"
+        text: "Работа с DBeaver"
+      - icon-name: "SQLAlchemy"
+        text: "SQLAlchemy ORM"
