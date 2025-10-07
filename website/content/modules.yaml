@@ -1,3 +1,8 @@
+# Ghost module configuration
+ghostModule:
+  enabled: false  # Set to true to show "new modules coming" indicator
+  # customText: "Новые модули уже разрабатываются! Курс постоянно обновляется."
+
 modules:
 
   "01-введение":
