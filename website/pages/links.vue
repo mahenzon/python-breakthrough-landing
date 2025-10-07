@@ -51,36 +51,7 @@
     </div>
     
     <!-- Value Proposition -->
-    <div class="max-w-6xl mx-auto mb-16">
-      <h2 class="text-3xl font-bold mb-12 text-center">{{ $t('courseLinks.valueTitle') }}</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition">
-          <div class="text-4xl mb-4">👨‍🏫</div>
-          <h3 class="font-bold text-xl mb-3 text-primary-600">{{ $t('courseLinks.value1Title') }}</h3>
-          <p class="text-gray-700">{{ $t('courseLinks.value1Description') }}</p>
-        </div>
-        <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition">
-          <div class="text-4xl mb-4">💼</div>
-          <h3 class="font-bold text-xl mb-3 text-primary-600">{{ $t('courseLinks.value2Title') }}</h3>
-          <p class="text-gray-700">{{ $t('courseLinks.value2Description') }}</p>
-        </div>
-        <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition">
-          <div class="text-4xl mb-4">🚀</div>
-          <h3 class="font-bold text-xl mb-3 text-primary-600">{{ $t('courseLinks.value3Title') }}</h3>
-          <p class="text-gray-700">{{ $t('courseLinks.value3Description') }}</p>
-        </div>
-        <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition">
-          <div class="text-4xl mb-4">⚡</div>
-          <h3 class="font-bold text-xl mb-3 text-primary-600">{{ $t('courseLinks.value4Title') }}</h3>
-          <p class="text-gray-700">{{ $t('courseLinks.value4Description') }}</p>
-        </div>
-        <div class="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition">
-          <div class="text-4xl mb-4">🌍</div>
-          <h3 class="font-bold text-xl mb-3 text-primary-600">{{ $t('courseLinks.value5Title') }}</h3>
-          <p class="text-gray-700">{{ $t('courseLinks.value5Description') }}</p>
-        </div>
-      </div>
-    </div>
+    <ValuePropositionSection />
     
     <!-- Payment by Invoice -->
     <div class="max-w-4xl mx-auto">
