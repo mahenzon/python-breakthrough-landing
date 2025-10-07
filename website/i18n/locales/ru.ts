@@ -29,6 +29,34 @@ export default {
     module: 'Модуль',
     topic: 'Тема',
     moduleTech: 'Технологии модуля',
+
+    // Status translations
+    status: {
+      ready: 'Готов',
+      inDevelopment: 'В разработке',
+    },
+
+    // Ghost Module translations
+    ghostModule: {
+      title: 'Новые модули в разработке',
+      defaultText: 'Курс постоянно обновляется. Новые модули появятся совсем скоро!',
+      followUpdates: 'Следите за обновлениями в чате курса',
+    },
+
+    // Ghost Topic translations
+    ghostTopic: {
+      title: 'Дополнительные темы в разработке',
+      defaultText: 'В этом модуле скоро появятся новые темы и уроки',
+      followUpdates: 'Следите за обновлениями',
+    },
+
+    // Development indicators
+    underDevelopment: {
+      badge: 'В разработке',
+      badgeReady: 'Готов',
+      iconAccessible: 'Модуль в разработке',
+      iconAccessibleReady: 'Модуль готов',
+    },
   },
   accordion: {
     expandAll: 'Развернуть всё',
