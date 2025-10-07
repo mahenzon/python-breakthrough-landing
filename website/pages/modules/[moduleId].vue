@@ -24,7 +24,7 @@
       <div class="space-y-4">
         <!-- Expand/Collapse All Button -->
         <div class="flex justify-end">
-          <button 
+          <button
             class="px-4 py-2 text-sm text-primary-600 hover:text-primary-700 font-medium"
             @click="toggleAllTopics()"
           >
@@ -56,20 +56,20 @@
               ▼
             </span>
           </button>
-          
+
           <!-- Topic Content (Collapsible) -->
           <div v-show="openTopics[topicIndex]" class="px-6 pb-6">
             <div v-if="topic.description" class="text-gray-600 mb-4">
               {{ topic.description }}
             </div>
-            
+
             <!-- Lessons Header -->
             <div class="grid grid-cols-12 gap-2 px-3 py-2 text-xs font-medium text-gray-500 border-b">
               <div class="col-span-7">Урок</div>
               <div class="col-span-3 text-center">{{ $t('course.videoDuration') }}</div>
               <div class="col-span-2 text-center">{{ $t('course.tasks') }}</div>
             </div>
-            
+
             <!-- Lessons List -->
             <div class="space-y-1 mt-2">
               <div
