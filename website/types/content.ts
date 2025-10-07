@@ -108,6 +108,8 @@ export interface CoursePlatform {
   title: string;
   description: string;
   url: string;
+  buttonText: string;
+  noteIcon: string;
   note: string;
   order: number;
 }
