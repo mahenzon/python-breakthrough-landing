@@ -14,3 +14,9 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const { getHomeContent } = useHomeContent()
+const homeContent = await getHomeContent()
+const valuePropositionList = homeContent.valueProposition
+</script>
