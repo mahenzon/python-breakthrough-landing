@@ -28,6 +28,7 @@ export default {
     hours: 'ч',
     module: 'Модуль',
     topic: 'Тема',
+    moduleTech: 'Технологии модуля',
   },
   accordion: {
     expandAll: 'Развернуть всё',

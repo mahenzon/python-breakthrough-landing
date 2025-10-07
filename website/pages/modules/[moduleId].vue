@@ -23,7 +23,7 @@
         <!-- Tech Icons Section (Vertical with Text) -->
         <div class="bg-gray-50 rounded-lg p-4 mb-5">
           <h3 class="text-lg font-semibold text-gray-700 tracking-wide mb-3">
-            Технологии модуля
+            {{ $t('course.moduleTech') }}
           </h3>
           <CourseModuleTechIcons
             :module-id="module.id"
