@@ -1,16 +1,21 @@
 # Ghost module configuration
 ghostModule:
-  enabled: false  # Set to true to show "new modules coming" indicator
-  # customText: "Новые модули уже разрабатываются! Курс постоянно обновляется."
+  enabled: true  # Set to true to show "new modules coming" indicator
+  customText: "Новые модули уже разрабатываются! Курс постоянно обновляется."
 
 modules:
 
   "01-введение":
+    status: "ready"
     tech:
       - icon-name: "Telegram"
         text: "Чат курса"
 
   "03-работа-на-локальном-компьютере":
+    status: "in_development"
+    ghostTopic:
+      enabled: true
+      customText: "Готовим материалы о дополнительных инструментах и пакетных менеджерах"
     tech:
       - icon-name: "bash"
         text: "Работа в терминале"
@@ -53,6 +58,10 @@ modules:
         text: "Работа с git в VS Code"
 
   "10-fastapi-приложение-коротких-ссылок":
+    status: "ready"
+    ghostTopic:
+      enabled: true
+      customText: "Планируется добавить темы про CI/CD, деплой и мониторинг приложения"
     tech:
       - icon-name: "FastAPI"
         text: "FastAPI — современный веб-фреймворк"

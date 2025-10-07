@@ -34,7 +34,7 @@ function getDirectories(path: string): string[] {
 
 /**
  * Auto-detects modules from course-data folder and ensures they exist
- * in modules-tech.yaml. If a module is missing, it adds it with empty tech array.
+ * in modules.yaml. If a module is missing, it adds it with empty tech array.
  * Preserves existing module configurations.
  */
 function ensureModulesInTechMapping(
@@ -44,13 +44,13 @@ function ensureModulesInTechMapping(
   // Get all module folder names from course-data
   const moduleIds = getDirectories(courseDataPath)
 
-  // Load existing modules-tech.yaml
+  // Load existing modules.yaml
   let modulesTechData: ModuleTechData
   try {
     modulesTechData = loadYamlFile<ModuleTechData>(modulesTechPath)
   } catch {
     // If file doesn't exist, create initial structure
-    console.log('⚠️  modules-tech.yaml not found, creating new one')
+    console.log('⚠️  modules.yaml not found, creating new one')
     modulesTechData = { modules: {} }
   }
 
@@ -92,9 +92,9 @@ function ensureModulesInTechMapping(
     })
 
     writeFileSync(modulesTechPath, yamlContent, 'utf-8')
-    console.log(`✅ modules-tech.yaml updated (${newModulesAdded} new modules added)`)
+    console.log(`✅ modules.yaml updated (${newModulesAdded} new modules added)`)
   } else {
-    console.log('✅ modules-tech.yaml is up to date')
+    console.log('✅ modules.yaml is up to date')
   }
 }
 
@@ -106,9 +106,9 @@ const course = parseCourseData(courseDataPath)
 writeFileSync(join(publicDir, 'course.json'), JSON.stringify(course, null, 2))
 console.log('✅ course.json generated')
 
-// 1a. Ensure all modules are in modules-tech.yaml
-console.log('\n🔍 Checking modules-tech.yaml...')
-const modulesTechPath = join(process.cwd(), 'content', 'modules-tech.yaml')
+// 1a. Ensure all modules are in modules.yaml
+console.log('\n🔍 Checking modules.yaml...')
+const modulesTechPath = join(process.cwd(), 'content', 'modules.yaml')
 ensureModulesInTechMapping(courseDataPath, modulesTechPath)
 console.log('')
 
