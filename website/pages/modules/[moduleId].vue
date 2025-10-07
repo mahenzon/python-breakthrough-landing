@@ -11,12 +11,29 @@
       <!-- Module Header -->
       <div class="mb-8">
         <h1 class="text-4xl font-bold mb-4">{{ module.name }}</h1>
-        <div class="flex flex-wrap gap-4 text-lg text-gray-800 bg-gray-50 rounded-lg">
+
+        <!-- Stats Section -->
+        <div class="flex flex-wrap gap-4 text-lg text-gray-800 bg-gray-50 rounded-lg p-4 mb-4">
           <span><strong>{{ $t('course.topicsCount') }}:</strong> {{ module.topics.length }}</span>
           <span><strong>{{ $t('course.lessonsCount') }}:</strong> {{ totalLessons }}</span>
           <span><strong>{{ $t('course.totalVideo') }}</strong> {{ formatDuration(totalDuration) }}</span>
           <span><strong>{{ $t('course.tasksCount') }}:</strong> {{ totalTasks }}</span>
         </div>
+
+        <!-- Tech Icons Section (Vertical with Text) -->
+        <div class="bg-gray-50 rounded-lg p-4 mb-4">
+          <h3 class="text-sm font-semibold text-gray-600 uppercase tracking-wide mb-3">
+            Технологии модуля
+          </h3>
+          <CourseModuleTechIcons
+            :module-id="module.id"
+            layout="vertical"
+            :show-text="true"
+            icon-size="sm"
+          />
+        </div>
+
+        <!-- Description -->
         <!-- eslint-disable-next-line vue/no-v-html -->
         <div v-if="module.description" class="prose text-gray-800 my-4" v-html="moduleDescriptionHtml"></div>
       </div>

@@ -9,26 +9,31 @@
       "items": [
         {
           "title": "FastAPI",
+          "icon-name": "FastAPI",
           "icon": "⚡",
           "path": "/icons/FastAPI.svg"
         },
         {
           "title": "Pydantic",
+          "icon-name": "Pydantic",
           "icon": "📐",
           "path": "/icons/Pydantic.svg"
         },
         {
           "title": "SQLAlchemy",
+          "icon-name": "SQLAlchemy",
           "icon": "🗄️",
           "path": "/icons/SQLAlchemy.svg"
         },
         {
           "title": "Django",
+          "icon-name": "Django",
           "icon": "🌿",
           "path": "/icons/Django-filled.svg"
         },
         {
           "title": "Django REST Framework",
+          "icon-name": "DRF",
           "icon": "🔗",
           "path": "/icons/Django-REST-custom.svg"
         }
@@ -41,16 +46,19 @@
       "items": [
         {
           "title": "Python",
+          "icon-name": "Python",
           "icon": "🐍",
           "path": "/icons/Python.svg"
         },
         {
           "title": "SQL",
+          "icon-name": "SQL",
           "icon": "🗃️",
           "path": "/icons/database.svg"
         },
         {
           "title": "Jinja",
+          "icon-name": "Jinja",
           "icon": "🪄",
           "path": "/icons/jinja.svg"
         }
@@ -63,21 +71,25 @@
       "items": [
         {
           "title": "HTML",
+          "icon-name": "HTML",
           "icon": "📄",
           "path": "/icons/HTML5.svg"
         },
         {
           "title": "CSS",
+          "icon-name": "CSS",
           "icon": "🎨",
           "path": "/icons/CSS3.svg"
         },
         {
           "title": "JavaScript",
+          "icon-name": "JS",
           "icon": "🟨",
           "path": "/icons/JavaScript.svg"
         },
         {
           "title": "Bootstrap",
+          "icon-name": "Bootstrap",
           "icon": "🅱️",
           "path": "/icons/Bootstrap.svg"
         }
@@ -90,36 +102,43 @@
       "items": [
         {
           "title": "Docker",
+          "icon-name": "Docker",
           "icon": "🐳",
           "path": "/icons/docker-minimal.svg"
         },
         {
           "title": "Docker Compose",
+          "icon-name": "Docker-Compose",
           "icon": "⚙️",
           "path": "/icons/containers.svg"
         },
         {
           "title": "Podman",
+          "icon-name": "Podman",
           "icon": "🐙",
           "path": "/icons/Podman.svg"
         },
         {
           "title": "Redis",
+          "icon-name": "Redis",
           "icon": "💾",
           "path": "/icons/Redis.svg"
         },
         {
           "title": "SQLite",
+          "icon-name": "SQLite",
           "icon": "📘",
           "path": "/icons/SQLite.svg"
         },
         {
           "title": "Postgres",
+          "icon-name": "Postgres",
           "icon": "🐘",
           "path": "/icons/PostgresSQL.svg"
         },
         {
           "title": "S3",
+          "icon-name": "S3",
           "icon": "🪣",
           "path": "/icons/s3-bucket.svg"
         }
@@ -132,31 +151,37 @@
       "items": [
         {
           "title": "Black",
+          "icon-name": "Black",
           "icon": "🖤",
           "path": "/icons/Black-formatter.svg"
         },
         {
           "title": "ruff",
+          "icon-name": "ruff",
           "icon": "🐶",
           "path": "/icons/ruff-r.svg"
         },
         {
           "title": "my[py]",
+          "icon-name": "mypy",
           "icon": "✏️",
           "path": "/icons/mypy.svg"
         },
         {
           "title": "pre-commit",
+          "icon-name": "pre-commit",
           "icon": "✅",
           "path": "/icons/pre-commit-logo.svg"
         },
         {
           "title": "uv",
+          "icon-name": "uv",
           "icon": "🌠",
           "path": "/icons/uv.svg"
         },
         {
           "title": "Poetry",
+          "icon-name": "Poetry",
           "icon": "🖋️",
           "path": "/icons/Python-Poetry.svg"
         }
@@ -169,11 +194,13 @@
       "items": [
         {
           "title": "GitHub Actions",
+          "icon-name": "GitHub-Actions",
           "icon": "⚙️",
           "path": "/icons/GitHub-Actions.svg"
         },
         {
           "title": "GitLab CI/CD",
+          "icon-name": "GitLab-CI-CD",
           "icon": "🦊",
           "path": "/icons/gitlab-ci.svg"
         }
@@ -186,21 +213,25 @@
       "items": [
         {
           "title": "Unittest",
+          "icon-name": "Unittest",
           "icon": "🧾",
           "path": "/icons/test-tube.svg"
         },
         {
           "title": "Pytest",
+          "icon-name": "Pytest",
           "icon": "🧫",
           "path": "/icons/pytest.svg"
         },
         {
           "title": "Coverage",
+          "icon-name": "Coverage",
           "icon": "📈",
           "path": "/icons/chart-bar-alt.svg"
         },
         {
           "title": "Codecov",
+          "icon-name": "Codecov",
           "icon": "🎯",
           "path": "/icons/Codecov.svg"
         }
@@ -213,26 +244,31 @@
       "items": [
         {
           "title": "RabbitMQ",
+          "icon-name": "RabbitMQ",
           "icon": "🐇",
           "path": "/icons/RabbitMQ.svg"
         },
         {
           "title": "NATS",
+          "icon-name": "NATS",
           "icon": "🛰️",
           "path": "/icons/nats.svg"
         },
         {
           "title": "FastStream",
+          "icon-name": "FastStream",
           "icon": "📡",
           "path": "/icons/FastStream.svg"
         },
         {
           "title": "Celery",
+          "icon-name": "Celery",
           "icon": "🥬",
           "path": "/icons/celery-logo.svg"
         },
         {
           "title": "Taskiq",
+          "icon-name": "Taskiq",
           "icon": "🧠",
           "path": "/icons/taskiq-small-logo.svg"
         }
@@ -245,26 +281,31 @@
       "items": [
         {
           "title": "bash / zsh",
+          "icon-name": "bash",
           "icon": "💻",
           "path": "/icons/Bash.svg"
         },
         {
           "title": "PowerShell",
+          "icon-name": "PowerShell",
           "icon": "🛰️",
           "path": "/icons/PowerShell.svg"
         },
         {
           "title": "Typer",
+          "icon-name": "Typer",
           "icon": "🎹",
           "path": "/icons/Typer.svg"
         },
         {
           "title": "Scoop",
+          "icon-name": "Scoop",
           "icon": "🪟",
           "path": "/icons/icecream-scoop.svg"
         },
         {
           "title": "Homebrew",
+          "icon-name": "Homebrew",
           "icon": "🍺",
           "path": "/icons/Homebrew.svg"
         }
@@ -277,26 +318,31 @@
       "items": [
         {
           "title": "PyCharm",
+          "icon-name": "PyCharm",
           "icon": "🔮",
           "path": "/icons/PyCharm.svg"
         },
         {
           "title": "DBeaver",
+          "icon-name": "DBeaver",
           "icon": "🦫",
           "path": "/icons/DBeaver.svg"
         },
         {
           "title": "GitHub CLI",
+          "icon-name": "GitHub-CLI",
           "icon": "🐱",
           "path": "/icons/github-inverted.svg"
         },
         {
           "title": "GitHub",
+          "icon-name": "GitHub",
           "icon": "😼",
           "path": "/icons/github-octocat.svg"
         },
         {
           "title": "GitLab",
+          "icon-name": "GitLab",
           "icon": "🦊",
           "path": "/icons/GitLab.svg"
         }

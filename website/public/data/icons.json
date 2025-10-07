@@ -1,0 +1,232 @@
+[
+  {
+    "name": "FastAPI",
+    "icon": "⚡",
+    "path": "/icons/FastAPI.svg"
+  },
+  {
+    "name": "Pydantic",
+    "icon": "📐",
+    "path": "/icons/Pydantic.svg"
+  },
+  {
+    "name": "SQLAlchemy",
+    "icon": "🗄️",
+    "path": "/icons/SQLAlchemy.svg"
+  },
+  {
+    "name": "Django",
+    "icon": "🌿",
+    "path": "/icons/Django-filled.svg"
+  },
+  {
+    "name": "DRF",
+    "icon": "🔗",
+    "path": "/icons/Django-REST-custom.svg"
+  },
+  {
+    "name": "Python",
+    "icon": "🐍",
+    "path": "/icons/Python.svg"
+  },
+  {
+    "name": "SQL",
+    "icon": "🗃️",
+    "path": "/icons/database.svg"
+  },
+  {
+    "name": "Jinja",
+    "icon": "🪄",
+    "path": "/icons/jinja.svg"
+  },
+  {
+    "name": "HTML",
+    "icon": "📄",
+    "path": "/icons/HTML5.svg"
+  },
+  {
+    "name": "CSS",
+    "icon": "🎨",
+    "path": "/icons/CSS3.svg"
+  },
+  {
+    "name": "JS",
+    "icon": "🟨",
+    "path": "/icons/JavaScript.svg"
+  },
+  {
+    "name": "Bootstrap",
+    "icon": "🅱️",
+    "path": "/icons/Bootstrap.svg"
+  },
+  {
+    "name": "Docker",
+    "icon": "🐳",
+    "path": "/icons/docker-minimal.svg"
+  },
+  {
+    "name": "Docker-Compose",
+    "icon": "⚙️",
+    "path": "/icons/containers.svg"
+  },
+  {
+    "name": "Podman",
+    "icon": "🐙",
+    "path": "/icons/Podman.svg"
+  },
+  {
+    "name": "Redis",
+    "icon": "💾",
+    "path": "/icons/Redis.svg"
+  },
+  {
+    "name": "SQLite",
+    "icon": "📘",
+    "path": "/icons/SQLite.svg"
+  },
+  {
+    "name": "Postgres",
+    "icon": "🐘",
+    "path": "/icons/PostgresSQL.svg"
+  },
+  {
+    "name": "S3",
+    "icon": "🪣",
+    "path": "/icons/s3-bucket.svg"
+  },
+  {
+    "name": "Black",
+    "icon": "🖤",
+    "path": "/icons/Black-formatter.svg"
+  },
+  {
+    "name": "ruff",
+    "icon": "🐶",
+    "path": "/icons/ruff-r.svg"
+  },
+  {
+    "name": "mypy",
+    "icon": "✏️",
+    "path": "/icons/mypy.svg"
+  },
+  {
+    "name": "pre-commit",
+    "icon": "✅",
+    "path": "/icons/pre-commit-logo.svg"
+  },
+  {
+    "name": "uv",
+    "icon": "🌠",
+    "path": "/icons/uv.svg"
+  },
+  {
+    "name": "Poetry",
+    "icon": "🖋️",
+    "path": "/icons/Python-Poetry.svg"
+  },
+  {
+    "name": "GitHub-Actions",
+    "icon": "⚙️",
+    "path": "/icons/GitHub-Actions.svg"
+  },
+  {
+    "name": "GitLab-CI-CD",
+    "icon": "🦊",
+    "path": "/icons/gitlab-ci.svg"
+  },
+  {
+    "name": "Unittest",
+    "icon": "🧾",
+    "path": "/icons/test-tube.svg"
+  },
+  {
+    "name": "Pytest",
+    "icon": "🧫",
+    "path": "/icons/pytest.svg"
+  },
+  {
+    "name": "Coverage",
+    "icon": "📈",
+    "path": "/icons/chart-bar-alt.svg"
+  },
+  {
+    "name": "Codecov",
+    "icon": "🎯",
+    "path": "/icons/Codecov.svg"
+  },
+  {
+    "name": "RabbitMQ",
+    "icon": "🐇",
+    "path": "/icons/RabbitMQ.svg"
+  },
+  {
+    "name": "NATS",
+    "icon": "🛰️",
+    "path": "/icons/nats.svg"
+  },
+  {
+    "name": "FastStream",
+    "icon": "📡",
+    "path": "/icons/FastStream.svg"
+  },
+  {
+    "name": "Celery",
+    "icon": "🥬",
+    "path": "/icons/celery-logo.svg"
+  },
+  {
+    "name": "Taskiq",
+    "icon": "🧠",
+    "path": "/icons/taskiq-small-logo.svg"
+  },
+  {
+    "name": "bash",
+    "icon": "💻",
+    "path": "/icons/Bash.svg"
+  },
+  {
+    "name": "PowerShell",
+    "icon": "🛰️",
+    "path": "/icons/PowerShell.svg"
+  },
+  {
+    "name": "Typer",
+    "icon": "🎹",
+    "path": "/icons/Typer.svg"
+  },
+  {
+    "name": "Scoop",
+    "icon": "🪟",
+    "path": "/icons/icecream-scoop.svg"
+  },
+  {
+    "name": "Homebrew",
+    "icon": "🍺",
+    "path": "/icons/Homebrew.svg"
+  },
+  {
+    "name": "PyCharm",
+    "icon": "🔮",
+    "path": "/icons/PyCharm.svg"
+  },
+  {
+    "name": "DBeaver",
+    "icon": "🦫",
+    "path": "/icons/DBeaver.svg"
+  },
+  {
+    "name": "GitHub-CLI",
+    "icon": "🐱",
+    "path": "/icons/github-inverted.svg"
+  },
+  {
+    "name": "GitHub",
+    "icon": "😼",
+    "path": "/icons/github-octocat.svg"
+  },
+  {
+    "name": "GitLab",
+    "icon": "🦊",
+    "path": "/icons/GitLab.svg"
+  }
+]

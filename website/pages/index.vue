@@ -141,6 +141,16 @@
                 <div class="flex justify-between items-start gap-4">
                   <div class="flex-1">
                     <h3 class="text-xl font-bold mb-2">{{ module.name }}</h3>
+
+                    <!-- Tech Icons (Horizontal) -->
+                    <div class="mb-3">
+                      <CourseModuleTechIcons
+                        :module-id="module.id"
+                        layout="horizontal"
+                        icon-size="sm"
+                      />
+                    </div>
+
                     <CourseModuleStats :module="module" />
                   </div>
                   <div class="flex gap-2 items-center">
