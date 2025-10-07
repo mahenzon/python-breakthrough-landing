@@ -5,7 +5,7 @@ import { parseCourseData } from '../server/utils/course-parser'
 import { calculateStatistics } from '../server/utils/stats-calculator'
 import { loadYamlFile } from '../server/utils/yaml-loader'
 import type { SiteConfig } from '../types/site-config'
-import type { FaqItem, StudentProject, CourseProject, TechnologyStackData, Icon, ModuleTechData, ModuleTechMapping, HomeContent } from '../types/content'
+import type { FaqItem, StudentProject, CourseProject, TechnologyStackData, Icon, ModuleTechData, ModuleTechMapping, HomeContent, CourseLinksData } from '../types/content'
 import { marked } from 'marked'
 
 const publicDir = join(process.cwd(), 'public', 'data')
@@ -159,6 +159,12 @@ const homeContentPath = join(process.cwd(), 'content', 'home-content.yaml')
 const homeContentData = loadYamlFile<HomeContent>(homeContentPath)
 writeFileSync(join(publicDir, 'home-content.json'), JSON.stringify(homeContentData, null, 2))
 console.log('✅ home-content.json generated')
+
+// 5a. Generate course links data
+const courseLinksPath = join(process.cwd(), 'content', 'course-links.yaml')
+const courseLinksData = loadYamlFile<CourseLinksData>(courseLinksPath)
+writeFileSync(join(publicDir, 'course-links.json'), JSON.stringify(courseLinksData, null, 2))
+console.log('✅ course-links.json generated')
 
 // 6. Generate student projects data
 const studentProjectsPath = join(process.cwd(), 'content', 'students-projects.yaml')

@@ -1,0 +1,24 @@
+{
+  "platforms": [
+    {
+      "id": "main-site",
+      "name": "mainSite",
+      "emoji": "🎓",
+      "title": "mainSiteTitle",
+      "description": "mainSiteDescription",
+      "url": "https://learn.mahenzon.ru/public/product/2f21dd78-666e-4806-9046-818353d6fc1b/tariffs",
+      "note": "mainSiteNote",
+      "order": 1
+    },
+    {
+      "id": "stepik",
+      "name": "stepikSite",
+      "emoji": "📚",
+      "title": "stepikTitle",
+      "description": "stepikDescription",
+      "url": "https://stepik.org/a/232803/pay?promo=4038a0310be870d3",
+      "note": "stepikNote",
+      "order": 2
+    }
+  ]
+}
