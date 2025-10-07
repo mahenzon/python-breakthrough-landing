@@ -6,7 +6,7 @@
     <!-- Course Platforms -->
     <div class="max-w-5xl mx-auto mb-16">
       <div class="grid md:grid-cols-2 gap-8">
-        <CourseCourseCard
+        <CourseCard
           v-for="platform in platforms"
           :key="platform.id"
           :platform="platform"

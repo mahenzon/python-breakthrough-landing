@@ -6,7 +6,7 @@
         <p class="text-center text-gray-600 mb-12 text-lg">{{ $t('courseLinks.description') }}</p>
 
         <div class="grid md:grid-cols-2 gap-8 mb-16">
-          <CourseCourseCard
+          <CourseCard
             v-for="platform in platforms"
             :key="platform.id"
             :platform="platform"
