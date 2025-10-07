@@ -1,0 +1,61 @@
+name: Data Generation Check
+
+on:
+  pull_request:
+    paths:
+      - 'website/content/**'
+      - 'course-data/**'
+  push:
+    branches:
+      - master
+    paths:
+      - 'website/content/**'
+      - 'course-data/**'
+
+permissions:
+  contents: write
+
+jobs:
+  generate-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref || github.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install dependencies
+        run: |
+          cd website
+          npm ci
+
+      - name: Generate data files
+        run: |
+          cd website
+          npm run generate-data
+
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          if [ -n "$(git status --porcelain website/public/data/)" ]; then
+            echo "🦸 Data files were generated with changes"
+            git diff website/public/data/
+            git add website/public/data/
+            git commit -m "chore: regenerate data files from content changes"
+            git push origin HEAD:${{ github.head_ref || github.ref }}
+            echo "✅ Changes committed and pushed"
+          else
+            echo "👌 No data file changes detected"
+          fi
