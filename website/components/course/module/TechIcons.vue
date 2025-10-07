@@ -17,15 +17,22 @@
   >
     <!-- Horizontal Layout -->
     <template v-if="layout === 'horizontal'">
-      <img
+      <div
         v-for="tech in techList"
         :key="tech.name"
-        :src="tech.path"
-        :alt="tech.name"
-        :title="tech.text"
-        :class="iconClasses"
-        loading="lazy"
-      />
+        class="relative group"
+      >
+        <img
+          :src="tech.path"
+          :alt="tech.name"
+          :title="tech.text"
+          :class="iconClasses"
+          loading="lazy"
+        />
+        <span class="absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-gray-900 text-white text-xs rounded py-1 px-2 bottom-full left-1/2 transform -translate-x-1/2 mb-2 whitespace-nowrap pointer-events-none z-10">
+          {{ tech.text }}
+        </span>
+      </div>
     </template>
 
     <!-- Vertical Layout -->

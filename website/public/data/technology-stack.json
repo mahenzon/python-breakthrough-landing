@@ -212,8 +212,8 @@
       "path": null,
       "items": [
         {
-          "title": "Unittest",
-          "icon-name": "Unittest",
+          "title": "unittest",
+          "icon-name": "unittest",
           "icon": "🧾",
           "path": "/icons/test-tube.svg"
         },

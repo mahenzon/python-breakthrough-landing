@@ -25,6 +25,16 @@
     "path": "/icons/Django-REST-custom.svg"
   },
   {
+    "name": "REST",
+    "icon": "🛏️",
+    "path": "/icons/rest-api.svg"
+  },
+  {
+    "name": "JSON",
+    "icon": "🛏️",
+    "path": "/icons/JSON.svg"
+  },
+  {
     "name": "Python",
     "icon": "🐍",
     "path": "/icons/Python.svg"
@@ -135,7 +145,7 @@
     "path": "/icons/gitlab-ci.svg"
   },
   {
-    "name": "Unittest",
+    "name": "unittest",
     "icon": "🧾",
     "path": "/icons/test-tube.svg"
   },
@@ -210,9 +220,19 @@
     "path": "/icons/PyCharm.svg"
   },
   {
+    "name": "vscode",
+    "icon": "🔮",
+    "path": "/icons/vscode.svg"
+  },
+  {
     "name": "DBeaver",
     "icon": "🦫",
     "path": "/icons/DBeaver.svg"
+  },
+  {
+    "name": "git",
+    "icon": "🦸",
+    "path": "/icons/git.svg"
   },
   {
     "name": "GitHub-CLI",
@@ -228,5 +248,20 @@
     "name": "GitLab",
     "icon": "🦊",
     "path": "/icons/GitLab.svg"
+  },
+  {
+    "name": "Telegram",
+    "icon": "✈️",
+    "path": "/icons/telegram-icon.svg"
+  },
+  {
+    "name": "Pipx",
+    "icon": "✈️",
+    "path": "/icons/pipx.svg"
+  },
+  {
+    "name": "user-auth",
+    "icon": "🔐",
+    "path": "/icons/user-auth.svg"
   }
 ]

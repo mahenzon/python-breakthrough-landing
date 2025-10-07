@@ -119,8 +119,8 @@ categories:
     path:
     items:
 
-      - title: "Unittest"
-        icon-name: "Unittest"
+      - title: "unittest"
+        icon-name: "unittest"
 
       - title: "Pytest"
         icon-name: "Pytest"
