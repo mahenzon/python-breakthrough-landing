@@ -10,7 +10,6 @@
     <SectionsWhatYouLearnSection />
     <SectionsModulesAccordionSection />
     <SectionsUnderDevelopmentSection />
-    <SectionsAboutCourseSection />
     <SectionsForWhomSection />
     <SectionsRequirementsSection />
     <SectionsHowItWorksSection />

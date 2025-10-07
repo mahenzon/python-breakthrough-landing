@@ -10,7 +10,7 @@
             class="flex items-start gap-3 p-4 bg-gray-50 rounded-lg"
           >
             <span class="text-primary-600 font-bold text-xl flex-shrink-0">✓</span>
-            <span class="text-gray-700">{{ item }}</span>
+            <span class="text-lg text-gray-800">{{ item }}</span>
           </div>
         </div>
       </div>
