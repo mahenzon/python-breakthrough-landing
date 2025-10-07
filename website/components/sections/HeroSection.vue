@@ -12,8 +12,8 @@
               <NuxtLink to="/modules" class="px-8 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-semibold">
                 {{ $t('nav.modules') }}
               </NuxtLink>
-              <NuxtLink to="/contacts" class="px-8 py-3 bg-white border-2 border-primary-600 text-primary-600 rounded-lg hover:bg-primary-50 transition font-semibold">
-                {{ $t('nav.contacts') }}
+              <NuxtLink to="/faq" class="px-8 py-3 bg-white border-2 border-primary-600 text-primary-600 rounded-lg hover:bg-primary-50 transition font-semibold">
+                {{ $t('nav.faqMin') }}
               </NuxtLink>
             </div>
           </div>

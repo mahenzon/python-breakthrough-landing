@@ -9,6 +9,7 @@ export default {
     statistics: 'Статистика',
     projects: 'Проекты',
     faq: 'Вопросы',
+    faqMin: 'ЧаВо',
     changelog: 'Изменения',
     contacts: 'Контакты',
     courseLinks: 'Ссылки на курс',
