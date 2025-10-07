@@ -15,16 +15,16 @@
             <div class="flex items-center gap-3 mb-7">
               <template v-if="category.path">
                 <img
-                  v-show="loadedPaths.has(category.path)"
+                  v-show="loadedPaths[category.path]"
                   :src="category.path"
                   :alt="category.title"
-                  class="w-10 h-10"
+                  class="w-10 h-10 icon-fade-in"
                   aria-hidden="true"
                   @load="onImageLoad(category.path)"
                   @error="onImageError(category.path)"
                 />
                 <span
-                  v-show="!loadedPaths.has(category.path)"
+                  v-show="!loadedPaths[category.path]"
                   class="text-5xl"
                   aria-hidden="true"
                 >{{ category.icon }}</span>
@@ -40,16 +40,16 @@
               >
                 <template v-if="item.path">
                   <img
-                    v-show="loadedPaths.has(item.path)"
+                    v-show="loadedPaths[item.path]"
                     :src="item.path"
                     :alt="item.title"
-                    class="w-8 h-8"
+                    class="w-8 h-8 icon-fade-in"
                     aria-hidden="true"
                     @load="onImageLoad(item.path)"
                     @error="onImageError(item.path)"
                   />
                   <span
-                    v-show="!loadedPaths.has(item.path)"
+                    v-show="!loadedPaths[item.path]"
                     class="text-2xl mr-2"
                     aria-hidden="true"
                   >{{ item.icon }}</span>
@@ -75,16 +75,15 @@ const { t } = useI18n()
 const sectionTitle = computed(() => props.data.title || t('home.technologyStackTitle'))
 const sectionSubtitle = computed(() => props.data.subtitle || t('home.technologyStackSubtitle'))
 
-const loadedPaths = ref(new Set<string>())
-const failedPaths = ref(new Set<string>())
+const loadedPaths = reactive<Record<string, boolean>>({})
 const sectionRef = ref<HTMLElement>()
 
 const onImageLoad = (path: string) => {
-  loadedPaths.value.add(path)
+  loadedPaths[path] = true
 }
 
 const onImageError = (path: string) => {
-  failedPaths.value.add(path)
+  loadedPaths[path] = false
 }
 
 onMounted(() => {
@@ -95,9 +94,24 @@ onMounted(() => {
     if (img.complete && img.naturalWidth > 0) {
       const path = img.getAttribute('src')
       if (path) {
-        loadedPaths.value.add(path)
+        loadedPaths[path] = true
       }
     }
   })
 })
 </script>
+
+<style scoped>
+.icon-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+</style>
