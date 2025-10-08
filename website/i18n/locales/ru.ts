@@ -80,7 +80,7 @@ export default {
   },
   projects: {
     studentProjectsTitle: 'Проекты студентов',
-    studentProjectsDescription: 'Проекты, созданные студентами курса. Станьте первым, чей проект будет добавлен на страницу.',
+    studentProjectsDescription: 'Проекты, созданные студентами курса. Вы можете добавить свой проект на эту страницу.',
     courseProjectsTitle: 'Проекты курса',
     courseProjectsDescription: 'Проекты, которые вы разработаете в процессе обучения',
     viewProject: 'Посмотреть проект',
