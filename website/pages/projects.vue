@@ -2,6 +2,8 @@
   <div class="container mx-auto px-4">
     <!-- Course Projects Section -->
     <ProjectsSection
+      id="course-projects"
+      class="pt-5"
       :title="$t('projects.courseProjectsTitle')"
       :description="$t('projects.courseProjectsDescription')"
       :projects="courseProjects"
@@ -10,7 +12,8 @@
 
     <!-- Student Projects Section -->
     <ProjectsSection
-      class="pt-10"
+      id="students-projects"
+      class="pt-20"
       :title="$t('projects.studentProjectsTitle')"
       :description="$t('projects.studentProjectsDescription')"
       :projects="studentProjects"

@@ -57,7 +57,7 @@
         :value="studentProjectsCount"
         :label="`${$t('stats.projects', studentProjectsCount)} ${$t('stats.ofStudents')}`"
         value-color="text-primary-600"
-        to="/projects"
+        to="/projects#students-projects"
       />
     </div>
   </div>
