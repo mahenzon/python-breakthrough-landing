@@ -1,5 +1,5 @@
 <template>
-  <section class="py-20 bg-gradient-to-br from-primary-50 to-white">
+  <section class="py-8 md:py-20 bg-gradient-to-br from-primary-50 to-white">
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto">
         <div class="grid md:grid-cols-2 gap-12 items-center">
