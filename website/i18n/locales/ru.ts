@@ -79,6 +79,7 @@ export default {
     contactMe: 'Связаться со мной',
   },
   projects: {
+    authorLabel: 'Автор',
     studentProjectsTitle: 'Проекты студентов',
     studentProjectsDescription: 'Проекты, созданные студентами курса. Вы можете добавить свой проект на эту страницу.',
     courseProjectsTitle: 'Проекты курса',
