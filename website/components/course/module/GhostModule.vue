@@ -53,6 +53,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
+  customText: '',
   layout: 'accordion',
 })
 

@@ -44,8 +44,8 @@
 
       <div v-else class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div
-          v-for="project in studentProjects"
-          :key="project.order"
+          v-for="(project, index) in studentProjects"
+          :key="index"
           class="bg-white rounded-lg shadow-lg p-6"
         >
           <h3 class="text-xl font-bold mb-3">{{ project.title }}</h3>
