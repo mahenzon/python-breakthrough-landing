@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink 
+  <NuxtLink
     v-if="to"
     :to="to"
     class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl hover:scale-105 transition-all duration-200 cursor-pointer group relative"
@@ -21,7 +21,7 @@
       </svg>
     </div>
   </NuxtLink>
-  <div 
+  <div
     v-else
     class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition"
   >
@@ -31,10 +31,14 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+withDefaults(defineProps<{
   value: string | number
   label: string
   valueColor?: string
   to?: string
-}>()
+}>(), {
+  valueColor: 'text-primary-600',
+  to: '',
+})
+
 </script>
