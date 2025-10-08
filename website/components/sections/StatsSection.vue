@@ -77,12 +77,12 @@ const additionalStatistics: StatItem[] = [
   {
     value: props.courseProjectsCount,
     label: `${t('stats.projects', props.courseProjectsCount)} ${t('stats.onCourse')}`,
-    to: '/projects',
+    to: '/projects/',
   },
   {
     value: props.studentProjectsCount,
     label: `${t('stats.projects', props.studentProjectsCount)} ${t('stats.ofStudents')}`,
-    to: '/projects#students-projects',
+    to: '/projects/#students-projects',
   },
 ]
 
