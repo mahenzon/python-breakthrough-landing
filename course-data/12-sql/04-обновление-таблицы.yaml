@@ -1,0 +1,24 @@
+name: Обновление таблицы
+order: 4
+description: ''
+lessons:
+- name: Доработка описания таблицы товаров
+  duration_minutes: 5
+  tasks: 0
+  order: 1
+- name: Доработка схемы таблицы товаров
+  duration_minutes: 4
+  tasks: 0
+  order: 2
+- name: Модификация таблицы товаров
+  duration_minutes: 11
+  tasks: 0
+  order: 3
+- name: Доработка описания и схемы таблицы клиентов
+  duration_minutes: 1
+  tasks: 1
+  order: 4
+- name: Модификация таблицы клиентов
+  duration_minutes: 2
+  tasks: 1
+  order: 5

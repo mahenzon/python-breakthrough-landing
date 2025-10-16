@@ -1,0 +1,16 @@
+name: Запуск Postgres и первое подключение
+order: 3
+description: ''
+lessons:
+- name: Запуск PostgreSQL в Docker
+  duration_minutes: 4
+  tasks: 0
+  order: 1
+- name: Подключение через DBeaver
+  duration_minutes: 3
+  tasks: 0
+  order: 2
+- name: Новая схема
+  duration_minutes: 4
+  tasks: 0
+  order: 3
