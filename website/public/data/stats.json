@@ -1,11 +1,11 @@
 {
-  "totalLessons": 263,
-  "totalDurationMinutes": 2530,
-  "totalDurationFormatted": "42 ч 10 мин",
+  "totalLessons": 271,
+  "totalDurationMinutes": 2564,
+  "totalDurationFormatted": "42 ч 44 мин",
   "numberOfStudents": 75,
-  "totalTasks": 335,
+  "totalTasks": 337,
   "modulesCount": 8,
-  "topicsCount": 42,
+  "topicsCount": 44,
   "modules": [
     {
       "id": "01-введение",
@@ -408,10 +408,10 @@
       "id": "12-sql",
       "name": "SQL",
       "order": 12,
-      "topicsCount": 2,
-      "lessonsCount": 16,
-      "totalDuration": 124,
-      "totalTasks": 3,
+      "topicsCount": 4,
+      "lessonsCount": 24,
+      "totalDuration": 158,
+      "totalTasks": 5,
       "topics": [
         {
           "id": "01-знакомство-с-sql",
@@ -428,6 +428,22 @@
           "lessonsCount": 8,
           "totalDuration": 57,
           "totalTasks": 3
+        },
+        {
+          "id": "03-запуск-postgres-и-первое-подключение",
+          "name": "Запуск Postgres и первое подключение",
+          "order": 3,
+          "lessonsCount": 3,
+          "totalDuration": 11,
+          "totalTasks": 0
+        },
+        {
+          "id": "04-обновление-таблицы",
+          "name": "Обновление таблицы",
+          "order": 4,
+          "lessonsCount": 5,
+          "totalDuration": 23,
+          "totalTasks": 2
         }
       ]
     }
