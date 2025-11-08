@@ -119,7 +119,7 @@ modules:
     status: "in_development"
     ghostTopic:
       enabled: true
-      customText: "Мы уже начали работать с Postgres, впереди знакомство с ограничениями и внешними ключами."
+      customText: "Мы уже начали работать с Postgres и уже прошли ограничения, впереди работа группировками, функциями и триггерами, а затем и с внешними ключами."
     tech:
       - icon-name: "SQL"
         text: "SQL запросы"
