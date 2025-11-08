@@ -2039,6 +2039,80 @@
             }
           ],
           "id": "04-обновление-таблицы"
+        },
+        {
+          "name": "Ограничения - Constraints",
+          "order": 5,
+          "description": "",
+          "lessons": [
+            {
+              "name": "Описание нового ограничения в таблице",
+              "duration_minutes": 3,
+              "tasks": 1,
+              "order": 1
+            },
+            {
+              "name": "Ограничение целого числа по значению",
+              "duration_minutes": 5,
+              "tasks": 1,
+              "order": 2
+            },
+            {
+              "name": "Описание ограничения даты",
+              "duration_minutes": 2,
+              "tasks": 1,
+              "order": 3
+            },
+            {
+              "name": "Ограничение даты",
+              "duration_minutes": 10,
+              "tasks": 1,
+              "order": 4
+            },
+            {
+              "name": "Выбор типа строки и почему не нужен VARCHAR",
+              "duration_minutes": 3,
+              "tasks": 2,
+              "order": 5
+            },
+            {
+              "name": "Переезд в новую колонку и ограничение текста по длине",
+              "duration_minutes": 18,
+              "tasks": 3,
+              "order": 6
+            },
+            {
+              "name": "Описание ограничения текста по значению",
+              "duration_minutes": 3,
+              "tasks": 1,
+              "order": 7
+            },
+            {
+              "name": "Ограничение TEXT по значению",
+              "duration_minutes": 6,
+              "tasks": 1,
+              "order": 8
+            },
+            {
+              "name": "Колонка статуса клиента",
+              "duration_minutes": 2,
+              "tasks": 1,
+              "order": 9
+            },
+            {
+              "name": "IDENTITY vs SERIAL",
+              "duration_minutes": 6,
+              "tasks": 1,
+              "order": 10
+            },
+            {
+              "name": "Отказ от SERIAL в пользу IDENTITY",
+              "duration_minutes": 15,
+              "tasks": 0,
+              "order": 11
+            }
+          ],
+          "id": "05-ограничения-constraints"
         }
       ]
     }

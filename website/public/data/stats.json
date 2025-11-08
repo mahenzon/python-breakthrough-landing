@@ -1,11 +1,11 @@
 {
-  "totalLessons": 271,
-  "totalDurationMinutes": 2564,
-  "totalDurationFormatted": "42 ч 44 мин",
+  "totalLessons": 282,
+  "totalDurationMinutes": 2637,
+  "totalDurationFormatted": "43 ч 57 мин",
   "numberOfStudents": 75,
-  "totalTasks": 337,
+  "totalTasks": 350,
   "modulesCount": 8,
-  "topicsCount": 44,
+  "topicsCount": 45,
   "modules": [
     {
       "id": "01-введение",
@@ -408,10 +408,10 @@
       "id": "12-sql",
       "name": "SQL",
       "order": 12,
-      "topicsCount": 4,
-      "lessonsCount": 24,
-      "totalDuration": 158,
-      "totalTasks": 5,
+      "topicsCount": 5,
+      "lessonsCount": 35,
+      "totalDuration": 231,
+      "totalTasks": 18,
       "topics": [
         {
           "id": "01-знакомство-с-sql",
@@ -444,6 +444,14 @@
           "lessonsCount": 5,
           "totalDuration": 23,
           "totalTasks": 2
+        },
+        {
+          "id": "05-ограничения-constraints",
+          "name": "Ограничения - Constraints",
+          "order": 5,
+          "lessonsCount": 11,
+          "totalDuration": 73,
+          "totalTasks": 13
         }
       ]
     }
