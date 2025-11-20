@@ -1,0 +1,32 @@
+name: Перечисление ENUM
+order: 6
+description: ''
+lessons:
+- name: Enum vs CHECK IN
+  duration_minutes: 9
+  tasks: 0
+  order: 1
+- name: Миграция в enum
+  duration_minutes: 7
+  tasks: 0
+  order: 2
+- name: Таблица обращений пользователей
+  duration_minutes: 3
+  tasks: 1
+  order: 3
+- name: Сортировка и фильтрация по приоритету Enum
+  duration_minutes: 4
+  tasks: 0
+  order: 4
+- name: Строгий тип Enum
+  duration_minutes: 5
+  tasks: 1
+  order: 5
+- name: Добавление значений в Enum
+  duration_minutes: 3
+  tasks: 0
+  order: 6
+- name: Изменение опций в Enum
+  duration_minutes: 5
+  tasks: 0
+  order: 7
