@@ -1,11 +1,11 @@
 {
-  "totalLessons": 311,
-  "totalDurationMinutes": 2776,
-  "totalDurationFormatted": "46 ч 16 мин",
+  "totalLessons": 317,
+  "totalDurationMinutes": 2824,
+  "totalDurationFormatted": "47 ч 4 мин",
   "numberOfStudents": 75,
   "totalTasks": 352,
   "modulesCount": 8,
-  "topicsCount": 49,
+  "topicsCount": 50,
   "modules": [
     {
       "id": "01-введение",
@@ -408,9 +408,9 @@
       "id": "12-sql",
       "name": "SQL",
       "order": 12,
-      "topicsCount": 9,
-      "lessonsCount": 64,
-      "totalDuration": 370,
+      "topicsCount": 10,
+      "lessonsCount": 70,
+      "totalDuration": 418,
       "totalTasks": 20,
       "topics": [
         {
@@ -483,6 +483,14 @@
           "order": 9,
           "lessonsCount": 10,
           "totalDuration": 33,
+          "totalTasks": 0
+        },
+        {
+          "id": "10-триггеры-в-postgres",
+          "name": "Триггеры в Postgres",
+          "order": 10,
+          "lessonsCount": 6,
+          "totalDuration": 48,
           "totalTasks": 0
         }
       ]

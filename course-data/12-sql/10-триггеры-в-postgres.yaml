@@ -1,0 +1,28 @@
+name: Триггеры в Postgres
+order: 10
+description: ''
+lessons:
+- name: Что такое триггер
+  duration_minutes: 2
+  tasks: 0
+  order: 1
+- name: Триггер создания для автоматических логов событий
+  duration_minutes: 12
+  tasks: 0
+  order: 2
+- name: Триггер обновления для автоматической истории изменений
+  duration_minutes: 11
+  tasks: 0
+  order: 3
+- name: На каждую строку или на каждое выражение
+  duration_minutes: 11
+  tasks: 0
+  order: 4
+- name: Автоматическое поле updated_at
+  duration_minutes: 7
+  tasks: 0
+  order: 5
+- name: Правило для обновления updated_at
+  duration_minutes: 5
+  tasks: 0
+  order: 6
