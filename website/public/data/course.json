@@ -2213,6 +2213,44 @@
             }
           ],
           "id": "07-группировки-и-агрегатные-функции"
+        },
+        {
+          "name": "RETURNING",
+          "order": 8,
+          "description": "",
+          "lessons": [
+            {
+              "name": "RETURNING при создании",
+              "duration_minutes": 7,
+              "tasks": 0,
+              "order": 1
+            },
+            {
+              "name": "RETURNING при обновлении",
+              "duration_minutes": 4,
+              "tasks": 0,
+              "order": 2
+            },
+            {
+              "name": "RETURNING при удалении",
+              "duration_minutes": 1,
+              "tasks": 0,
+              "order": 3
+            },
+            {
+              "name": "Бекап базы Postgres и раскатка на новой версии",
+              "duration_minutes": 15,
+              "tasks": 0,
+              "order": 4
+            },
+            {
+              "name": "RETURNING OLD AND NEW",
+              "duration_minutes": 4,
+              "tasks": 0,
+              "order": 5
+            }
+          ],
+          "id": "08-returning"
         }
       ]
     }
