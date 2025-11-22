@@ -2251,6 +2251,74 @@
             }
           ],
           "id": "08-returning"
+        },
+        {
+          "name": "Функции в Postgres",
+          "order": 9,
+          "description": "",
+          "lessons": [
+            {
+              "name": "Простая функция в Postgres",
+              "duration_minutes": 5,
+              "tasks": 0,
+              "order": 1
+            },
+            {
+              "name": "Обновление функции",
+              "duration_minutes": 2,
+              "tasks": 0,
+              "order": 2
+            },
+            {
+              "name": "Возврат числа",
+              "duration_minutes": 1,
+              "tasks": 0,
+              "order": 3
+            },
+            {
+              "name": "Параметры функции",
+              "duration_minutes": 6,
+              "tasks": 0,
+              "order": 4
+            },
+            {
+              "name": "Ветвление",
+              "duration_minutes": 4,
+              "tasks": 0,
+              "order": 5
+            },
+            {
+              "name": "Новые переменные внутри функций",
+              "duration_minutes": 2,
+              "tasks": 0,
+              "order": 6
+            },
+            {
+              "name": "Запросы внутри функции",
+              "duration_minutes": 3,
+              "tasks": 0,
+              "order": 7
+            },
+            {
+              "name": "Входные параметры IN",
+              "duration_minutes": 2,
+              "tasks": 0,
+              "order": 8
+            },
+            {
+              "name": "Выходные параметры OUT",
+              "duration_minutes": 4,
+              "tasks": 0,
+              "order": 9
+            },
+            {
+              "name": "Входные-выходные параметры INOUT",
+              "duration_minutes": 4,
+              "tasks": 0,
+              "order": 10
+            }
+          ],
+          "id": "09-функции-в-postgres"
         }
       ]
     }
