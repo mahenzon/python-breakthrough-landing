@@ -1,11 +1,11 @@
 {
-  "totalLessons": 289,
-  "totalDurationMinutes": 2673,
-  "totalDurationFormatted": "44 ч 33 мин",
+  "totalLessons": 296,
+  "totalDurationMinutes": 2712,
+  "totalDurationFormatted": "45 ч 12 мин",
   "numberOfStudents": 75,
   "totalTasks": 352,
   "modulesCount": 8,
-  "topicsCount": 46,
+  "topicsCount": 47,
   "modules": [
     {
       "id": "01-введение",
@@ -408,9 +408,9 @@
       "id": "12-sql",
       "name": "SQL",
       "order": 12,
-      "topicsCount": 6,
-      "lessonsCount": 42,
-      "totalDuration": 267,
+      "topicsCount": 7,
+      "lessonsCount": 49,
+      "totalDuration": 306,
       "totalTasks": 20,
       "topics": [
         {
@@ -460,6 +460,14 @@
           "lessonsCount": 7,
           "totalDuration": 36,
           "totalTasks": 2
+        },
+        {
+          "id": "07-группировки-и-агрегатные-функции",
+          "name": "Группировки и агрегатные функции",
+          "order": 7,
+          "lessonsCount": 7,
+          "totalDuration": 39,
+          "totalTasks": 0
         }
       ]
     }
