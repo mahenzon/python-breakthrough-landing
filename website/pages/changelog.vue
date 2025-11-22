@@ -39,6 +39,11 @@ useHead({
 </script>
 
 <style scoped>
+:deep(.prose code::before),
+:deep(.prose code::after) {
+  content: none;
+}
+
 :deep(.prose table tbody tr:nth-child(even)) {
   background-color: rgba(15, 23, 42, 0.04);
 }
