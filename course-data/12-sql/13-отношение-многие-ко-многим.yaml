@@ -1,0 +1,28 @@
+name: Отношение многие-ко-многим
+order: 13
+description: ''
+lessons:
+- name: Что за многие и к каким многим
+  duration_minutes: 11
+  tasks: 0
+  order: 1
+- name: Описание таблиц для связи многие ко многим
+  duration_minutes: 3
+  tasks: 2
+  order: 2
+- name: Схема связи многие ко многим
+  duration_minutes: 2
+  tasks: 1
+  order: 3
+- name: Таблица тегов
+  duration_minutes: 1
+  tasks: 1
+  order: 4
+- name: Таблица тегов статей
+  duration_minutes: 2
+  tasks: 1
+  order: 5
+- name: Связь статей и тегов
+  duration_minutes: 10
+  tasks: 0
+  order: 6

@@ -2316,6 +2316,18 @@
               "duration_minutes": 4,
               "tasks": 0,
               "order": 10
+            },
+            {
+              "name": "UUID версии 7",
+              "duration_minutes": 13,
+              "tasks": 0,
+              "order": 11
+            },
+            {
+              "name": "Первичный ключ UUIDv7",
+              "duration_minutes": 8,
+              "tasks": 1,
+              "order": 12
             }
           ],
           "id": "09-функции-в-postgres"
@@ -2363,6 +2375,150 @@
             }
           ],
           "id": "10-триггеры-в-postgres"
+        },
+        {
+          "name": "Внешний ключ",
+          "order": 11,
+          "description": "",
+          "lessons": [
+            {
+              "name": "Зачем нужен внешний ключ",
+              "duration_minutes": 8,
+              "tasks": 0,
+              "order": 1
+            },
+            {
+              "name": "Схема таблицы картинок товаров",
+              "duration_minutes": 11,
+              "tasks": 1,
+              "order": 2
+            },
+            {
+              "name": "Внешний ключ и гарантия целостности",
+              "duration_minutes": 12,
+              "tasks": 0,
+              "order": 3
+            },
+            {
+              "name": "Все товары с картинками - INNER JOIN",
+              "duration_minutes": 5,
+              "tasks": 0,
+              "order": 4
+            },
+            {
+              "name": "Все-все товары и их картинки - LEFT JOIN",
+              "duration_minutes": 2,
+              "tasks": 0,
+              "order": 5
+            },
+            {
+              "name": "Все картинки и их товары - RIGHT JOIN",
+              "duration_minutes": 5,
+              "tasks": 0,
+              "order": 6
+            },
+            {
+              "name": "Все товары и все картинки",
+              "duration_minutes": 2,
+              "tasks": 0,
+              "order": 7
+            },
+            {
+              "name": "Каскадное удаление",
+              "duration_minutes": 5,
+              "tasks": 0,
+              "order": 8
+            },
+            {
+              "name": "ON DELETE SET NULL",
+              "duration_minutes": 10,
+              "tasks": 1,
+              "order": 9
+            }
+          ],
+          "id": "11-внешний-ключ"
+        },
+        {
+          "name": "Отношение один-к-одному",
+          "order": 12,
+          "description": "",
+          "lessons": [
+            {
+              "name": "Зачем нужно отношение один к одному",
+              "duration_minutes": 5,
+              "tasks": 0,
+              "order": 1
+            },
+            {
+              "name": "Описание таблицы профиля автора",
+              "duration_minutes": 4,
+              "tasks": 1,
+              "order": 2
+            },
+            {
+              "name": "Схема таблицы профиля автора",
+              "duration_minutes": 2,
+              "tasks": 1,
+              "order": 3
+            },
+            {
+              "name": "Таблица профиля автора",
+              "duration_minutes": 10,
+              "tasks": 0,
+              "order": 4
+            },
+            {
+              "name": "Первичный ключ и внешний ключ в таблице 1к1",
+              "duration_minutes": 5,
+              "tasks": 1,
+              "order": 5
+            }
+          ],
+          "id": "12-отношение-один-к-одному"
+        },
+        {
+          "name": "Отношение многие-ко-многим",
+          "order": 13,
+          "description": "",
+          "lessons": [
+            {
+              "name": "Что за многие и к каким многим",
+              "duration_minutes": 11,
+              "tasks": 0,
+              "order": 1
+            },
+            {
+              "name": "Описание таблиц для связи многие ко многим",
+              "duration_minutes": 3,
+              "tasks": 2,
+              "order": 2
+            },
+            {
+              "name": "Схема связи многие ко многим",
+              "duration_minutes": 2,
+              "tasks": 1,
+              "order": 3
+            },
+            {
+              "name": "Таблица тегов",
+              "duration_minutes": 1,
+              "tasks": 1,
+              "order": 4
+            },
+            {
+              "name": "Таблица тегов статей",
+              "duration_minutes": 2,
+              "tasks": 1,
+              "order": 5
+            },
+            {
+              "name": "Связь статей и тегов",
+              "duration_minutes": 10,
+              "tasks": 0,
+              "order": 6
+            }
+          ],
+          "id": "13-отношение-многие-ко-многим"
         }
       ]
     }

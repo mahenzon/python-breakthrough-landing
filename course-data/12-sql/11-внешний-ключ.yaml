@@ -1,0 +1,40 @@
+name: Внешний ключ
+order: 11
+description: ''
+lessons:
+- name: Зачем нужен внешний ключ
+  duration_minutes: 8
+  tasks: 0
+  order: 1
+- name: Схема таблицы картинок товаров
+  duration_minutes: 11
+  tasks: 1
+  order: 2
+- name: Внешний ключ и гарантия целостности
+  duration_minutes: 12
+  tasks: 0
+  order: 3
+- name: Все товары с картинками - INNER JOIN
+  duration_minutes: 5
+  tasks: 0
+  order: 4
+- name: Все-все товары и их картинки - LEFT JOIN
+  duration_minutes: 2
+  tasks: 0
+  order: 5
+- name: Все картинки и их товары - RIGHT JOIN
+  duration_minutes: 5
+  tasks: 0
+  order: 6
+- name: Все товары и все картинки
+  duration_minutes: 2
+  tasks: 0
+  order: 7
+- name: Каскадное удаление
+  duration_minutes: 5
+  tasks: 0
+  order: 8
+- name: ON DELETE SET NULL
+  duration_minutes: 10
+  tasks: 1
+  order: 9
