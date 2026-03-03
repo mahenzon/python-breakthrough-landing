@@ -1,0 +1,12 @@
+name: Обновление PyCharm
+order: 3
+description: ''
+lessons:
+- name: Обновляем PyCharm
+  duration_minutes: 5
+  tasks: 0
+  order: 1
+- name: Проверяем новый PyCharm и ставим плагины
+  duration_minutes: 5
+  tasks: 0
+  order: 2

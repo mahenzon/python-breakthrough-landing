@@ -2,7 +2,7 @@ name: uv
 order: 3
 description: ''
 lessons:
-- name: Установка uv на *nix
+- name: Установка uv на Linux или Unix
   duration_minutes: 4
   tasks: 0
   order: 1
