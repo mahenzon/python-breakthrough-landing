@@ -1,11 +1,11 @@
 {
-  "totalLessons": 339,
-  "totalDurationMinutes": 2960,
-  "totalDurationFormatted": "49 ч 20 мин",
+  "totalLessons": 354,
+  "totalDurationMinutes": 3057,
+  "totalDurationFormatted": "50 ч 57 мин",
   "numberOfStudents": 75,
-  "totalTasks": 363,
+  "totalTasks": 366,
   "modulesCount": 8,
-  "topicsCount": 53,
+  "topicsCount": 55,
   "modules": [
     {
       "id": "01-введение",
@@ -73,9 +73,9 @@
       "id": "04-pycharm",
       "name": "PyCharm",
       "order": 4,
-      "topicsCount": 2,
-      "lessonsCount": 6,
-      "totalDuration": 65,
+      "topicsCount": 3,
+      "lessonsCount": 8,
+      "totalDuration": 75,
       "totalTasks": 3,
       "topics": [
         {
@@ -92,6 +92,14 @@
           "order": 2,
           "lessonsCount": 1,
           "totalDuration": 7,
+          "totalTasks": 0
+        },
+        {
+          "id": "03-обновление-pycharm",
+          "name": "Обновление PyCharm",
+          "order": 3,
+          "lessonsCount": 2,
+          "totalDuration": 10,
           "totalTasks": 0
         }
       ]
@@ -408,10 +416,10 @@
       "id": "12-sql",
       "name": "SQL",
       "order": 12,
-      "topicsCount": 13,
-      "lessonsCount": 92,
-      "totalDuration": 554,
-      "totalTasks": 31,
+      "topicsCount": 14,
+      "lessonsCount": 105,
+      "totalDuration": 641,
+      "totalTasks": 34,
       "topics": [
         {
           "id": "01-знакомство-с-sql",
@@ -516,6 +524,14 @@
           "lessonsCount": 6,
           "totalDuration": 29,
           "totalTasks": 5
+        },
+        {
+          "id": "14-индексы",
+          "name": "Индексы",
+          "order": 14,
+          "lessonsCount": 13,
+          "totalDuration": 87,
+          "totalTasks": 3
         }
       ]
     }

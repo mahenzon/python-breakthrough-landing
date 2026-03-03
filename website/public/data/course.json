@@ -233,6 +233,26 @@
             }
           ],
           "id": "02-плагины"
+        },
+        {
+          "name": "Обновление PyCharm",
+          "order": 3,
+          "description": "",
+          "lessons": [
+            {
+              "name": "Обновляем PyCharm",
+              "duration_minutes": 5,
+              "tasks": 0,
+              "order": 1
+            },
+            {
+              "name": "Проверяем новый PyCharm и ставим плагины",
+              "duration_minutes": 5,
+              "tasks": 0,
+              "order": 2
+            }
+          ],
+          "id": "03-обновление-pycharm"
         }
       ]
     },
@@ -288,7 +308,7 @@
           "description": "",
           "lessons": [
             {
-              "name": "Установка uv на *nix",
+              "name": "Установка uv на Linux или Unix",
               "duration_minutes": 4,
               "tasks": 0,
               "order": 1
@@ -2519,6 +2539,92 @@
             }
           ],
           "id": "13-отношение-многие-ко-многим"
+        },
+        {
+          "name": "Индексы",
+          "order": 14,
+          "description": "",
+          "lessons": [
+            {
+              "name": "Описание таблицы пользователей",
+              "duration_minutes": 4,
+              "tasks": 0,
+              "order": 1
+            },
+            {
+              "name": "Схема таблицы пользователей",
+              "duration_minutes": 2,
+              "tasks": 2,
+              "order": 2
+            },
+            {
+              "name": "Серия данных",
+              "duration_minutes": 3,
+              "tasks": 0,
+              "order": 3
+            },
+            {
+              "name": "Условия в запросе",
+              "duration_minutes": 5,
+              "tasks": 0,
+              "order": 4
+            },
+            {
+              "name": "Таблица пользователей и данные",
+              "duration_minutes": 11,
+              "tasks": 0,
+              "order": 5
+            },
+            {
+              "name": "Поиск по тысячам записей и анализ запроса",
+              "duration_minutes": 8,
+              "tasks": 0,
+              "order": 6
+            },
+            {
+              "name": "Новый индекс",
+              "duration_minutes": 4,
+              "tasks": 0,
+              "order": 7
+            },
+            {
+              "name": "Сбалансированное дерево поиска",
+              "duration_minutes": 3,
+              "tasks": 0,
+              "order": 8
+            },
+            {
+              "name": "Неявный индекс - уникальное поле",
+              "duration_minutes": 3,
+              "tasks": 0,
+              "order": 9
+            },
+            {
+              "name": "Составной индекс",
+              "duration_minutes": 13,
+              "tasks": 0,
+              "order": 10
+            },
+            {
+              "name": "Индекс по выражению",
+              "duration_minutes": 11,
+              "tasks": 0,
+              "order": 11
+            },
+            {
+              "name": "Частичный индекс",
+              "duration_minutes": 9,
+              "tasks": 1,
+              "order": 12
+            },
+            {
+              "name": "Поиск по тексту на основе триграмм",
+              "duration_minutes": 11,
+              "tasks": 0,
+              "order": 13
+            }
+          ],
+          "id": "14-индексы"
         }
       ]
     }
