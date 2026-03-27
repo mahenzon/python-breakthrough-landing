@@ -1,0 +1,28 @@
+name: JSONB
+order: 15
+description: ''
+lessons:
+- name: JSON и JSONB в Postgres
+  duration_minutes: 16
+  tasks: 0
+  order: 1
+- name: Работа с JSONB в Postgres
+  duration_minutes: 28
+  tasks: 0
+  order: 2
+- name: Сложная фильтрация по JSONB
+  duration_minutes: 15
+  tasks: 0
+  order: 3
+- name: Обновление JSONB поля
+  duration_minutes: 5
+  tasks: 0
+  order: 4
+- name: GIN индекс на JSONB поле
+  duration_minutes: 12
+  tasks: 0
+  order: 5
+- name: Уникальный индекс JSONB поля
+  duration_minutes: 7
+  tasks: 0
+  order: 6

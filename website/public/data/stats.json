@@ -1,11 +1,11 @@
 {
-  "totalLessons": 354,
-  "totalDurationMinutes": 3057,
-  "totalDurationFormatted": "50 ч 57 мин",
+  "totalLessons": 360,
+  "totalDurationMinutes": 3140,
+  "totalDurationFormatted": "52 ч 20 мин",
   "numberOfStudents": 75,
   "totalTasks": 366,
   "modulesCount": 8,
-  "topicsCount": 55,
+  "topicsCount": 56,
   "modules": [
     {
       "id": "01-введение",
@@ -416,9 +416,9 @@
       "id": "12-sql",
       "name": "SQL",
       "order": 12,
-      "topicsCount": 14,
-      "lessonsCount": 105,
-      "totalDuration": 641,
+      "topicsCount": 15,
+      "lessonsCount": 111,
+      "totalDuration": 724,
       "totalTasks": 34,
       "topics": [
         {
@@ -532,6 +532,14 @@
           "lessonsCount": 13,
           "totalDuration": 87,
           "totalTasks": 3
+        },
+        {
+          "id": "15-jsonb",
+          "name": "JSONB",
+          "order": 15,
+          "lessonsCount": 6,
+          "totalDuration": 83,
+          "totalTasks": 0
         }
       ]
     }
