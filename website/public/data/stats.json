@@ -1,11 +1,11 @@
 {
-  "totalLessons": 360,
-  "totalDurationMinutes": 3140,
-  "totalDurationFormatted": "52 ч 20 мин",
+  "totalLessons": 368,
+  "totalDurationMinutes": 3210,
+  "totalDurationFormatted": "53 ч 30 мин",
   "numberOfStudents": 75,
   "totalTasks": 366,
   "modulesCount": 8,
-  "topicsCount": 56,
+  "topicsCount": 58,
   "modules": [
     {
       "id": "01-введение",
@@ -416,9 +416,9 @@
       "id": "12-sql",
       "name": "SQL",
       "order": 12,
-      "topicsCount": 15,
-      "lessonsCount": 111,
-      "totalDuration": 724,
+      "topicsCount": 17,
+      "lessonsCount": 119,
+      "totalDuration": 794,
       "totalTasks": 34,
       "topics": [
         {
@@ -539,6 +539,22 @@
           "order": 15,
           "lessonsCount": 6,
           "totalDuration": 83,
+          "totalTasks": 0
+        },
+        {
+          "id": "16-внешний-ключ-вместо-перечисления",
+          "name": "Внешний ключ вместо перечисления",
+          "order": 16,
+          "lessonsCount": 3,
+          "totalDuration": 19,
+          "totalTasks": 0
+        },
+        {
+          "id": "17-транзакции",
+          "name": "Транзакции",
+          "order": 17,
+          "lessonsCount": 5,
+          "totalDuration": 51,
           "totalTasks": 0
         }
       ]

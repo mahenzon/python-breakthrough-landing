@@ -1,0 +1,16 @@
+name: Внешний ключ вместо перечисления
+order: 16
+description: ''
+lessons:
+- name: Категории товаров
+  duration_minutes: 7
+  tasks: 0
+  order: 1
+- name: Внешний ключ на категорию
+  duration_minutes: 7
+  tasks: 0
+  order: 2
+- name: Индекс на внешний ключ
+  duration_minutes: 5
+  tasks: 0
+  order: 3

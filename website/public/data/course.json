@@ -2669,6 +2669,70 @@
             }
           ],
           "id": "15-jsonb"
+        },
+        {
+          "name": "Внешний ключ вместо перечисления",
+          "order": 16,
+          "description": "",
+          "lessons": [
+            {
+              "name": "Категории товаров",
+              "duration_minutes": 7,
+              "tasks": 0,
+              "order": 1
+            },
+            {
+              "name": "Внешний ключ на категорию",
+              "duration_minutes": 7,
+              "tasks": 0,
+              "order": 2
+            },
+            {
+              "name": "Индекс на внешний ключ",
+              "duration_minutes": 5,
+              "tasks": 0,
+              "order": 3
+            }
+          ],
+          "id": "16-внешний-ключ-вместо-перечисления"
+        },
+        {
+          "name": "Транзакции",
+          "order": 17,
+          "description": "",
+          "lessons": [
+            {
+              "name": "Транзакция - BEGIN и COMMIT",
+              "duration_minutes": 10,
+              "tasks": 0,
+              "order": 1
+            },
+            {
+              "name": "Транзакция - BEGIN и ROLLBACK",
+              "duration_minutes": 5,
+              "tasks": 0,
+              "order": 2
+            },
+            {
+              "name": "Формирование заказа в одной транзакции",
+              "duration_minutes": 14,
+              "tasks": 0,
+              "order": 3
+            },
+            {
+              "name": "Конкурентные транзакции",
+              "duration_minutes": 12,
+              "tasks": 0,
+              "order": 4
+            },
+            {
+              "name": "Добавление не-NULL поля",
+              "duration_minutes": 10,
+              "tasks": 0,
+              "order": 5
+            }
+          ],
+          "id": "17-транзакции"
         }
       ]
     }

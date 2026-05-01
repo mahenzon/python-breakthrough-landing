@@ -1,0 +1,24 @@
+name: Транзакции
+order: 17
+description: ''
+lessons:
+- name: Транзакция - BEGIN и COMMIT
+  duration_minutes: 10
+  tasks: 0
+  order: 1
+- name: Транзакция - BEGIN и ROLLBACK
+  duration_minutes: 5
+  tasks: 0
+  order: 2
+- name: Формирование заказа в одной транзакции
+  duration_minutes: 14
+  tasks: 0
+  order: 3
+- name: Конкурентные транзакции
+  duration_minutes: 12
+  tasks: 0
+  order: 4
+- name: Добавление не-NULL поля
+  duration_minutes: 10
+  tasks: 0
+  order: 5
