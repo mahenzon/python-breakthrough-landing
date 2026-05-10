@@ -67,11 +67,13 @@
 
 Занятия:
 
-| Урок0 | Тема | 🕑 |
+| Урок4 | Тема | 🕑 |
 | --- | --- | --- |
-| **Всего: 0** |  | **🕑 0** |
-
-Dataview: No results to show for table query.
+| 01 - Обновление Python на Windows через pyenv | 05 - Обновление Python | 4 |
+| 03 - Обновление PyCharm на Windows | 03 - Обновление PyCharm | 4 |
+| 08 - Обновление uv на Windows через scoop и установка Python | 03 - uv | 4 |
+| 06 - Чиним Docker Desktop на Windows + WSL | 03 - Знакомство с Docker Desktop | 3 |
+| **Всего: 4** |  | **🕑 15** |
 
 29 марта 2026
 -------------
