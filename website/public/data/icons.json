@@ -15,6 +15,11 @@
     "path": "/icons/SQLAlchemy.svg"
   },
   {
+    "name": "Alembic",
+    "icon": "⚗️",
+    "path": "/icons/alembic.svg"
+  },
+  {
     "name": "Django",
     "icon": "🌿",
     "path": "/icons/Django-filled.svg"
