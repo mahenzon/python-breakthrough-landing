@@ -10,3 +10,7 @@ lessons:
   duration_minutes: 5
   tasks: 0
   order: 2
+- name: Обновление PyCharm на Windows
+  duration_minutes: 4
+  tasks: 0
+  order: 3

@@ -1,0 +1,8 @@
+name: Обновление Python
+order: 5
+description: ''
+lessons:
+- name: Обновление Python на Windows через pyenv
+  duration_minutes: 4
+  tasks: 0
+  order: 1

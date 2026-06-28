@@ -173,6 +173,20 @@
             }
           ],
           "id": "04-установка-pipx"
+        },
+        {
+          "name": "Обновление Python",
+          "order": 5,
+          "description": "",
+          "lessons": [
+            {
+              "name": "Обновление Python на Windows через pyenv",
+              "duration_minutes": 4,
+              "tasks": 0,
+              "order": 1
+            }
+          ],
+          "id": "05-обновление-python"
         }
       ]
     },
@@ -250,6 +264,12 @@
               "duration_minutes": 5,
               "tasks": 0,
               "order": 2
+            },
+            {
+              "name": "Обновление PyCharm на Windows",
+              "duration_minutes": 4,
+              "tasks": 0,
+              "order": 3
             }
           ],
           "id": "03-обновление-pycharm"
@@ -342,6 +362,12 @@
               "duration_minutes": 9,
               "tasks": 1,
               "order": 6
+            },
+            {
+              "name": "Обновление uv на Windows через scoop и установка Python",
+              "duration_minutes": 4,
+              "tasks": 0,
+              "order": 8
             }
           ],
           "id": "03-uv"
@@ -640,6 +666,12 @@
               "duration_minutes": 10,
               "tasks": 1,
               "order": 5
+            },
+            {
+              "name": "Чиним Docker Desktop на Windows + WSL",
+              "duration_minutes": 3,
+              "tasks": 0,
+              "order": 6
             }
           ],
           "id": "03-знакомство-с-docker-desktop"
@@ -2733,6 +2765,120 @@
             }
           ],
           "id": "17-транзакции"
+        }
+      ]
+    },
+    {
+      "name": "Интеграция Python с базами данных",
+      "description": "Взаимодействуем с реляционными СУБД на Python. \n\nТут мы наконец-то разбираемся с SQLAlchemy.",
+      "order": 13,
+      "id": "13-интеграция-python-с-базами-данных",
+      "topics": [
+        {
+          "name": "Python и SQLite",
+          "order": 1,
+          "description": "",
+          "lessons": [
+            {
+              "name": "Подключение к SQLite в Python",
+              "duration_minutes": 17,
+              "tasks": 0,
+              "order": 1
+            },
+            {
+              "name": "Создание таблицы и вставка значений",
+              "duration_minutes": 21,
+              "tasks": 0,
+              "order": 2
+            },
+            {
+              "name": "Доступ к данным в строке по имени колонки",
+              "duration_minutes": 8,
+              "tasks": 0,
+              "order": 3
+            },
+            {
+              "name": "Параметризованные запросы",
+              "duration_minutes": 16,
+              "tasks": 1,
+              "order": 4
+            },
+            {
+              "name": "Параметризованные запросы через словарь",
+              "duration_minutes": 9,
+              "tasks": 0,
+              "order": 5
+            },
+            {
+              "name": "Обновление данных",
+              "duration_minutes": 12,
+              "tasks": 0,
+              "order": 6
+            },
+            {
+              "name": "Удаление данных",
+              "duration_minutes": 5,
+              "tasks": 0,
+              "order": 7
+            },
+            {
+              "name": "Python SQLite CLI",
+              "duration_minutes": 2,
+              "tasks": 0,
+              "order": 8
+            },
+            {
+              "name": "SQLite в памяти",
+              "duration_minutes": 3,
+              "tasks": 0,
+              "order": 9
+            }
+          ],
+          "id": "01-python-и-sqlite"
+        },
+        {
+          "name": "Python и Postgres",
+          "order": 2,
+          "description": "",
+          "lessons": [
+            {
+              "name": "Подключение к Postgres в Python",
+              "duration_minutes": 16,
+              "tasks": 1,
+              "order": 1
+            },
+            {
+              "name": "Создание таблицы и вставка записей из Python в Postgres",
+              "duration_minutes": 15,
+              "tasks": 1,
+              "order": 2
+            },
+            {
+              "name": "Чтение данных и фабрики строк",
+              "duration_minutes": 16,
+              "tasks": 1,
+              "order": 3
+            },
+            {
+              "name": "Обновление и удаление срок в Postgres на Python",
+              "duration_minutes": 14,
+              "tasks": 1,
+              "order": 4
+            },
+            {
+              "name": "Форматирование запросов",
+              "duration_minutes": 23,
+              "tasks": 1,
+              "order": 5
+            },
+            {
+              "name": "template strings в Python 3.14 и psycopg",
+              "duration_minutes": 44,
+              "tasks": 1,
+              "order": 6
+            }
+          ],
+          "id": "02-python-и-postgres"
         }
       ]
     }

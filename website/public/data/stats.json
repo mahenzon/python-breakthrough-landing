@@ -1,11 +1,11 @@
 {
-  "totalLessons": 368,
-  "totalDurationMinutes": 3210,
-  "totalDurationFormatted": "53 ч 30 мин",
+  "totalLessons": 387,
+  "totalDurationMinutes": 3446,
+  "totalDurationFormatted": "57 ч 26 мин",
   "numberOfStudents": 77,
-  "totalTasks": 366,
-  "modulesCount": 8,
-  "topicsCount": 58,
+  "totalTasks": 373,
+  "modulesCount": 9,
+  "topicsCount": 61,
   "modules": [
     {
       "id": "01-введение",
@@ -30,9 +30,9 @@
       "id": "03-работа-на-локальном-компьютере",
       "name": "Работа на локальном компьютере",
       "order": 3,
-      "topicsCount": 4,
-      "lessonsCount": 18,
-      "totalDuration": 80,
+      "topicsCount": 5,
+      "lessonsCount": 19,
+      "totalDuration": 84,
       "totalTasks": 8,
       "topics": [
         {
@@ -66,6 +66,14 @@
           "lessonsCount": 4,
           "totalDuration": 20,
           "totalTasks": 2
+        },
+        {
+          "id": "05-обновление-python",
+          "name": "Обновление Python",
+          "order": 5,
+          "lessonsCount": 1,
+          "totalDuration": 4,
+          "totalTasks": 0
         }
       ]
     },
@@ -74,8 +82,8 @@
       "name": "PyCharm",
       "order": 4,
       "topicsCount": 3,
-      "lessonsCount": 8,
-      "totalDuration": 75,
+      "lessonsCount": 9,
+      "totalDuration": 79,
       "totalTasks": 3,
       "topics": [
         {
@@ -98,8 +106,8 @@
           "id": "03-обновление-pycharm",
           "name": "Обновление PyCharm",
           "order": 3,
-          "lessonsCount": 2,
-          "totalDuration": 10,
+          "lessonsCount": 3,
+          "totalDuration": 14,
           "totalTasks": 0
         }
       ]
@@ -109,8 +117,8 @@
       "name": "Рабочее окружение",
       "order": 6,
       "topicsCount": 4,
-      "lessonsCount": 13,
-      "totalDuration": 59,
+      "lessonsCount": 14,
+      "totalDuration": 63,
       "totalTasks": 6,
       "topics": [
         {
@@ -133,8 +141,8 @@
           "id": "03-uv",
           "name": "uv",
           "order": 3,
-          "lessonsCount": 6,
-          "totalDuration": 29,
+          "lessonsCount": 7,
+          "totalDuration": 33,
           "totalTasks": 3
         },
         {
@@ -179,8 +187,8 @@
       "name": "FastAPI приложение коротких ссылок",
       "order": 10,
       "topicsCount": 21,
-      "lessonsCount": 172,
-      "totalDuration": 1847,
+      "lessonsCount": 173,
+      "totalDuration": 1850,
       "totalTasks": 227,
       "topics": [
         {
@@ -203,8 +211,8 @@
           "id": "03-знакомство-с-docker-desktop",
           "name": "Знакомство с Docker Desktop",
           "order": 3,
-          "lessonsCount": 5,
-          "totalDuration": 43,
+          "lessonsCount": 6,
+          "totalDuration": 46,
           "totalTasks": 2
         },
         {
@@ -556,6 +564,33 @@
           "lessonsCount": 5,
           "totalDuration": 51,
           "totalTasks": 0
+        }
+      ]
+    },
+    {
+      "id": "13-интеграция-python-с-базами-данных",
+      "name": "Интеграция Python с базами данных",
+      "order": 13,
+      "topicsCount": 2,
+      "lessonsCount": 15,
+      "totalDuration": 221,
+      "totalTasks": 7,
+      "topics": [
+        {
+          "id": "01-python-и-sqlite",
+          "name": "Python и SQLite",
+          "order": 1,
+          "lessonsCount": 9,
+          "totalDuration": 93,
+          "totalTasks": 1
+        },
+        {
+          "id": "02-python-и-postgres",
+          "name": "Python и Postgres",
+          "order": 2,
+          "lessonsCount": 6,
+          "totalDuration": 128,
+          "totalTasks": 6
         }
       ]
     }

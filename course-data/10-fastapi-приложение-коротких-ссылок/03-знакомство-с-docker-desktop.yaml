@@ -22,3 +22,7 @@ lessons:
   duration_minutes: 10
   tasks: 1
   order: 5
+- name: Чиним Docker Desktop на Windows + WSL
+  duration_minutes: 3
+  tasks: 0
+  order: 6

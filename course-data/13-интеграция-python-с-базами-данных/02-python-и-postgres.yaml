@@ -1,0 +1,28 @@
+name: Python и Postgres
+order: 2
+description: ''
+lessons:
+- name: Подключение к Postgres в Python
+  duration_minutes: 16
+  tasks: 1
+  order: 1
+- name: Создание таблицы и вставка записей из Python в Postgres
+  duration_minutes: 15
+  tasks: 1
+  order: 2
+- name: Чтение данных и фабрики строк
+  duration_minutes: 16
+  tasks: 1
+  order: 3
+- name: Обновление и удаление срок в Postgres на Python
+  duration_minutes: 14
+  tasks: 1
+  order: 4
+- name: Форматирование запросов
+  duration_minutes: 23
+  tasks: 1
+  order: 5
+- name: template strings в Python 3.14 и psycopg
+  duration_minutes: 44
+  tasks: 1
+  order: 6

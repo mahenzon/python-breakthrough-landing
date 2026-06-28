@@ -26,3 +26,7 @@ lessons:
   duration_minutes: 9
   tasks: 1
   order: 6
+- name: Обновление uv на Windows через scoop и установка Python
+  duration_minutes: 4
+  tasks: 0
+  order: 8
