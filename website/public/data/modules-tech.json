@@ -226,6 +226,26 @@
           "text": "SQLAlchemy ORM"
         }
       ]
+    },
+    "13-интеграция-python-с-базами-данных": {
+      "tech": [
+        {
+          "icon-name": "SQL",
+          "text": "SQL запросы"
+        },
+        {
+          "icon-name": "Python",
+          "text": "Запросы к БД из Python"
+        },
+        {
+          "icon-name": "SQLite",
+          "text": "Работа с SQLite через встроенный в Python модуль sqlite3"
+        },
+        {
+          "icon-name": "Postgres",
+          "text": "Работа с PostgreSQL через psycopg"
+        }
+      ]
     }
   }
 }

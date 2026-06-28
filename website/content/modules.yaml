@@ -1,130 +1,129 @@
-# Ghost module configuration
 ghostModule:
-  enabled: true  # Set to true to show "new modules coming" indicator
-  customText: >
-    Курс постоянно обновляется, скоро тут появятся новые темы.
-    Например аренда сервера, настройка SSH, работа с Django.
-
+  enabled: true
+  customText: |
+    Курс постоянно обновляется, скоро тут появятся новые темы. Например аренда сервера, настройка SSH, работа с Django.
 modules:
-
-  "01-введение":
-    status: "ready"
+  01-введение:
+    status: ready
     tech:
-      - icon-name: "Telegram"
-        text: "Чат курса"
-
-  "03-работа-на-локальном-компьютере":
+      - icon-name: Telegram
+        text: Чат курса
+  03-работа-на-локальном-компьютере:
     tech:
-      - icon-name: "bash"
-        text: "Работа в терминале"
-      - icon-name: "PowerShell"
-        text: "PowerShell для Windows"
-      - icon-name: "Homebrew"
-        text: "Установка пакетов через Homebrew - macOS"
-      - icon-name: "Scoop"
-        text: "Установка пакетов через Scoop - Windows"
-      - icon-name: "Python"
-        text: "Установка Python"
-      - icon-name: "Pipx"
-        text: "Работа с Pipx"
-
-  "04-pycharm":
+      - icon-name: bash
+        text: Работа в терминале
+      - icon-name: PowerShell
+        text: PowerShell для Windows
+      - icon-name: Homebrew
+        text: Установка пакетов через Homebrew - macOS
+      - icon-name: Scoop
+        text: Установка пакетов через Scoop - Windows
+      - icon-name: Python
+        text: Установка Python
+      - icon-name: Pipx
+        text: Работа с Pipx
+  04-pycharm:
     tech:
-      - icon-name: "PyCharm"
-        text: "Профессиональная разработка в профессиональном PyCharm. Установка и настройка."
-
-  "06-рабочее-окружение":
+      - icon-name: PyCharm
+        text: Профессиональная разработка в профессиональном PyCharm. Установка и настройка.
+  06-рабочее-окружение:
     tech:
-      - icon-name: "Python"
-        text: "Работа с Python и знакомство с виртуальным окружением"
-      - icon-name: "Poetry"
-        text: "Poetry для управления зависимостями. И сравнение с uv"
-      - icon-name: "uv"
-        text: "Менеджер пакетов uv"
-      - icon-name: "Black"
-        text: "Автоматическое форматирование кода"
-
-  "07-git":
+      - icon-name: Python
+        text: Работа с Python и знакомство с виртуальным окружением
+      - icon-name: Poetry
+        text: Poetry для управления зависимостями. И сравнение с uv
+      - icon-name: uv
+        text: Менеджер пакетов uv
+      - icon-name: Black
+        text: Автоматическое форматирование кода
+  07-git:
     tech:
-      - icon-name: "git"
-        text: "Начало работы с Git"
-      - icon-name: "GitHub"
-        text: "Знакомство с GitHub и GitHub Desktop"
-      - icon-name: "PyCharm"
-        text: "Работа с git в PyCharm"
-      - icon-name: "vscode"
-        text: "Работа с git в VS Code"
-
-  "10-fastapi-приложение-коротких-ссылок":
-    status: "in_development"
+      - icon-name: git
+        text: Начало работы с Git
+      - icon-name: GitHub
+        text: Знакомство с GitHub и GitHub Desktop
+      - icon-name: PyCharm
+        text: Работа с git в PyCharm
+      - icon-name: vscode
+        text: Работа с git в VS Code
+  10-fastapi-приложение-коротких-ссылок:
+    status: in_development
     ghostTopic:
       enabled: true
-      customText: "Скоро тут будут новые модули по работе с базой данных и деплою приложения"
+      customText: Скоро тут будут новые модули по работе с базой данных и деплою приложения
     tech:
-      - icon-name: "FastAPI"
-        text: "FastAPI — современный веб-фреймворк"
-      - icon-name: "Pydantic"
-        text: "Pydantic для валидации данных"
-      - icon-name: "REST"
-        text: "Знакомство с REST API"
-      - icon-name: "JSON"
-        text: "Зачем нужен JSON"
-      - icon-name: "user-auth"
-        text: "Auth"
-      - icon-name: "Docker"
-        text: "Запуск сервисов в Docker контейнерах"
-      - icon-name: "Docker-Compose"
-        text: "Оркестрация контейнеров через Docker Compose"
-      - icon-name: "Redis"
-        text: "Работа с быстрым Redis хранилищем"
-      - icon-name: "unittest"
-        text: "unittest — встроенный фреймворк для тестирования"
-      - icon-name: "Pytest"
-        text: "Pytest — полное тестирование приложения"
-      - icon-name: "mypy"
-        text: "Строгая типизация через my[py]"
-      - icon-name: "Coverage"
-        text: "Coverage для проверки покрытия"
-      - icon-name: "GitHub-Actions"
-        text: "GitHub Actions: автоматические проверки"
-      - icon-name: "Jinja"
-        text: "Jinja шаблоны страниц"
-      - icon-name: "HTML"
-        text: "HTML разметка"
-      - icon-name: "CSS"
-        text: "CSS — стили страниц"
-      - icon-name: "Bootstrap"
-        text: "Bootstrap фреймворк для переиспользования CSS и JS"
-      - icon-name: "HTMX"
-        text: "HTMX для динамического изменения страницы"
-      - icon-name: "Postgres"
-        text: "PostgreSQL база данных"
-      - icon-name: "SQLAlchemy"
-        text: "SQLAlchemy ORM для работы с БД"
-
-  "11-основы-frontend":
+      - icon-name: FastAPI
+        text: FastAPI — современный веб-фреймворк
+      - icon-name: Pydantic
+        text: Pydantic для валидации данных
+      - icon-name: REST
+        text: Знакомство с REST API
+      - icon-name: JSON
+        text: Зачем нужен JSON
+      - icon-name: user-auth
+        text: Auth
+      - icon-name: Docker
+        text: Запуск сервисов в Docker контейнерах
+      - icon-name: Docker-Compose
+        text: Оркестрация контейнеров через Docker Compose
+      - icon-name: Redis
+        text: Работа с быстрым Redis хранилищем
+      - icon-name: unittest
+        text: unittest — встроенный фреймворк для тестирования
+      - icon-name: Pytest
+        text: Pytest — полное тестирование приложения
+      - icon-name: mypy
+        text: Строгая типизация через my[py]
+      - icon-name: Coverage
+        text: Coverage для проверки покрытия
+      - icon-name: GitHub-Actions
+        text: 'GitHub Actions: автоматические проверки'
+      - icon-name: Jinja
+        text: Jinja шаблоны страниц
+      - icon-name: HTML
+        text: HTML разметка
+      - icon-name: CSS
+        text: CSS — стили страниц
+      - icon-name: Bootstrap
+        text: Bootstrap фреймворк для переиспользования CSS и JS
+      - icon-name: HTMX
+        text: HTMX для динамического изменения страницы
+      - icon-name: Postgres
+        text: PostgreSQL база данных
+      - icon-name: SQLAlchemy
+        text: SQLAlchemy ORM для работы с БД
+  11-основы-frontend:
     tech:
-      - icon-name: "HTML"
-        text: "HTML разметка"
-      - icon-name: "CSS"
-        text: "Стили CSS"
-      - icon-name: "JS"
-        text: "Основы JavaScript"
-      - icon-name: "Bootstrap"
-        text: "Фреймворк Bootstrap CSS & JS"
-      - icon-name: "GitHub"
-        text: "Публикация на GitHub Pages"
-
-  "12-sql":
-    status: "in_development"
+      - icon-name: HTML
+        text: HTML разметка
+      - icon-name: CSS
+        text: Стили CSS
+      - icon-name: JS
+        text: Основы JavaScript
+      - icon-name: Bootstrap
+        text: Фреймворк Bootstrap CSS & JS
+      - icon-name: GitHub
+        text: Публикация на GitHub Pages
+  12-sql:
+    status: in_development
     tech:
-      - icon-name: "SQL"
-        text: "SQL запросы"
-      - icon-name: "SQLite"
-        text: "Работа с SQLite"
-      - icon-name: "Postgres"
-        text: "Работа с PostgreSQL"
-      - icon-name: "DBeaver"
-        text: "DBeaver для взаимодействия с базой"
-      - icon-name: "SQLAlchemy"
-        text: "SQLAlchemy ORM"
+      - icon-name: SQL
+        text: SQL запросы
+      - icon-name: SQLite
+        text: Работа с SQLite
+      - icon-name: Postgres
+        text: Работа с PostgreSQL
+      - icon-name: DBeaver
+        text: DBeaver для взаимодействия с базой
+      - icon-name: SQLAlchemy
+        text: SQLAlchemy ORM
+  13-интеграция-python-с-базами-данных:
+    tech:
+      - icon-name: SQL
+        text: SQL запросы
+      - icon-name: Python
+        text: Запросы к БД из Python
+      - icon-name: SQLite
+        text: Работа с SQLite через встроенный в Python модуль sqlite3
+      - icon-name: Postgres
+        text: Работа с PostgreSQL через psycopg
