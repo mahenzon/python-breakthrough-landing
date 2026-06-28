@@ -105,7 +105,6 @@ modules:
       - icon-name: GitHub
         text: Публикация на GitHub Pages
   12-sql:
-    status: in_development
     tech:
       - icon-name: SQL
         text: SQL запросы
@@ -115,9 +114,8 @@ modules:
         text: Работа с PostgreSQL
       - icon-name: DBeaver
         text: DBeaver для взаимодействия с базой
-      - icon-name: SQLAlchemy
-        text: SQLAlchemy ORM
   13-интеграция-python-с-базами-данных:
+    status: in_development
     tech:
       - icon-name: SQL
         text: SQL запросы
@@ -127,3 +125,7 @@ modules:
         text: Работа с SQLite через встроенный в Python модуль sqlite3
       - icon-name: Postgres
         text: Работа с PostgreSQL через psycopg
+      - icon-name: SQLAlchemy
+        text: SQLAlchemy Core & ORM для работы с СУБД
+      - icon-name: Alembic
+        text: Миграции через alembic
